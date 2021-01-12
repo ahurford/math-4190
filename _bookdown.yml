@@ -1,0 +1,5 @@
+book_filename: "math-4190"
+language:
+  ui:
+delete_merged_file: true
+output_dir: "docs"

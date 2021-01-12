@@ -1,0 +1,282 @@
+\documentclass[]{book}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\usepackage{fixltx2e} % provides \textsubscript
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+\else % if luatex or xelatex
+  \ifxetex
+    \usepackage{mathspec}
+  \else
+    \usepackage{fontspec}
+  \fi
+  \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
+\fi
+% use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+% use microtype if available
+\IfFileExists{microtype.sty}{%
+\usepackage{microtype}
+\UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage[unicode=true]{hyperref}
+\hypersetup{
+            pdfborder={0 0 0},
+            breaklinks=true}
+\urlstyle{same}  % don't use monospace font for urls
+\usepackage{longtable,booktabs}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+\IfFileExists{parskip.sty}{%
+\usepackage{parskip}
+}{% else
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt plus 2pt minus 1pt}
+}
+\setlength{\emergencystretch}{3em}  % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{5}
+% Redefines (sub)paragraphs to behave more like sections
+\ifx\paragraph\undefined\else
+\let\oldparagraph\paragraph
+\renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+\let\oldsubparagraph\subparagraph
+\renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+
+{
+\setcounter{tocdepth}{1}
+\tableofcontents
+}
+\chapter{Tues Sept 12: Syllabus}\label{tues-sept-12-syllabus}
+
+\section{Instructor Information}\label{instructor-information}
+
+Instructor: Dr.~Amy Hurford\\
+Office: Teaching remotely\\
+Email: \href{mailto:ahurford@mun.ca}{\nolinkurl{ahurford@mun.ca}}\\
+WebEx: \url{https://mun.webex.com/meet/ahurford/}
+
+Availability: I will try to reply to emails within 24 hours (excluding
+evenings, weekends and holidays). I am always available during the
+lecture times. Please email to request a meeting for a different time.
+Please check my \href{https://amyhurford.weebly.com/}{schedule} and
+suggest a time I am free that works for you.
+
+\section{Course Information}\label{course-information}
+
+TR 2-3.15pm meet on WebEx
+
+Course description:\\
+MATH 4190 Mathematical Modelling is intended to develop students' skills
+in mathematical modelling and competence in oral and written
+presentations. Case studies in modelling will be analyzed. Students will
+develop a mathematical model and present it in both oral and report
+form.
+
+Course format:\\
+
+Course expectations:\\
+Any students that are disruptive, violating university policies, or
+acting in a potentially unsafe way will be warned and asked to
+leave.\\[2\baselineskip]Learning goals:\\
+I consider your completed assignments to be a portfolio of your
+knowledge in population and evolutionary ecology. You will also get some
+exposure to coding in \texttt{R}. It takes time to become proficient in
+a programming language, but the time you will spend coding in this class
+will help you towards becoming more proficient. The course content
+emphasizes a deeper understanding of fewer concepts. You have the
+opportunity to further explore a topic of interest to you for the final
+project.
+
+Required Text and Resources:\\
+The course materials are online at
+\url{https://ahurford.github.io/BIOL-3295-Fall-2020/}. In addition you
+will need a computer to install \texttt{R} and \texttt{RStudio}. This
+will be covered on Thursday Sept 17 (see Chapter \ref{Rinstall}). Class
+announcements and WebEx links will be provided on the course BrightSpace
+and your assignments are to be submitted to BrightSpace.
+
+\section{Method of Evaluation}\label{method-of-evaluation}
+
+\begin{itemize}
+\tightlist
+\item
+  27 assignments (equal weighting) - 50\%
+\item
+  Midterm (due Fri Nov 6 at 5pm) - 15\%
+\item
+  Final Project (due Monday Dec 14 at 9am) - 35\%
+\end{itemize}
+
+You should aim to complete each assignment before the next class, but
+assignments will be accepted, without penalty, up to a week later.
+
+Late assignments, labs, and missed midterms, and final exams will be
+accommodated as described by University Regulation 6.7.3 and 6.7.5 (see
+\url{https://www.mun.ca/regoff/calendar/sectionNo=REGS-0474} for
+Regulations).
+
+\section{Additional Policies}\label{additional-policies}
+
+\subsection{Accommodation of students with
+disabilities}\label{accommodation-of-students-with-disabilities}
+
+Memorial University of Newfoundland is committed to supporting inclusive
+education based on the principles of equity, accessibility and
+collaboration. Accommodations are provided within the scope of the
+University Policies for the Accommodations for Students with
+Disabilities see \url{www.mun.ca/policy/site/policy.php?id=239}.
+Students who may need an academic accommodation are asked to initiate
+the request with the Glenn Roy Blundon Centre at the earliest
+opportunity (see \url{www.mun.ca/blundon} for more information).
+
+\subsection{Academic misconduct}\label{academic-misconduct}
+
+Students are expected to adhere to those principles, which constitute
+proper academic conduct. A student has the responsibility to know which
+actions, as described under Academic Offences in the University
+Regulations, could be construed as dishonest or improper. Students found
+guilty of an academic offence may be subject to a number of penalties
+commensurate with the offence including reprimand, reduction of grade,
+probation, suspension or expulsion from the University. For more
+information regarding this policy, students should refer to University
+Regulation 6.12.
+
+\subsection{Equity and Diversity}\label{equity-and-diversity}
+
+A safe learning environment will be provided for all students regardless
+of race, colour, nationality, ethnic origin, social origin, religious
+creed, religion, age, disability, disfigurement, sex (including
+pregnancy), sexual orientation, gender identity, gender expression,
+marital status, family status, source of income or political opinion.
+
+You should not photograph or record myself, teaching assistants, or
+other students in the class without first obtaining permission.
+Accommodation will be made for students with special needs.
+
+The sound should be turned off on phones and computers during class.
+
+\section{Additional Supports}\label{additional-supports}
+
+Resources for additional support can be found at:
+
+\begin{itemize}
+\item
+  \url{www.mun.ca/currentstudents/student/}
+\item
+  \url{https://munsu.ca/resource-centres/}
+\end{itemize}
+
+\section{Tentative course schedule}\label{tentative-course-schedule}
+
+The course schedule is found in the toolbar of the class materials, see
+\url{https://ahurford.github.io/BIOL-3295-Fall-2020/}.
+
+The last day to drop the course without academic prejudice is Wednesday
+Nov. 4.
+
+\section{Handing in your work}\label{handing-in-your-work}
+
+\subsection{Making figures to hand-in}\label{figures}
+
+The graphs you hand in need to have descriptive axeses and a figure
+caption. You may put these elements together using a word processing
+software such as \emph{Microsoft Word}. Elements of a good figure
+caption:
+
+\begin{itemize}
+\item
+  Has a label, i.e., ``Figure 1'',
+\item
+  The first sentences provides a summary of what the figure shows, i.e.,
+  ``The price of oranges has increased steadily since 1964'',
+\item
+  Provide all necessary information to understand everything in the
+  figure, i.e., if the figure has no legend, but multiple line
+  types/symbols, be sure to indicate what is represented by the
+  different symbols. If the axes labels are overly brief due to space
+  constraints in the graph, provide a more thorough description in the
+  figure caption. If any assumptions have been made in making the
+  figure, disclose these, i.e., a point that was excluded from the
+  analysis due to being considered an outlier.
+\end{itemize}
+
+\subsection{Writing R scripts to hand-in}\label{RScript}
+
+To write your own R scripts follow the guidelines described in Chapter 7
+\href{https://ahurford.github.io/quant-guide-all-courses/style.html}{Best
+Practices} of \emph{Quantitative training in Biology}. If you are asked
+to hand in your R script this means you need to submit an \texttt{.R}
+file on Brightspace.
+
+\chapter{Quantitative skills laboratory}\label{lab2}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+PURPOSE
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  To learn how to record data in electronic format
+\item
+  To learn how to write hypotheses as equations
+\item
+  To learn how to choose the appropriate visualizations
+\item
+  To learn how to make graphs using R Studio
+\end{enumerate}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Before coming to the laboratory:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  If you have not already, install
+  \href{https://ahurford.github.io/quant-guide-all-courses/install.html}{\texttt{R}
+  and \texttt{RStudio}}.
+\item
+  Before coming to the laboratory read:
+\end{enumerate}
+
+\begin{itemize}
+\tightlist
+\item
+  \href{https://ahurford.github.io/quant-guide-all-courses/rintro.html}{Introduction
+  to R}
+\item
+  \href{https://ahurford.github.io/quant-guide-all-courses/graph.html}{Making
+  graphs in R}
+\item
+  \href{https://ahurford.github.io/quant-guide-all-courses/data-entry.html}{Entering
+  and loading data}
+\end{itemize}
+
+\section*{EXERCISE 1. Data entry and graphing with a continuous
+independent
+variable}\label{exercise-1.-data-entry-and-graphing-with-a-continuous-independent-variable}
+\addcontentsline{toc}{section}{EXERCISE 1. Data entry and graphing with
+a continuous independent variable}
+
+\end{document}
