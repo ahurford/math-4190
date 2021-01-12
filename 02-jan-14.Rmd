@@ -49,7 +49,7 @@ cm \frac{dU(t)}{dt}=-hS(U(t)-u_s).
 (\#eq:LL)
 \end{equation}
 
-The negative sign on the righthand side of equation \@ref(eq:LL) is to make sure both sides of the equation are consistent because $\frac{dU(t)}{dt}$ is negative while all other terms are positive. This is a linear ordinary differential equation (ODE). It is possible to integrate this ODE to solve for $U(t)$. If we assume that $U(0) = 60^\circ C$ we can then solve $t_40$ such that $U(t_40) = 40^\circ C$.
+The negative sign on the righthand side of equation \@ref(eq:LL) is to make sure both sides of the equation are consistent because $\frac{dU(t)}{dt}$ is negative while all other terms are positive. This is a linear ordinary differential equation (ODE). It is possible to integrate this ODE to solve for $U(t)$. If we assume that $U(0) = 60^\circ C$ we can then solve $t_{40}$ such that $U(t_{40}) = 40^\circ C$.
 
 ## Questions {-}
 5. Complete Step 4 from Box 2.1 on p30-31 of [A biologists guide to mathematical modelling](https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/MUN/detail.action?docID=768551) for the cooling beer problem. Write down the equation for the cooling beer model, define all the parameters and variables, also giving their units, contraints, and values. Calculate the units for each term in your equation to make sure the units are consistent across terms (i.e., perform a [dimensional analysis](https://en.wikipedia.org/wiki/Dimensional_analysis)).\
