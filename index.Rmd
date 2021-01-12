@@ -19,6 +19,7 @@ Instructor: Dr. Amy Hurford\
 Office: Teaching remotely\
 Email: ahurford@mun.ca\
 WebEx: https://mun.webex.com/meet/ahurford\
+Course website: https://ahurford.github.io/math-4190/
 
 Availability: I will try to reply to emails within 24 hours (excluding evenings, weekends and holidays). I am always available during the lecture times. Please email to request a meeting for a different time. Please check my [schedule](https://amyhurford.weebly.com/) and suggest a time I am free that works for you.
 
