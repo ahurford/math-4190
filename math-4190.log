@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  12 JAN 2021 13:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.5.23)  12 JAN 2021 13:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -947,14 +947,17 @@ Chapter 2.
 [7] [8]
 Chapter 3.
 
-Underfull \hbox (badness 10000) in paragraph at lines 259--262
+Underfull \hbox (badness 10000) in paragraph at lines 265--268
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 262--263
+Underfull \hbox (badness 10000) in paragraph at lines 268--269
 
  []
+
+
+Underfull \vbox (badness 4096) has occurred while \output is active []
 
 [9
 
@@ -963,7 +966,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 262--263
 ]
 Chapter 4.
 
-Underfull \hbox (badness 10000) in paragraph at lines 388--395
+Underfull \hbox (badness 10000) in paragraph at lines 397--404
 
  []
 
@@ -1058,23 +1061,23 @@ STOCHASTIC MODELS
 ]
 Chapter 16.
 [37] [38]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 655.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 667.
 [39] [40]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 655.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 667.
 (./math-4190.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 655.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 655.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 667.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 667.
 Package rerunfilecheck Info: File `math-4190.out' has not changed.
 (rerunfilecheck)             Checksum: 668FFE01C6F154185D2C9FC9BFA27C61;6102.
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 655.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 667.
  ) 
 Here is how much of TeX's memory you used:
  12156 strings out of 492995
  175906 string characters out of 6132704
- 272356 words of memory out of 5000000
+ 272357 words of memory out of 5000000
  15373 multiletter control sequences out of 15000+600000
  58195 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1092,7 +1095,7 @@ ist/fonts/type1/public/lm/lmr7.pfb></usr/local/texlive/2017/texmf-dist/fonts/ty
 pe1/public/lm/lmri10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public
 /lm/lmro10.pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy10
 .pfb></usr/local/texlive/2017/texmf-dist/fonts/type1/public/lm/lmsy7.pfb>
-Output written on math-4190.pdf (40 pages, 219942 bytes).
+Output written on math-4190.pdf (40 pages, 223470 bytes).
 PDF statistics:
  443 PDF objects out of 1000 (max. 8388607)
  387 compressed objects within 4 object streams

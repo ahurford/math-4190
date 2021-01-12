@@ -1,6 +1,8 @@
 # A2. Tues Jan 19: Deriving ordinary differential equation models
 
-Assignment 2: to be handed in to Brightspace on Tues Jan 26 by 2pm.
+*Assignment 2: to be handed in to Brightspace on Tues Jan 26 by 2pm.*
+
+---
 
 Ordinary differential equations (ODEs) models are often appropriate for MATH 4190 final projects. The general form of an ODE model is:
 

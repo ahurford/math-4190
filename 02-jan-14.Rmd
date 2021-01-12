@@ -1,6 +1,8 @@
 # A1. Thurs Jan 14: Getting started
 
-Assignment 1: to be handed in on Brightspace by Tues Jan 19 at 2pm.
+*Assignment 1, Q5-6: to be handed in on Brightspace by Tues Jan 19 at 2pm.*
+
+---
 
 When deriving a mathematical model, some practical advice is:
 
