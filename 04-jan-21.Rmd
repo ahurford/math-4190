@@ -1,0 +1,3 @@
+# A2. Thurs Jan 21: Deriving recursion equation models
+
+Assignment 2: to be handed in to Brightspace on Tues Jan 26 by 2pm.

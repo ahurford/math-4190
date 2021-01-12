@@ -65,7 +65,7 @@
 \setcounter{tocdepth}{1}
 \tableofcontents
 }
-\chapter{Tues Sept 12: Syllabus}\label{tues-sept-12-syllabus}
+\chapter{Syllabus}\label{syllabus}
 
 \section{Instructor Information}\label{instructor-information}
 
@@ -123,12 +123,15 @@ BrightSpace.
 \begin{itemize}
 \tightlist
 \item
-  6 assignments (equal weighting) - 35\%
+  7 assignments (equal weighting) - 35\%
 \item
-  Oral presentation - 15\% (week of April 5)
+  Oral presentation (week of April 5) - 15\%
 \item
-  Final Project (due Monday April 12 at 9am) - 50\%
+  Written project (due Monday April 12 at 9am) - 50\%
 \end{itemize}
+
+See Section \ref{final-project} for expectations regarding the final
+project.
 
 Late assignments, labs, and missed midterms, and final exams will be
 accommodated as described by University Regulation 6.7.3 and 6.7.5 (see
@@ -194,56 +197,459 @@ The course schedule is found in the toolbar of the class materials, see
 The last day to drop the course without academic prejudice is Monday
 March 8.
 
-\chapter{Quantitative skills laboratory}\label{lab2}
+\chapter{A1. Tues Jan 12: What is a mathematical
+model?}\label{a1.-tues-jan-12-what-is-a-mathematical-model}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+Assignment 1: to be handed in on Brightspace by Tues Jan 19 at 2pm.
 
-PURPOSE
+\section*{Questions}\label{questions}
+\addcontentsline{toc}{section}{Questions}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
+\item
+  What is a mathematical model? Give the citation for your answer in the
+  style of the Bulletin of Mathematical Biology. This citation must be
+  to a book (i.e., from the MUN library, or another an article from the
+  peer-reviewed literature). {[}2 marks{]}
+\item
+  Usually statistical models such as a linear regression satisfy my
+  defintion of a mathematical model. Given your definition in 1., would
+  a linear regression meet the requirements for a mathematical model?
+  {[}1 mark{]}
+\item
+  Per your answer to 1., give an example of something that is a model,
+  but not a mathematical model. {[}1 mark{]}
+\item
+  List some types of equations that are commonly used as models. {[}1
+  mark{]}
+\end{enumerate}
+
+While the definition of a mathematical model is quite broad, in keeping
+with the pre-requisites for this class, we will emphasize models from
+dynamical systems throughout this course.
+
+You may search the MUN library online holdings to find a book or
+peer-reviewed article to answer the above questions. Alternatively, you
+may use one of the resources below:
+
+Bliss et al. 2014
+\href{https://m3challenge.siam.org/sites/default/files/uploads/siam-guidebook-final-press.pdf}{Math
+modeling: getting started and getting solutions}
+
+Otto and Day 2009.
+\href{https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/MUN/detail.action?docID=768551}{A
+biologists guide to mathematical modelling}
+
+\href{https://link-springer-com.qe2a-proxy.mun.ca/book/10.1007\%2F978-3-030-44541-6}{A
+primer on mathematical modelling} (the chapters can be downloaded for
+free)
+
+\chapter{A1. Thurs Jan 14: Getting
+started}\label{a1.-thurs-jan-14-getting-started}
+
+Assignment 1: to be handed in on Brightspace by Tues Jan 19 at 2pm.
+
+When deriving a mathematical model, some practical advice is:
+
+\begin{enumerate}
+\def\labelenumi{\alph{enumi}.}
 \tightlist
 \item
-  To learn how to record data in electronic format
+  Modifying an existing model to suit your purposes is often a good
+  approach; and\\
 \item
-  To learn how to write hypotheses as equations
-\item
-  To learn how to choose the appropriate visualizations
-\item
-  To learn how to make graphs using R Studio
+  The units in the terms of your model need to be consistent.\\
 \end{enumerate}
 
-\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+We would like to derive a mathematical model for the following:
 
-Before coming to the laboratory:
+\emph{Cooling beer in the freezer}\\
+Room temperature beer can be cooled down by putting it in the freezer.
+If left too long, the beer will freeze and burst the glass making it
+undrinkable. How long can the beer be left in the freezer?
+
+Read Box 2.1 on p30-31 of
+\href{https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/MUN/detail.action?docID=768551}{A
+biologists guide to mathematical modelling}.
+
+Step 1 of the modelling process has been completed because the question
+has been provided. Next, we will skip to Step 4. Read about the
+\emph{cooling cup of coffee} model below. We can borrow the
+\emph{cooling cup of coffee} model to use as our model for the
+\emph{cooling beer in the freezer} question.
+
+\section{The cooling cup of coffee}\label{the-cooling-cup-of-coffee}
+
+The following is taken from Barnes \& Fulford (2002), section 9.1-9.2
+starting of p218.
+
+We would like to know how long it will take a 60\(^\circ\)C cup of
+coffee to drop to 40\(^\circ\)C. To develop the model, we assume the cup
+of coffee is a uniform temperature throughout. The cup of coffee will
+cool as heat energy from the coffee is lost to its surroundings, which
+are at a lower temperature. Note that temperature is measured in degrees
+Celsius, while heat is measured in Joules or Watts (Joules per second).
+
+From physics, the equation for the change in the heat content of coffee,
+\(Q_{hc}\) (in Watts) is,
+
+\begin{equation}
+Q_{hc} = cm \frac{dU(t)}{dt},
+\end{equation}
+
+where \(c\) is the heat specific constant (measured in Joules per degree
+Celcius per kilogram), \(m\) is the mass of the material being heated or
+cooled (in kilograms), and \(U(t)\) is the temperature in Celcius.
+
+Also, from physics the rate of heat exchange of an object which is
+hotter than its surroundings, \(Q_{cs}\), (in Watts) is,
+
+\begin{equation}
+Q_{cs} = hS(U(t)-u_s),
+\end{equation}
+
+where \(h\) is the constant of convective heat transfer (in Watts per
+\(m^2\) per degree Celcuis), \(S\) is the surface area from which heat
+is lost, \(U(t)\) is the temperature of the object and \(u_s<U(t)\) is
+the temperature of the surroundings (in Celcius).
+
+Owing to the conservation of heat energy, the change in the heat content
+of coffee, \(Q_{hc}\), should be equal to the rate of heat exchange from
+the coffee to its surroundings, \(Q_{cs}\). As such, the equation for
+the cooling of the cup of coffee is,
+
+\begin{equation}
+cm \frac{dU(t)}{dt}=-hS(U(t)-u_s).
+\label{eq:LL}
+\end{equation}
+
+The negative sign on the righthand side of equation \eqref{eq:LL} is to
+make sure both sides of the equation are consistent because
+\(\frac{dU(t)}{dt}\) is negative while all other terms are positive.
+This is a linear ordinary differential equation (ODE). It is possible to
+integrate this ODE to solve for \(U(t)\). If we assume that
+\(U(0) = 60^\circ C\) we can then solve \(t_40\) such that
+\(U(t_40) = 40^\circ C\).
+
+\section*{Questions}\label{questions}
+\addcontentsline{toc}{section}{Questions}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{4}
 \item
-  If you have not already, install
-  \href{https://ahurford.github.io/quant-guide-all-courses/install.html}{\texttt{R}
-  and \texttt{RStudio}}.
+  Complete Step 4 from Box 2.1 on p30-31 of
+  \href{https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/MUN/detail.action?docID=768551}{A
+  biologists guide to mathematical modelling} for the cooling beer
+  problem. Write down the equation for the cooling beer model, define
+  all the parameters and variables, also giving their units, contraints,
+  and values. Calculate the units for each term in your equation to make
+  sure the units are consistent across terms (i.e., perform a
+  \href{https://en.wikipedia.org/wiki/Dimensional_analysis}{dimensional
+  analysis}).\\[2\baselineskip]Note the difference between
+  \emph{parameters} and \emph{variables}. For dynamical system models
+  the dependent \emph{variables} are the quantities that change over
+  time. Time is the independent variable. \emph{Parameters} are
+  constants whose values are estimated. The dependent variables need to
+  be assigned an initial value.\\[2\baselineskip]You will need to do
+  some research to estimate the values of the parameters and the initial
+  condition for the variable in your model. Provide your evidence to
+  support your parameter estimates.\\
+  List any assumptions that you have made, either in your model
+  formulation or regarding the parameter estimates.
 \item
-  Before coming to the laboratory read:
+  Complete Steps 5-7 from Box 2.1 on p30-31 of
+  \href{https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/MUN/detail.action?docID=768551}{A
+  biologists guide to mathematical modelling} for the cooling beer
+  problem.
 \end{enumerate}
+
+\chapter{A2. Tues Jan 19: Deriving ordinary differential equation
+models}\label{a2.-tues-jan-19-deriving-ordinary-differential-equation-models}
+
+Assignment 2: to be handed in to Brightspace on Tues Jan 26 by 2pm.
+
+Ordinary differential equations (ODEs) models are often appropriate for
+MATH 4190 final projects. The general form of an ODE model is:
+
+\begin{equation}\label{eq:genCT}
+\frac{dn(t)}{dt} = \mbox{rate of increase} - \mbox{rate of decrease}.
+\end{equation}
+
+Using this general form, familiarizing yourself with some classic ODE
+models, ensuring the units of the terms in your ODE are consistent, and
+knowing the assumptions of ODE models,
+
+\section{HIV model}\label{hiv-model}
+
+This model is modified from Otto and Day (2009).
+
+\emph{Variables}\\
+\(S(t)\): number of susceptible T-cells (number, \(S(t)\geq 0\)).\\
+\(L(t)\): number of latently infected T-cells (number,
+\(L(t)\geq 0\)).\\
+\(A(t)\): number of actively infected cells T-cells (number,
+\(A(t)\geq 0\)).\\
+\(V(t)\): amount of virus (number, \(V(t)\geq 0\)).\\
+
+\emph{Parameters}\\
+\(\Sigma:\) rate of production of susceptible T-cells (number/time,
+\(\Sigma \geq 0\)).\\
+\(d:\) removal rate of T-cells (1/time, \(d \geq 0\)).\\
+\(\beta:\) rate of T-cell infection (1/number/time, \(\beta >0\)).\\
+\(p:\) fraction of infected T-cells that upon infection are latently
+infected (unitless, \(1\geq p \geq 0\)).\\
+\(a:\) rate that latent T-cells become activated (1/time,
+\(a \geq 0\)).\\
+\(\delta:\) death rate/removal of actively infected T-cells (1/time,
+\(\delta \geq d\)).\\
+\(\pi:\) rate that virus is produced by actively infected T-cells
+(1/time, \(\pi > 0\)).\\
+\(\kappa:\) rate of virus removal (1/time, \(\kappa > 0\).)
+
+to be continued\ldots{}
+
+\chapter{A2. Thurs Jan 21: Deriving recursion equation
+models}\label{a2.-thurs-jan-21-deriving-recursion-equation-models}
+
+Assignment 2: to be handed in to Brightspace on Tues Jan 26 by 2pm.
+
+\chapter{A3. Tues Jan 26: Analysis of dynamical
+systems}\label{a3.-tues-jan-26-analysis-of-dynamical-systems}
+
+Assignment 3: to be handed in to Brightspace on Tues Feb 2 by 2pm.
+
+\chapter{A3. Thurs Jan 28: Classic models of population
+biology}\label{a3.-thurs-jan-28-classic-models-of-population-biology}
+
+Assignment 3: to be handed in to Brightspace on Tues Feb 2 by 2pm.
+
+\chapter{A4. Tues Feb 2: Epidemic, consumer-resource, and competition
+models}\label{a4.-tues-feb-2-epidemic-consumer-resource-and-competition-models}
+
+Assignment 4: to be handed in to Brightspace on Tues Feb 9 by 2pm.
+
+\chapter{A4. Thurs Feb 4: Partial differential and delay differential
+equation
+models}\label{a4.-thurs-feb-4-partial-differential-and-delay-differential-equation-models}
+
+Assignment 4: to be handed in to Brightspace on Tues Feb 9 by 2pm.
+
+\chapter{A5. Tues Feb 9: Parameter
+estimation}\label{a5.-tues-feb-9-parameter-estimation}
+
+Assignment 5: to be handed in to Brightspace on Tues Feb 16 by 2pm.
+
+\chapter{A5. Thurs Feb 11: Numerical
+solultions}\label{a5.-thurs-feb-11-numerical-solultions}
+
+Assignment 5: to be handed in to Brightspace on Tues Feb 16 by 2pm.
+
+\chapter{A6. Tues Feb 16: Case
+studies}\label{a6.-tues-feb-16-case-studies}
+
+Assignment 6: to be handed in to Brightspace on Tues Feb 27 by 2pm.
+
+\chapter{A6. Thurs Feb 18: Make your own
+model}\label{a6.-thurs-feb-18-make-your-own-model}
+
+Assignment 6: to be handed in to Brightspace on Tues Feb 27 by 2pm.
+
+\chapter{A7. Tues Feb 23: Stochastic
+models}\label{a7.-tues-feb-23-stochastic-models}
+
+Assignment 7: to be handed in to Brightspace on Tues Mar 2 by 2pm.
+
+\chapter{A7. Thurs Feb 25: Simulation of stochastic
+models}\label{a7.-thurs-feb-25-simulation-of-stochastic-models}
+
+Assignment 7: to be handed in to Brightspace on Tues Mar 2 by 2pm.
+
+\chapter{Final project}\label{final-project}
 
 \begin{itemize}
 \tightlist
 \item
-  \href{https://ahurford.github.io/quant-guide-all-courses/rintro.html}{Introduction
-  to R}
+  Oral presentation - 15\% (week of April 5)
 \item
-  \href{https://ahurford.github.io/quant-guide-all-courses/graph.html}{Making
-  graphs in R}
-\item
-  \href{https://ahurford.github.io/quant-guide-all-courses/data-entry.html}{Entering
-  and loading data}
+  Written Project - 50\% (due Monday April 12 at 9am)
 \end{itemize}
 
-\section*{EXERCISE 1. Data entry and graphing with a continuous
-independent
-variable}\label{exercise-1.-data-entry-and-graphing-with-a-continuous-independent-variable}
-\addcontentsline{toc}{section}{EXERCISE 1. Data entry and graphing with
-a continuous independent variable}
+The main focus of the second half of MATH 4190 is the final project. You
+are to:
+
+\begin{itemize}
+\tightlist
+\item
+  derive and analyze an original mathematical model,
+\item
+  extend and analyze an existing mathematical model, or
+\item
+  explain, recreate and/or produce novel proofs for an existing analysis
+  of a mathematical model involving advanced mathematics (i.e., graduate
+  level).
+\end{itemize}
+
+\section{Written Report}\label{written-report}
+
+Your written report should consist of four sections: Introduction,
+Model, Results, and Discussion (for more details see below). You must
+appropriately acknowledge results and models that are not your own work.
+Your written report must be no more than 10 pages (excluding references,
+figures, and appendices) and written in Latex. If you have more than 10
+pages of important content, then you should choose to place some of this
+content in an Appendix.
+
+Some advice: - Start simple. Start with a model that you are confident
+that you will be able to produce some results for. When you fully
+understand simpler versions of your model, gradually add in more
+complexity. This prevents you from tackling a project this is `too hard'
+and not getting any results. - Be concise. A good project is
+thoughtfully put together -- it does not necessarily need to be overly
+complex or long.
+
+Guidelines for each section of the final project:
+
+\subsection{Introduction}\label{introduction}
+
+\begin{itemize}
+\tightlist
+\item
+  Describe the general question/problem of interest.
+\item
+  Describe the real-world application in language that is accessible to
+  a reader without prior knowledge of the application.
+\item
+  Summarize relevant previous research from the scientific literature
+  (i.e., scholarly journals and books) and clearly place the project
+  within the context of what has already been done. Remember to cite
+  modeling articles, not just articles that describe the details of your
+  applied system.
+\item
+  Don't focus your literature research to narrowly. For example, if you
+  project is on `moose-wolf population dynamics' consider also the
+  literature on predator-prey dynamics, which may contain mathematically
+  equivalent model formulations.
+\item
+  Concisely state the main objective, hypothesis or question of the
+  project.
+\item
+  Usually ends with a paragraph describing how the problem will be
+  solved, i.e., the type of model and the type of analysis.
+\end{itemize}
+
+\subsection{Model}\label{model}
+
+\begin{itemize}
+\tightlist
+\item
+  Your model should be a dynamical system. The model cannot be an
+  autonomous linear system of differential equations or difference
+  equations because the analysis of such a model is too simple. You may
+  however, consider a simplification of the model you are interested in
+  that is an autonomous linear system of equations, if it helps you to
+  understand the non-linear or non-autonomous system of interest.
+\item
+  Provide all details of the model to be analyzed. Define all the model
+  parameters, variables, provide their word definitions and state their
+  units. Provide the complete system of equations that comprises the
+  model. If appropriate provide a table of parameter values (and
+  references if literature sources are used to justify choices of
+  parameter values).
+\item
+  You should describe the assumptions of your model.
+\item
+  You should provide enough detail that your model is reproducible. This
+  may mean that you need to appendicize some material.
+\item
+  Consider including a diagram that communicates the interactions
+  present in your model. This is often useful.
+\end{itemize}
+
+\subsection{Results}\label{results}
+
+\begin{itemize}
+\tightlist
+\item
+  If possible, consider special cases of your model that yield
+  analytical solutions such as equilibria and local stability
+  conditions.
+\item
+  If it is possible to solve for the equilibrium values and/or to
+  determine the local stability of equilibria for your model you must do
+  so.
+\item
+  Usually the results section of a MATH 4190 project includes numerical
+  solutions for the main model of interest.
+\item
+  You may wish to summarize how numerical results for your model change
+  depending on the parameter values used.
+\item
+  Depending on your project, you may wish to explore different types of
+  more advanced analyses, i.e.~perturbation analysis, sensitivity and
+  uncertainty analysis, stochastic simulations based on the Gillespie
+  algorithm, bifurcation diagrams, analysis of periodic systems, and
+  model validation.
+\item
+  You do not need to hand in your code. If your numerical methods are
+  complex or non-standard you may wish to provide your pseudo-code in an
+  Appendix.
+\item
+  Your results should include at least 1 figure that is fully labeled
+  and contains a figure caption.
+\item
+  Your results section does not need to include every analysis that you
+  have done. Your results section should be logically organized and this
+  may mean omitting analyses that `didn't work out' or you judge to be
+  less important given later results that you were able to achieve. Your
+  results should be appropriate given the question/hypothesis that you
+  described in the Introduction.
+\end{itemize}
+
+\subsection{Discussion}\label{discussion}
+
+\begin{itemize}
+\tightlist
+\item
+  Interpret your results in terms of the main question/hypothesis.
+\item
+  Towards the beginning of the Discussion, typically there is a section
+  that reiterates the highlights of the results section.
+\item
+  Your discussion should describe whether your results matched what was
+  expected or not. Are your results consistent with other similar
+  studies?
+\item
+  You should interpret your results in the context of the applied
+  problem, i.e., what does a stability condition suggest in terms of the
+  practical management of a system?
+\item
+  How did your assumptions affect your results?
+\item
+  Do your results suggest any avenues for future research?
+\item
+  Highlight what is novel about your work.
+\end{itemize}
+
+You are to provide a complete bibliography of literature cited. You can
+choose to use the referencing style of any scholarly scientific journal
+or any of the preset options from Bibtex. The referencing style you use
+must be consistent throughout.
+
+\section{Oral report}\label{oral-report}
+
+The content of your oral report should be similiar to the written
+report.
+
+I am here to help! Please let me know if you have any questions.
+
+For writing tips, you may consider: (1)
+\href{https://m3challenge.siam.org/sites/default/files/uploads/siam-guidebook-final-press.pdf}{Bliss
+et al. 2014} (p42-44); (2)
+\href{http://matryoshka.org/2012/07/13/how-to-write-a-paper-people-will-cite/}{``How
+to write a theoretical ecology paper that people will cite''}; or (3)
+\href{https://video.mbi.ohio-state.edu/video/player/?id=4775\&title=Webinar\%3A\%20How\%20to\%20Write\%20a\%20Modelling\%20Paper}{Webinar:
+How to write a modelling paper}
 
 \end{document}

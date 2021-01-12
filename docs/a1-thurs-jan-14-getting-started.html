@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="a1-tues-jan-12-what-is-a-mathematical-model.html"/>
+<link rel="prev" href="a1-tues-jan-12-what-is-a-mathematical-model.html"/>
+<link rel="next" href="a2-tues-jan-19-deriving-ordinary-differential-equation-models.html"/>
 <script src="book_assets/jquery-2.2.3/jquery.min.js"></script>
 <link href="book_assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="book_assets/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -129,73 +129,55 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<!--bookdown:title:end-->
-<!--bookdown:title:start-->
-<div id="syllabus" class="section level1">
-<h1><span class="header-section-number">1</span> Syllabus</h1>
-<div id="instructor-information" class="section level2">
-<h2><span class="header-section-number">1.1</span> Instructor Information</h2>
-<p>Instructor: Dr. Amy Hurford<br />
-Office: Teaching remotely<br />
-Email: <a href="mailto:ahurford@mun.ca">ahurford@mun.ca</a><br />
-WebEx: <a href="https://mun.webex.com/meet/ahurford" class="uri">https://mun.webex.com/meet/ahurford</a><br />
-Course website: <a href="https://ahurford.github.io/math-4190/" class="uri">https://ahurford.github.io/math-4190/</a></p>
-<p>Availability: I will try to reply to emails within 24 hours (excluding evenings, weekends and holidays). I am always available during the lecture times. Please email to request a meeting for a different time. Please check my <a href="https://amyhurford.weebly.com/">schedule</a> and suggest a time I am free that works for you.</p>
+<div id="a1.-thurs-jan-14-getting-started" class="section level1">
+<h1><span class="header-section-number">3</span> A1. Thurs Jan 14: Getting started</h1>
+<p>Assignment 1: to be handed in on Brightspace by Tues Jan 19 at 2pm.</p>
+<p>When deriving a mathematical model, some practical advice is:</p>
+<ol style="list-style-type: lower-alpha">
+<li>Modifying an existing model to suit your purposes is often a good approach; and<br />
+</li>
+<li>The units in the terms of your model need to be consistent.<br />
+</li>
+</ol>
+<p>We would like to derive a mathematical model for the following:</p>
+<div class="alert alert-info">
+<p><em>Cooling beer in the freezer</em><br />
+Room temperature beer can be cooled down by putting it in the freezer. If left too long, the beer will freeze and burst the glass making it undrinkable. How long can the beer be left in the freezer?</p>
 </div>
-<div id="course-information" class="section level2">
-<h2><span class="header-section-number">1.2</span> Course Information</h2>
-<p>TR 2-3.15pm meet on WebEx</p>
-<p>Course description:<br />
-MATH 4190 Mathematical Modelling is intended to develop students' skills in mathematical modelling and competence in oral and written presentations. Case studies in modelling will be analyzed. Students will develop a mathematical model and present it in both oral and report form.</p>
-<p>Course format:<br />
-For the first 7 weeks of class, each week you will have an assignment to complete. There will not be lectures, but there may be required readings (ideally to be completed before class). For the next 5 weeks, during class time you should work on your final project. During the last week of class each student will do an oral presentation of their final project. During classtime, I will be available on WebEx to help you with your assignments, to answer your questions, or to advise you regarding your final project. If you are not able to make it to class, but require help, please email me to set up an appointment.</p>
-<p>Course expectations:<br />
-Any students that are disruptive, violating university policies, or acting in a potentially unsafe way will be warned and asked to leave.<br />
+<p>Read Box 2.1 on p30-31 of <a href="https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/MUN/detail.action?docID=768551">A biologists guide to mathematical modelling</a>.</p>
+<p>Step 1 of the modelling process has been completed because the question has been provided. Next, we will skip to Step 4. Read about the <em>cooling cup of coffee</em> model below. We can borrow the <em>cooling cup of coffee</em> model to use as our model for the <em>cooling beer in the freezer</em> question.</p>
+<div id="the-cooling-cup-of-coffee" class="section level2">
+<h2><span class="header-section-number">3.1</span> The cooling cup of coffee</h2>
+<p>The following is taken from Barnes &amp; Fulford (2002), section 9.1-9.2 starting of p218.</p>
+<p>We would like to know how long it will take a 60<span class="math inline">\(^\circ\)</span>C cup of coffee to drop to 40<span class="math inline">\(^\circ\)</span>C. To develop the model, we assume the cup of coffee is a uniform temperature throughout. The cup of coffee will cool as heat energy from the coffee is lost to its surroundings, which are at a lower temperature. Note that temperature is measured in degrees Celsius, while heat is measured in Joules or Watts (Joules per second).</p>
+<p>From physics, the equation for the change in the heat content of coffee, <span class="math inline">\(Q_{hc}\)</span> (in Watts) is,</p>
+<span class="math display">\[\begin{equation}
+Q_{hc} = cm \frac{dU(t)}{dt},
+\end{equation}\]</span>
+<p>where <span class="math inline">\(c\)</span> is the heat specific constant (measured in Joules per degree Celcius per kilogram), <span class="math inline">\(m\)</span> is the mass of the material being heated or cooled (in kilograms), and <span class="math inline">\(U(t)\)</span> is the temperature in Celcius.</p>
+<p>Also, from physics the rate of heat exchange of an object which is hotter than its surroundings, <span class="math inline">\(Q_{cs}\)</span>, (in Watts) is,</p>
+<span class="math display">\[\begin{equation}
+Q_{cs} = hS(U(t)-u_s),
+\end{equation}\]</span>
+<p>where <span class="math inline">\(h\)</span> is the constant of convective heat transfer (in Watts per <span class="math inline">\(m^2\)</span> per degree Celcuis), <span class="math inline">\(S\)</span> is the surface area from which heat is lost, <span class="math inline">\(U(t)\)</span> is the temperature of the object and <span class="math inline">\(u_s&lt;U(t)\)</span> is the temperature of the surroundings (in Celcius).</p>
+<p>Owing to the conservation of heat energy, the change in the heat content of coffee, <span class="math inline">\(Q_{hc}\)</span>, should be equal to the rate of heat exchange from the coffee to its surroundings, <span class="math inline">\(Q_{cs}\)</span>. As such, the equation for the cooling of the cup of coffee is,</p>
+<span class="math display" id="eq:LL">\[\begin{equation}
+cm \frac{dU(t)}{dt}=-hS(U(t)-u_s).
+\tag{3.1}
+\end{equation}\]</span>
+<p>The negative sign on the righthand side of equation <a href="a1-thurs-jan-14-getting-started.html#eq:LL">(3.1)</a> is to make sure both sides of the equation are consistent because <span class="math inline">\(\frac{dU(t)}{dt}\)</span> is negative while all other terms are positive. This is a linear ordinary differential equation (ODE). It is possible to integrate this ODE to solve for <span class="math inline">\(U(t)\)</span>. If we assume that <span class="math inline">\(U(0) = 60^\circ C\)</span> we can then solve <span class="math inline">\(t_40\)</span> such that <span class="math inline">\(U(t_40) = 40^\circ C\)</span>.</p>
+</div>
+<div id="questions" class="section level2 unnumbered">
+<h2>Questions</h2>
+<ol start="5" style="list-style-type: decimal">
+<li><p>Complete Step 4 from Box 2.1 on p30-31 of <a href="https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/MUN/detail.action?docID=768551">A biologists guide to mathematical modelling</a> for the cooling beer problem. Write down the equation for the cooling beer model, define all the parameters and variables, also giving their units, contraints, and values. Calculate the units for each term in your equation to make sure the units are consistent across terms (i.e., perform a <a href="https://en.wikipedia.org/wiki/Dimensional_analysis">dimensional analysis</a>).<br />
 <br />
-Learning goals:<br />
-This course will teach you how to derive, parameterize, and interpret your own mathematical models with an emphasis on 'hands-on' modelling experience.</p>
-<p>Required Text and Resources:<br />
-The ebook at <a href="https://ahurford.github.io/math-4190/" class="uri">https://ahurford.github.io/math-4190/</a> is the text for the course. This ebook will refer you to any other readings that will be either publically available or available via the MUN library. Class announcements and submission of your assignments will occur through BrightSpace.</p>
-</div>
-<div id="method-of-evaluation" class="section level2">
-<h2><span class="header-section-number">1.3</span> Method of Evaluation</h2>
-<ul>
-<li>7 assignments (equal weighting) - 35%</li>
-<li>Oral presentation (week of April 5) - 15%</li>
-<li>Written project (due Monday April 12 at 9am) - 50%</li>
-</ul>
-<p>See Section <a href="final-project.html#final-project">16</a> for expectations regarding the final project.</p>
-<p>Late assignments, labs, and missed midterms, and final exams will be accommodated as described by University Regulation 6.7.3 and 6.7.5 (see <a href="https://www.mun.ca/regoff/calendar/sectionNo=REGS-0474" class="uri">https://www.mun.ca/regoff/calendar/sectionNo=REGS-0474</a> for Regulations).</p>
-</div>
-<div id="additional-policies" class="section level2">
-<h2><span class="header-section-number">1.4</span> Additional Policies</h2>
-<div id="accommodation-of-students-with-disabilities" class="section level3">
-<h3><span class="header-section-number">1.4.1</span> Accommodation of students with disabilities</h3>
-<p>Memorial University of Newfoundland is committed to supporting inclusive education based on the principles of equity, accessibility and collaboration. Accommodations are provided within the scope of the University Policies for the Accommodations for Students with Disabilities see <a href="www.mun.ca/policy/site/policy.php?id=239" class="uri">www.mun.ca/policy/site/policy.php?id=239</a>. Students who may need an academic accommodation are asked to initiate the request with the Glenn Roy Blundon Centre at the earliest opportunity (see <a href="www.mun.ca/blundon" class="uri">www.mun.ca/blundon</a> for more information).</p>
-</div>
-<div id="academic-misconduct" class="section level3">
-<h3><span class="header-section-number">1.4.2</span> Academic misconduct</h3>
-<p>Students are expected to adhere to those principles, which constitute proper academic conduct. A student has the responsibility to know which actions, as described under Academic Offences in the University Regulations, could be construed as dishonest or improper. Students found guilty of an academic offence may be subject to a number of penalties commensurate with the offence including reprimand, reduction of grade, probation, suspension or expulsion from the University. For more information regarding this policy, students should refer to University Regulation 6.12.</p>
-</div>
-<div id="equity-and-diversity" class="section level3">
-<h3><span class="header-section-number">1.4.3</span> Equity and Diversity</h3>
-<p>A safe learning environment will be provided for all students regardless of race, colour, nationality, ethnic origin, social origin, religious creed, religion, age, disability, disfigurement, sex (including pregnancy), sexual orientation, gender identity, gender expression, marital status, family status, source of income or political opinion.</p>
-<p>You should not photograph or record myself, teaching assistants, or other students in the class without first obtaining permission. Accommodation will be made for students with special needs.</p>
-<p>The sound should be turned off on phones and computers during class.</p>
-</div>
-</div>
-<div id="additional-supports" class="section level2">
-<h2><span class="header-section-number">1.5</span> Additional Supports</h2>
-<p>Resources for additional support can be found at:</p>
-<ul>
-<li><p><a href="www.mun.ca/currentstudents/student/" class="uri">www.mun.ca/currentstudents/student/</a></p></li>
-<li><p><a href="https://munsu.ca/resource-centres/" class="uri">https://munsu.ca/resource-centres/</a></p></li>
-</ul>
-</div>
-<div id="tentative-course-schedule" class="section level2">
-<h2><span class="header-section-number">1.6</span> Tentative course schedule</h2>
-<p>The course schedule is found in the toolbar of the class materials, see <a href="https://ahurford.github.io/math-4190/" class="uri">https://ahurford.github.io/math-4190/</a>.</p>
-<p>The last day to drop the course without academic prejudice is Monday March 8.</p>
+Note the difference between <em>parameters</em> and <em>variables</em>. For dynamical system models the dependent <em>variables</em> are the quantities that change over time. Time is the independent variable. <em>Parameters</em> are constants whose values are estimated. The dependent variables need to be assigned an initial value.<br />
+<br />
+You will need to do some research to estimate the values of the parameters and the initial condition for the variable in your model. Provide your evidence to support your parameter estimates.<br />
+List any assumptions that you have made, either in your model formulation or regarding the parameter estimates.</p></li>
+<li><p>Complete Steps 5-7 from Box 2.1 on p30-31 of <a href="https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/MUN/detail.action?docID=768551">A biologists guide to mathematical modelling</a> for the cooling beer problem.</p></li>
+</ol>
 
 </div>
 </div>
@@ -204,8 +186,8 @@ The ebook at <a href="https://ahurford.github.io/math-4190/" class="uri">https:/
           </div>
         </div>
       </div>
-
-<a href="a1-tues-jan-12-what-is-a-mathematical-model.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="a1-tues-jan-12-what-is-a-mathematical-model.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="a2-tues-jan-19-deriving-ordinary-differential-equation-models.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="book_assets/gitbook-2.6.7/js/app.min.js"></script>
@@ -236,7 +218,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/index.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/02-jan-14.Rmd",
 "text": "Edit"
 },
 "history": {

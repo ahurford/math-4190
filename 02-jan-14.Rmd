@@ -1,0 +1,61 @@
+# A1. Thurs Jan 14: Getting started
+
+Assignment 1: to be handed in on Brightspace by Tues Jan 19 at 2pm.
+
+When deriving a mathematical model, some practical advice is:
+
+a. Modifying an existing model to suit your purposes is often a good approach; and\
+b. The units in the terms of your model need to be consistent.\
+
+We would like to derive a mathematical model for the following:
+
+<div class="alert alert-info">
+*Cooling beer in the freezer*\
+Room temperature beer can be cooled down by putting it in the freezer. If left too long, the beer will freeze and burst the glass making it undrinkable. How long can the beer be left in the freezer?
+</div>
+
+Read Box 2.1 on p30-31 of [A biologists guide to mathematical modelling](https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/MUN/detail.action?docID=768551).
+
+Step 1 of the modelling process has been completed because the question has been provided. Next, we will skip to Step 4. Read about the _cooling cup of coffee_ model below. We can borrow the _cooling cup of coffee_ model to use as our model for the _cooling beer in the freezer_ question.
+
+## The cooling cup of coffee
+
+The following is taken from Barnes & Fulford (2002), section 9.1-9.2 starting of p218.
+
+We would like to know how long it will take a 60$^\circ$C cup of coffee to drop to 40$^\circ$C. To develop the model, we assume the cup of coffee is a uniform temperature throughout. The cup of coffee will cool as heat energy from the coffee is lost to its surroundings, which are at a lower temperature. Note that temperature is measured in degrees Celsius, while heat is measured in Joules or Watts (Joules per second).
+
+From physics, the equation for the change in the heat content of coffee, $Q_{hc}$ (in Watts) is,
+
+\begin{equation}
+Q_{hc} = cm \frac{dU(t)}{dt},
+\end{equation}
+
+where $c$ is the heat specific constant (measured in Joules per degree Celcius per kilogram), $m$ is the mass of the material being heated or cooled (in kilograms), and $U(t)$ is the temperature in Celcius.
+
+Also, from physics the rate of heat exchange of an object which is hotter than its surroundings, $Q_{cs}$, (in Watts) is,
+
+\begin{equation}
+Q_{cs} = hS(U(t)-u_s),
+\end{equation}
+
+where $h$ is the constant of convective heat transfer (in Watts per $m^2$ per degree Celcuis), $S$ is the surface area from which heat is lost, $U(t)$ is the temperature of the object and $u_s<U(t)$ is the temperature of the surroundings (in Celcius).
+
+Owing to the conservation of heat energy, the change in the heat content of coffee, $Q_{hc}$, should be equal to the rate of heat exchange from the coffee to its surroundings, $Q_{cs}$. As such, the equation for the cooling of the cup of coffee is,
+
+\begin{equation}
+cm \frac{dU(t)}{dt}=-hS(U(t)-u_s).
+(\#eq:LL)
+\end{equation}
+
+The negative sign on the righthand side of equation \@ref(eq:LL) is to make sure both sides of the equation are consistent because $\frac{dU(t)}{dt}$ is negative while all other terms are positive. This is a linear ordinary differential equation (ODE). It is possible to integrate this ODE to solve for $U(t)$. If we assume that $U(0) = 60^\circ C$ we can then solve $t_40$ such that $U(t_40) = 40^\circ C$.
+
+## Questions {-}
+5. Complete Step 4 from Box 2.1 on p30-31 of [A biologists guide to mathematical modelling](https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/MUN/detail.action?docID=768551) for the cooling beer problem. Write down the equation for the cooling beer model, define all the parameters and variables, also giving their units, contraints, and values. Calculate the units for each term in your equation to make sure the units are consistent across terms (i.e., perform a [dimensional analysis](https://en.wikipedia.org/wiki/Dimensional_analysis)).\
+\
+Note the difference between _parameters_ and _variables_. For dynamical system models the dependent _variables_ are the quantities that change over time. Time is the independent variable. _Parameters_ are constants whose values are estimated. The dependent variables need to be assigned an initial value.\
+\
+You will need to do some research to estimate the values of the parameters and the initial condition for the variable in your model. Provide your evidence to support your parameter estimates.
+\
+List any assumptions that you have made, either in your model formulation or regarding the parameter estimates.
+
+6. Complete Steps 5-7 from Box 2.1 on p30-31 of [A biologists guide to mathematical modelling](https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/MUN/detail.action?docID=768551) for the cooling beer problem.

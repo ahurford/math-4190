@@ -1,0 +1,53 @@
+# A2. Tues Jan 19: Deriving ordinary differential equation models
+
+Assignment 2: to be handed in to Brightspace on Tues Jan 26 by 2pm.
+
+Ordinary differential equations (ODEs) models are often appropriate for MATH 4190 final projects. The general form of an ODE model is:
+
+\begin{equation}\label{eq:genCT}
+\frac{dn(t)}{dt} = \mbox{rate of increase} - \mbox{rate of decrease}.
+\end{equation}
+
+Using this general form, familiarizing yourself with some classic ODE models, ensuring the units of the terms in your ODE are consistent, and knowing the assumptions of ODE models, 
+
+## HIV model
+This model is modified from Otto and Day (2009).
+
+*Variables*\
+$S(t)$: number of susceptible T-cells (number, $S(t)\geq 0$).\
+$L(t)$: number of latently infected T-cells (number, $L(t)\geq 0$).\
+$A(t)$: number of actively infected cells T-cells (number, $A(t)\geq 0$).\
+$V(t)$: amount of virus (number, $V(t)\geq 0$).\
+
+
+*Parameters*\
+$\Sigma:$ rate of production of susceptible T-cells (number/time, $\Sigma \geq 0$).\
+$d:$ removal rate of T-cells (1/time, $d \geq 0$).\
+$\beta:$ rate of T-cell infection (1/number/time, $\beta >0$).\
+$p:$ fraction of infected T-cells that upon infection are latently infected (unitless, $1\geq p \geq 0$).\
+$a:$ rate that latent T-cells become activated (1/time, $a \geq 0$).\
+$\delta:$ death rate/removal of actively infected T-cells (1/time, $\delta \geq d$).\
+$\pi:$ rate that virus is produced by actively infected T-cells  (1/time, $\pi > 0$).\
+$\kappa:$ rate of virus removal (1/time, $\kappa > 0$.)
+
+to be continued...
+
+<!-- \emph{Equations}\\ -->
+<!-- % -->
+<!-- \begin{eqnarray}\label{eq:HIV1} -->
+<!-- \frac{dS(t)}{dt}&=& A - d S(t) - \beta V(t) R(t), \\ \nonumber -->
+<!-- \frac{dL(t)}{dt}&=& p B - C - D, \\ \nonumber -->
+<!-- \frac{dA(t)}{dt}&=& (1-p)B + \alpha L(t) - \delta E, \\ \nonumber -->
+<!-- \frac{dV(t)}{dt}&=& \pi E(t) - \kappa V(t). -->
+<!-- \end{eqnarray} -->
+<!-- % -->
+<!-- Note that each positive term in the above system of equations corresponds to the `rate of increase' and each negative term corresponds to the `rate of decrease' in the corresponding variables, as per equation genCT. -->
+
+<!-- This model formulation assumes that only a small fraction of virus in the blood infects T-cells. This is evident because infection of T-cells does not appear as a loss term in the $\frac{dV}{dt}$ equation. The model also assumes that the rate of virus production is independent of the destruction of actively infected T-cells. Are there any terms in the model derivation that are surprising? Which terms are constant? Which terms are non-linear? -->
+
+<!-- \emph{Exercise}\\ -->
+<!-- Draw a diagram representing the dynamics of HIV (equation HIV1). -->
+
+
+
+<!-- How are latently infected T-cells different from actively infected T-cells? How are some of the assumptions of this model evident your diagram. -->

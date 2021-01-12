@@ -11,7 +11,7 @@ biblio-style: apalike
 link-citations: false 
 ---
 
-# Tues Sept 12: Syllabus
+# Syllabus
  
 ## Instructor Information
 
@@ -44,9 +44,11 @@ The ebook at https://ahurford.github.io/math-4190/ is the text for the course. T
 
 ## Method of Evaluation
 
-- 6 assignments (equal weighting) - 35%
-- Oral presentation - 15% (week of April 5)
-- Final Project (due Monday April 12 at 9am) - 50%
+- 7 assignments (equal weighting) - 35%
+- Oral presentation (week of April 5) - 15%
+- Written project (due Monday April 12 at 9am) - 50%
+
+See Section \@ref(final-project) for expectations regarding the final project.
 
 Late assignments, labs, and missed midterms, and final exams will be accommodated as described by University Regulation 6.7.3 and 6.7.5 (see [https://www.mun.ca/regoff/calendar/sectionNo=REGS-0474](https://www.mun.ca/regoff/calendar/sectionNo=REGS-0474) for Regulations).
 
