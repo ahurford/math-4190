@@ -4,29 +4,31 @@
 
 ---
 
-Ordinary differential equations (ODEs) models are often appropriate for MATH 4190 final projects. The general form of an ODE model is:
+Ordinary differential equation (ODEs) models are often appropriate for MATH 4190 final projects. The general form of an ODE model is:
 
 \begin{equation}\label{eq:genCT}
 \frac{dn(t)}{dt} = \mbox{rate of increase} - \mbox{rate of decrease}.
 \end{equation}
 
-The units of rate quantities are `per time', although this may be number per time, mL per time, or simply, per time. The ODE model may contain multiple increase and/or decrease terms and there may be several equations coupled together.
+The units of rate quantities are `per time', although this may be number per time, mL per time, or simply, per time. The ODE model may contain multiple (or no) increase and/or decrease terms and there may be several equations coupled together.
 
-Generally, a parameter that correspnds to a rate is either constrained to be positive, non-negative, or has no constraints. When the rate parameter is $>1$ this means that, on average, more than one of the corresponding event occurs per time unit. A parameter that is a probability is constrained to be $\geq 0$ and $\leq 1$.
+Generally, a parameter that correspnds to a rate is either constrained to be positive, non-negative, or has no constraints. When the rate parameter is $>1$ this means that, on average, more than one of the corresponding event occurs per time unit. Sometimes rate parameters are multiplied by probabilities. A parameter that is a probability is constrained to be $\geq 0$ and $\leq 1$.
 
 When deriving ODE models it is helpful to draw a diagram (i.e. Step 3, Box 2.1 on p30-31 of [A biologists guide to mathematical modelling](https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/MUN/detail.action?docID=768551)).
 
-## Questions {-}
-1. Draw a flow diagram for one of the systems of ODEs in [In-host Mathematical Modelling of COVID-19 in Humans](https://www-ncbi-nlm-nih-gov.qe2a-proxy.mun.ca/pmc/articles/PMC7526677/) by Hernandez-Vargas and Velasco-Hernandeza. For your equations provide a table listing the variables and the parameters, their units, and any constraints on their values. Be sure to clearly identify which are parameters and which are variables. To make your flow diagram follow the rules described in Box 2.3: Drawing flow diagrams, on p44 of [A biologists guide to mathematical modelling(https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/reader.action?docID=768551&ppg=44). The diagram may be hand drawn and photographed.
+## Questions A2-1
+1. Draw a flow diagram for one of the systems of ODEs in [In-host Mathematical Modelling of COVID-19 in Humans](https://www-ncbi-nlm-nih-gov.qe2a-proxy.mun.ca/pmc/articles/PMC7526677/) by Hernandez-Vargas and Velasco-Hernandeza. For the system of ODEs that you chose, provide a table listing the variables and the parameters, their units, and any constraints on their values. Be sure to clearly identify which are parameters and which are variables. To make your flow diagram, follow the rules described in Box 2.3: Drawing flow diagrams, on p44 of [A biologists guide to mathematical modelling](https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/reader.action?docID=768551&ppg=44). This question does not need to be completed in Latex. You may work with pencil and paper and photograph your work. [5 marks]
 
 2. Derive your own system of ODEs for a between-host epidemic spread model. Assume that the epidemiology of the system is such that:
 
-- The system has 3 variables: Susceptible host, $S(t)$, Infected hosts, $I(t)$, and Recovered hosts, $R(t)$.
+- The system has 3 variables: Susceptible host, $S(t)$, Infected hosts, $I(t)$, and Recovered hosts, $R(t)$. For all of these variables the units are number.
 
-- The rate that new susceptible hosts enter the population is $\theta>0$ (units: number/time)
+- The rate that new susceptible hosts enter the population is $\theta>0$ (units: number/time).
 
 - The rate that susceptible hosts become infected due to coming into contact with the infected host is $\beta S(t) I(t)/N(t)$, where $N(t) = S(t) + I(t) + R(t)$, and $\beta>0$ is the transmission rate (units: 1/time). This term results in both a decrease in $\frac{dS(t)}{dt}$ and an increase in $\frac{dI(t)}{dt}$. 
 
 - The rate that infected indviduals recover is $\gamma I(t)$, where $\gamma >0$ (units: 1/time). This term results in both a decrease in $\frac{dI(t)}{dt}$ and an increase in $\frac{dR(t)}{dt}$.
 
 - Recovered individuals lose immunity at rate $\omega R(t)$. This term results in both a decrease in $\frac{dR(t)}{dt}$ and an increase in $\frac{dS(t)}{dt}$.
+
+You may work on pencil and paper and photograph your work. [5 marks]

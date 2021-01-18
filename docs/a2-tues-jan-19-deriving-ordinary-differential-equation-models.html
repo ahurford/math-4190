@@ -80,14 +80,14 @@
 <li class="chapter" data-level="1.6" data-path="index.html"><a href="index.html#tentative-course-schedule"><i class="fa fa-check"></i><b>1.6</b> Tentative course schedule</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="a1-tues-jan-12-what-is-a-mathematical-model.html"><a href="a1-tues-jan-12-what-is-a-mathematical-model.html"><i class="fa fa-check"></i><b>2</b> A1. Tues Jan 12: What is a mathematical model?</a><ul>
-<li class="chapter" data-level="" data-path="a1-tues-jan-12-what-is-a-mathematical-model.html"><a href="a1-tues-jan-12-what-is-a-mathematical-model.html#questions"><i class="fa fa-check"></i>Questions</a></li>
+<li class="chapter" data-level="2.1" data-path="a1-tues-jan-12-what-is-a-mathematical-model.html"><a href="a1-tues-jan-12-what-is-a-mathematical-model.html#questions-a1-1"><i class="fa fa-check"></i><b>2.1</b> Questions A1-1</a></li>
 </ul></li>
 <li class="chapter" data-level="3" data-path="a1-thurs-jan-14-getting-started.html"><a href="a1-thurs-jan-14-getting-started.html"><i class="fa fa-check"></i><b>3</b> A1. Thurs Jan 14: Getting started</a><ul>
 <li class="chapter" data-level="3.1" data-path="a1-thurs-jan-14-getting-started.html"><a href="a1-thurs-jan-14-getting-started.html#the-cooling-cup-of-coffee"><i class="fa fa-check"></i><b>3.1</b> The cooling cup of coffee</a></li>
-<li class="chapter" data-level="" data-path="a1-tues-jan-12-what-is-a-mathematical-model.html"><a href="a1-tues-jan-12-what-is-a-mathematical-model.html#questions"><i class="fa fa-check"></i>Questions</a></li>
+<li class="chapter" data-level="3.2" data-path="a1-thurs-jan-14-getting-started.html"><a href="a1-thurs-jan-14-getting-started.html#questions-a1-2"><i class="fa fa-check"></i><b>3.2</b> Questions A1-2</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="a2-tues-jan-19-deriving-ordinary-differential-equation-models.html"><a href="a2-tues-jan-19-deriving-ordinary-differential-equation-models.html"><i class="fa fa-check"></i><b>4</b> A2. Tues Jan 19: Deriving ordinary differential equation models</a><ul>
-<li class="chapter" data-level="" data-path="a1-tues-jan-12-what-is-a-mathematical-model.html"><a href="a1-tues-jan-12-what-is-a-mathematical-model.html#questions"><i class="fa fa-check"></i>Questions</a></li>
+<li class="chapter" data-level="4.1" data-path="a2-tues-jan-19-deriving-ordinary-differential-equation-models.html"><a href="a2-tues-jan-19-deriving-ordinary-differential-equation-models.html#questions-a2-1"><i class="fa fa-check"></i><b>4.1</b> Questions A2-1</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="a2-thurs-jan-21-deriving-recursion-equation-models.html"><a href="a2-thurs-jan-21-deriving-recursion-equation-models.html"><i class="fa fa-check"></i><b>5</b> A2. Thurs Jan 21: Deriving recursion equation models</a></li>
 <li class="chapter" data-level="6" data-path="a3-tues-jan-26-analysis-of-dynamical-systems.html"><a href="a3-tues-jan-26-analysis-of-dynamical-systems.html"><i class="fa fa-check"></i><b>6</b> A3. Tues Jan 26: Analysis of dynamical systems</a></li>
@@ -133,26 +133,27 @@
 <h1><span class="header-section-number">4</span> A2. Tues Jan 19: Deriving ordinary differential equation models</h1>
 <p><em>Assignment 2: to be handed in to Brightspace on Tues Jan 26 by 2pm.</em></p>
 <hr />
-<p>Ordinary differential equations (ODEs) models are often appropriate for MATH 4190 final projects. The general form of an ODE model is:</p>
+<p>Ordinary differential equation (ODEs) models are often appropriate for MATH 4190 final projects. The general form of an ODE model is:</p>
 <span class="math display">\[\begin{equation}\label{eq:genCT}
 \frac{dn(t)}{dt} = \mbox{rate of increase} - \mbox{rate of decrease}.
 \end{equation}\]</span>
-<p>The units of rate quantities are `per time', although this may be number per time, mL per time, or simply, per time. The ODE model may contain multiple increase and/or decrease terms and there may be several equations coupled together.</p>
-<p>Generally, a parameter that correspnds to a rate is either constrained to be positive, non-negative, or has no constraints. When the rate parameter is <span class="math inline">\(&gt;1\)</span> this means that, on average, more than one of the corresponding event occurs per time unit. A parameter that is a probability is constrained to be <span class="math inline">\(\geq 0\)</span> and <span class="math inline">\(\leq 1\)</span>.</p>
+<p>The units of rate quantities are `per time', although this may be number per time, mL per time, or simply, per time. The ODE model may contain multiple (or no) increase and/or decrease terms and there may be several equations coupled together.</p>
+<p>Generally, a parameter that correspnds to a rate is either constrained to be positive, non-negative, or has no constraints. When the rate parameter is <span class="math inline">\(&gt;1\)</span> this means that, on average, more than one of the corresponding event occurs per time unit. Sometimes rate parameters are multiplied by probabilities. A parameter that is a probability is constrained to be <span class="math inline">\(\geq 0\)</span> and <span class="math inline">\(\leq 1\)</span>.</p>
 <p>When deriving ODE models it is helpful to draw a diagram (i.e. Step 3, Box 2.1 on p30-31 of <a href="https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/MUN/detail.action?docID=768551">A biologists guide to mathematical modelling</a>).</p>
-<div id="questions" class="section level2 unnumbered">
-<h2>Questions</h2>
+<div id="questions-a2-1" class="section level2">
+<h2><span class="header-section-number">4.1</span> Questions A2-1</h2>
 <ol style="list-style-type: decimal">
-<li><p>Draw a flow diagram for one of the systems of ODEs in <a href="https://www-ncbi-nlm-nih-gov.qe2a-proxy.mun.ca/pmc/articles/PMC7526677/">In-host Mathematical Modelling of COVID-19 in Humans</a> by Hernandez-Vargas and Velasco-Hernandeza. For your equations provide a table listing the variables and the parameters, their units, and any constraints on their values. Be sure to clearly identify which are parameters and which are variables. To make your flow diagram follow the rules described in Box 2.3: Drawing flow diagrams, on p44 of [A biologists guide to mathematical modelling(<a href="https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/reader.action?docID=768551&amp;ppg=44" class="uri">https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/reader.action?docID=768551&amp;ppg=44</a>). The diagram may be hand drawn and photographed.</p></li>
+<li><p>Draw a flow diagram for one of the systems of ODEs in <a href="https://www-ncbi-nlm-nih-gov.qe2a-proxy.mun.ca/pmc/articles/PMC7526677/">In-host Mathematical Modelling of COVID-19 in Humans</a> by Hernandez-Vargas and Velasco-Hernandeza. For the system of ODEs that you chose, provide a table listing the variables and the parameters, their units, and any constraints on their values. Be sure to clearly identify which are parameters and which are variables. To make your flow diagram, follow the rules described in Box 2.3: Drawing flow diagrams, on p44 of <a href="https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/reader.action?docID=768551&amp;ppg=44">A biologists guide to mathematical modelling</a>. This question does not need to be completed in Latex. You may work with pencil and paper and photograph your work. [5 marks]</p></li>
 <li><p>Derive your own system of ODEs for a between-host epidemic spread model. Assume that the epidemiology of the system is such that:</p></li>
 </ol>
 <ul>
-<li><p>The system has 3 variables: Susceptible host, <span class="math inline">\(S(t)\)</span>, Infected hosts, <span class="math inline">\(I(t)\)</span>, and Recovered hosts, <span class="math inline">\(R(t)\)</span>.</p></li>
-<li><p>The rate that new susceptible hosts enter the population is <span class="math inline">\(\theta&gt;0\)</span> (units: number/time)</p></li>
+<li><p>The system has 3 variables: Susceptible host, <span class="math inline">\(S(t)\)</span>, Infected hosts, <span class="math inline">\(I(t)\)</span>, and Recovered hosts, <span class="math inline">\(R(t)\)</span>. For all of these variables the units are number.</p></li>
+<li><p>The rate that new susceptible hosts enter the population is <span class="math inline">\(\theta&gt;0\)</span> (units: number/time).</p></li>
 <li><p>The rate that susceptible hosts become infected due to coming into contact with the infected host is <span class="math inline">\(\beta S(t) I(t)/N(t)\)</span>, where <span class="math inline">\(N(t) = S(t) + I(t) + R(t)\)</span>, and <span class="math inline">\(\beta&gt;0\)</span> is the transmission rate (units: 1/time). This term results in both a decrease in <span class="math inline">\(\frac{dS(t)}{dt}\)</span> and an increase in <span class="math inline">\(\frac{dI(t)}{dt}\)</span>.</p></li>
 <li><p>The rate that infected indviduals recover is <span class="math inline">\(\gamma I(t)\)</span>, where <span class="math inline">\(\gamma &gt;0\)</span> (units: 1/time). This term results in both a decrease in <span class="math inline">\(\frac{dI(t)}{dt}\)</span> and an increase in <span class="math inline">\(\frac{dR(t)}{dt}\)</span>.</p></li>
 <li><p>Recovered individuals lose immunity at rate <span class="math inline">\(\omega R(t)\)</span>. This term results in both a decrease in <span class="math inline">\(\frac{dR(t)}{dt}\)</span> and an increase in <span class="math inline">\(\frac{dS(t)}{dt}\)</span>.</p></li>
 </ul>
+<p>You may work on pencil and paper and photograph your work. [5 marks]</p>
 
 </div>
 </div>

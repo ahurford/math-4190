@@ -205,8 +205,7 @@ at 2pm.}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-\section*{Questions}\label{questions}
-\addcontentsline{toc}{section}{Questions}
+\section{Questions A1-1}\label{questions-a1-1}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -338,8 +337,7 @@ integrate this ODE to solve for \(U(t)\). If we assume that
 \(U(0) = 60^\circ C\) we can then solve \(t_{40}\) such that
 \(U(t_{40}) = 40^\circ C\).
 
-\section*{Questions}\label{questions}
-\addcontentsline{toc}{section}{Questions}
+\section{Questions A1-2}\label{questions-a1-2}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -387,7 +385,7 @@ models}\label{a2.-tues-jan-19-deriving-ordinary-differential-equation-models}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-Ordinary differential equations (ODEs) models are often appropriate for
+Ordinary differential equation (ODEs) models are often appropriate for
 MATH 4190 final projects. The general form of an ODE model is:
 
 \begin{equation}\label{eq:genCT}
@@ -396,22 +394,22 @@ MATH 4190 final projects. The general form of an ODE model is:
 
 The units of rate quantities are `per time', although this may be number
 per time, mL per time, or simply, per time. The ODE model may contain
-multiple increase and/or decrease terms and there may be several
+multiple (or no) increase and/or decrease terms and there may be several
 equations coupled together.
 
 Generally, a parameter that correspnds to a rate is either constrained
 to be positive, non-negative, or has no constraints. When the rate
 parameter is \(>1\) this means that, on average, more than one of the
-corresponding event occurs per time unit. A parameter that is a
-probability is constrained to be \(\geq 0\) and \(\leq 1\).
+corresponding event occurs per time unit. Sometimes rate parameters are
+multiplied by probabilities. A parameter that is a probability is
+constrained to be \(\geq 0\) and \(\leq 1\).
 
 When deriving ODE models it is helpful to draw a diagram (i.e.~Step 3,
 Box 2.1 on p30-31 of
 \href{https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/MUN/detail.action?docID=768551}{A
 biologists guide to mathematical modelling}).
 
-\section*{Questions}\label{questions}
-\addcontentsline{toc}{section}{Questions}
+\section{Questions A2-1}\label{questions-a2-1}
 
 \begin{enumerate}
 \def\labelenumi{\arabic{enumi}.}
@@ -419,14 +417,15 @@ biologists guide to mathematical modelling}).
   Draw a flow diagram for one of the systems of ODEs in
   \href{https://www-ncbi-nlm-nih-gov.qe2a-proxy.mun.ca/pmc/articles/PMC7526677/}{In-host
   Mathematical Modelling of COVID-19 in Humans} by Hernandez-Vargas and
-  Velasco-Hernandeza. For your equations provide a table listing the
-  variables and the parameters, their units, and any constraints on
-  their values. Be sure to clearly identify which are parameters and
-  which are variables. To make your flow diagram follow the rules
-  described in Box 2.3: Drawing flow diagrams, on p44 of {[}A biologists
-  guide to mathematical
-  modelling(\url{https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/reader.action?docID=768551\&ppg=44}).
-  The diagram may be hand drawn and photographed.
+  Velasco-Hernandeza. For the system of ODEs that you chose, provide a
+  table listing the variables and the parameters, their units, and any
+  constraints on their values. Be sure to clearly identify which are
+  parameters and which are variables. To make your flow diagram, follow
+  the rules described in Box 2.3: Drawing flow diagrams, on p44 of
+  \href{https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/reader.action?docID=768551\&ppg=44}{A
+  biologists guide to mathematical modelling}. This question does not
+  need to be completed in Latex. You may work with pencil and paper and
+  photograph your work. {[}5 marks{]}
 \item
   Derive your own system of ODEs for a between-host epidemic spread
   model. Assume that the epidemiology of the system is such that:
@@ -435,10 +434,11 @@ biologists guide to mathematical modelling}).
 \begin{itemize}
 \item
   The system has 3 variables: Susceptible host, \(S(t)\), Infected
-  hosts, \(I(t)\), and Recovered hosts, \(R(t)\).
+  hosts, \(I(t)\), and Recovered hosts, \(R(t)\). For all of these
+  variables the units are number.
 \item
   The rate that new susceptible hosts enter the population is
-  \(\theta>0\) (units: number/time)
+  \(\theta>0\) (units: number/time).
 \item
   The rate that susceptible hosts become infected due to coming into
   contact with the infected host is \(\beta S(t) I(t)/N(t)\), where
@@ -454,6 +454,8 @@ biologists guide to mathematical modelling}).
   results in both a decrease in \(\frac{dR(t)}{dt}\) and an increase in
   \(\frac{dS(t)}{dt}\).
 \end{itemize}
+
+You may work on pencil and paper and photograph your work. {[}5 marks{]}
 
 \chapter{A2. Thurs Jan 21: Deriving recursion equation
 models}\label{a2.-thurs-jan-21-deriving-recursion-equation-models}
