@@ -58,6 +58,10 @@ Note the difference between _parameters_ and _variables_. For dynamical system m
 \
 You will need to do some research to estimate the values of the parameters and the initial condition for the variable in your model. Provide your evidence to support your parameter estimates.
 \
-List any assumptions that you have made, either in your model formulation or regarding the parameter estimates.
+List any assumptions that you have made, either in your model formulation or regarding the parameter estimates. [6 marks]
 
-6. Complete Steps 5-7 from Box 2.1 on p30-31 of [A biologists guide to mathematical modelling](https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/MUN/detail.action?docID=768551) for the cooling beer problem.
+6. Complete some of Steps 5-7 from Box 2.1 on p30-31 of [A biologists guide to mathematical modelling](https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/MUN/detail.action?docID=768551) by doing the following [2 marks]:
+
+- Solve the ODE to estimate the time to the beer bottle exploding.
+
+- Sketch by hand or use a software to make a graph of the change in temperature over time. 

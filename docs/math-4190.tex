@@ -363,13 +363,21 @@ integrate this ODE to solve for \(U(t)\). If we assume that
   condition for the variable in your model. Provide your evidence to
   support your parameter estimates.\\
   List any assumptions that you have made, either in your model
-  formulation or regarding the parameter estimates.
+  formulation or regarding the parameter estimates. {[}6 marks{]}
 \item
-  Complete Steps 5-7 from Box 2.1 on p30-31 of
+  Complete some of Steps 5-7 from Box 2.1 on p30-31 of
   \href{https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/MUN/detail.action?docID=768551}{A
-  biologists guide to mathematical modelling} for the cooling beer
-  problem.
+  biologists guide to mathematical modelling} by doing the following
+  {[}2 marks{]}:
 \end{enumerate}
+
+\begin{itemize}
+\item
+  Solve the ODE to estimate the time to the beer bottle exploding.
+\item
+  Sketch by hand or use a software to make a graph of the change in
+  temperature over time.
+\end{itemize}
 
 \chapter{A2. Tues Jan 19: Deriving ordinary differential equation
 models}\label{a2.-tues-jan-19-deriving-ordinary-differential-equation-models}
@@ -386,38 +394,66 @@ MATH 4190 final projects. The general form of an ODE model is:
 \frac{dn(t)}{dt} = \mbox{rate of increase} - \mbox{rate of decrease}.
 \end{equation}
 
-Using this general form, familiarizing yourself with some classic ODE
-models, ensuring the units of the terms in your ODE are consistent, and
-knowing the assumptions of ODE models,
+The units of rate quantities are `per time', although this may be number
+per time, mL per time, or simply, per time. The ODE model may contain
+multiple increase and/or decrease terms and there may be several
+equations coupled together.
 
-\section{HIV model}\label{hiv-model}
+Generally, a parameter that correspnds to a rate is either constrained
+to be positive, non-negative, or has no constraints. When the rate
+parameter is \(>1\) this means that, on average, more than one of the
+corresponding event occurs per time unit. A parameter that is a
+probability is constrained to be \(\geq 0\) and \(\leq 1\).
 
-This model is modified from Otto and Day (2009).
+When deriving ODE models it is helpful to draw a diagram (i.e.~Step 3,
+Box 2.1 on p30-31 of
+\href{https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/MUN/detail.action?docID=768551}{A
+biologists guide to mathematical modelling}).
 
-\emph{Variables}\\
-\(S(t)\): number of susceptible T-cells (number, \(S(t)\geq 0\)).\\
-\(L(t)\): number of latently infected T-cells (number,
-\(L(t)\geq 0\)).\\
-\(A(t)\): number of actively infected cells T-cells (number,
-\(A(t)\geq 0\)).\\
-\(V(t)\): amount of virus (number, \(V(t)\geq 0\)).\\
+\section*{Questions}\label{questions}
+\addcontentsline{toc}{section}{Questions}
 
-\emph{Parameters}\\
-\(\Sigma:\) rate of production of susceptible T-cells (number/time,
-\(\Sigma \geq 0\)).\\
-\(d:\) removal rate of T-cells (1/time, \(d \geq 0\)).\\
-\(\beta:\) rate of T-cell infection (1/number/time, \(\beta >0\)).\\
-\(p:\) fraction of infected T-cells that upon infection are latently
-infected (unitless, \(1\geq p \geq 0\)).\\
-\(a:\) rate that latent T-cells become activated (1/time,
-\(a \geq 0\)).\\
-\(\delta:\) death rate/removal of actively infected T-cells (1/time,
-\(\delta \geq d\)).\\
-\(\pi:\) rate that virus is produced by actively infected T-cells
-(1/time, \(\pi > 0\)).\\
-\(\kappa:\) rate of virus removal (1/time, \(\kappa > 0\).)
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Draw a flow diagram for one of the systems of ODEs in
+  \href{https://www-ncbi-nlm-nih-gov.qe2a-proxy.mun.ca/pmc/articles/PMC7526677/}{In-host
+  Mathematical Modelling of COVID-19 in Humans} by Hernandez-Vargas and
+  Velasco-Hernandeza. For your equations provide a table listing the
+  variables and the parameters, their units, and any constraints on
+  their values. Be sure to clearly identify which are parameters and
+  which are variables. To make your flow diagram follow the rules
+  described in Box 2.3: Drawing flow diagrams, on p44 of {[}A biologists
+  guide to mathematical
+  modelling(\url{https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/reader.action?docID=768551\&ppg=44}).
+  The diagram may be hand drawn and photographed.
+\item
+  Derive your own system of ODEs for a between-host epidemic spread
+  model. Assume that the epidemiology of the system is such that:
+\end{enumerate}
 
-to be continued\ldots{}
+\begin{itemize}
+\item
+  The system has 3 variables: Susceptible host, \(S(t)\), Infected
+  hosts, \(I(t)\), and Recovered hosts, \(R(t)\).
+\item
+  The rate that new susceptible hosts enter the population is
+  \(\theta>0\) (units: number/time)
+\item
+  The rate that susceptible hosts become infected due to coming into
+  contact with the infected host is \(\beta S(t) I(t)/N(t)\), where
+  \(N(t) = S(t) + I(t) + R(t)\), and \(\beta>0\) is the transmission
+  rate (units: 1/time). This term results in both a decrease in
+  \(\frac{dS(t)}{dt}\) and an increase in \(\frac{dI(t)}{dt}\).
+\item
+  The rate that infected indviduals recover is \(\gamma I(t)\), where
+  \(\gamma >0\) (units: 1/time). This term results in both a decrease in
+  \(\frac{dI(t)}{dt}\) and an increase in \(\frac{dR(t)}{dt}\).
+\item
+  Recovered individuals lose immunity at rate \(\omega R(t)\). This term
+  results in both a decrease in \(\frac{dR(t)}{dt}\) and an increase in
+  \(\frac{dS(t)}{dt}\).
+\end{itemize}
 
 \chapter{A2. Thurs Jan 21: Deriving recursion equation
 models}\label{a2.-thurs-jan-21-deriving-recursion-equation-models}
