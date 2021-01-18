@@ -3,3 +3,4 @@
 *Assignment 2: to be handed in to Brightspace on Tues Jan 26 by 2pm.*
 
 ---
+Recursion equation models update the value of your dependent variables at regular intervals, i.e. after one year, rather than continuously as they would for an ordinary differential equation model. Recursion equation models are referred to as discrete time models, whereas 

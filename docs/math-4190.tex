@@ -337,6 +337,14 @@ integrate this ODE to solve for \(U(t)\). If we assume that
 \(U(0) = 60^\circ C\) we can then solve \(t_{40}\) such that
 \(U(t_{40}) = 40^\circ C\).
 
+The constant of convective transfer for water
+(\href{https://en.wikipedia.org/wiki/Specific_heat_capacity}{the
+specific heat capacity}) is 4179.6 J/kg/K. This can be used in your
+calculations if you convert \(m^2\) to \(kg\) for water (or beer),
+determine the units for Watts, and note that one unit change in Kelvin
+is equal to one unit change in Celcius (see
+\href{https://en.wikipedia.org/wiki/Kelvin}{here})
+
 \section{Questions A1-2}\label{questions-a1-2}
 
 \begin{enumerate}
@@ -464,6 +472,11 @@ models}\label{a2.-thurs-jan-21-deriving-recursion-equation-models}
 2pm.}
 
 \begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+Recursion equation models update the value of your dependent variables
+at regular intervals, i.e.~after one year, rather than continuously as
+they would for an ordinary differential equation model. Recursion
+equation models are referred to as discrete time models, whereas
 
 \chapter{A3. Tues Jan 26: Analysis of dynamical
 systems}\label{a3.-tues-jan-26-analysis-of-dynamical-systems}
