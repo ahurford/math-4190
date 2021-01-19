@@ -1,0 +1,35 @@
+\contentsline {chapter}{\numberline {1}Syllabus}{3}{chapter.1}
+\contentsline {section}{\numberline {1.1}Instructor Information}{3}{section.1.1}
+\contentsline {section}{\numberline {1.2}Course Information}{3}{section.1.2}
+\contentsline {section}{\numberline {1.3}Method of Evaluation}{4}{section.1.3}
+\contentsline {section}{\numberline {1.4}Additional Policies}{4}{section.1.4}
+\contentsline {subsection}{\numberline {1.4.1}Accommodation of students with disabilities}{4}{subsection.1.4.1}
+\contentsline {subsection}{\numberline {1.4.2}Academic misconduct}{5}{subsection.1.4.2}
+\contentsline {subsection}{\numberline {1.4.3}Equity and Diversity}{5}{subsection.1.4.3}
+\contentsline {section}{\numberline {1.5}Additional Supports}{5}{section.1.5}
+\contentsline {section}{\numberline {1.6}Tentative course schedule}{5}{section.1.6}
+\contentsline {chapter}{\numberline {2}A1. Tues Jan 12: What is a mathematical model?}{7}{chapter.2}
+\contentsline {section}{\numberline {2.1}Questions A1-1}{7}{section.2.1}
+\contentsline {chapter}{\numberline {3}A1. Thurs Jan 14: Getting started}{9}{chapter.3}
+\contentsline {section}{\numberline {3.1}The cooling cup of coffee}{10}{section.3.1}
+\contentsline {section}{\numberline {3.2}Questions A1-2}{11}{section.3.2}
+\contentsline {chapter}{\numberline {4}A2. Tues Jan 19: Deriving ordinary differential equation models}{13}{chapter.4}
+\contentsline {section}{\numberline {4.1}Questions A2-1}{14}{section.4.1}
+\contentsline {chapter}{\numberline {5}A2. Thurs Jan 21: Deriving recursion equation models}{15}{chapter.5}
+\contentsline {chapter}{\numberline {6}A3. Tues Jan 26: Analysis of dynamical systems}{17}{chapter.6}
+\contentsline {chapter}{\numberline {7}A3. Thurs Jan 28: Classic models of population biology}{19}{chapter.7}
+\contentsline {chapter}{\numberline {8}A4. Tues Feb 2: Epidemic, consumer-resource, and competition models}{21}{chapter.8}
+\contentsline {chapter}{\numberline {9}A4. Thurs Feb 4: Partial differential and delay differential equation models}{23}{chapter.9}
+\contentsline {chapter}{\numberline {10}A5. Tues Feb 9: Parameter estimation}{25}{chapter.10}
+\contentsline {chapter}{\numberline {11}A5. Thurs Feb 11: Numerical solultions}{27}{chapter.11}
+\contentsline {chapter}{\numberline {12}A6. Tues Feb 16: Case studies}{29}{chapter.12}
+\contentsline {chapter}{\numberline {13}A6. Thurs Feb 18: Make your own model}{31}{chapter.13}
+\contentsline {chapter}{\numberline {14}A7. Tues Feb 23: Stochastic models}{33}{chapter.14}
+\contentsline {chapter}{\numberline {15}A7. Thurs Feb 25: Simulation of stochastic models}{35}{chapter.15}
+\contentsline {chapter}{\numberline {16}Final project}{37}{chapter.16}
+\contentsline {section}{\numberline {16.1}Written Report}{37}{section.16.1}
+\contentsline {subsection}{\numberline {16.1.1}Introduction}{38}{subsection.16.1.1}
+\contentsline {subsection}{\numberline {16.1.2}Model}{38}{subsection.16.1.2}
+\contentsline {subsection}{\numberline {16.1.3}Results}{38}{subsection.16.1.3}
+\contentsline {subsection}{\numberline {16.1.4}Discussion}{39}{subsection.16.1.4}
+\contentsline {section}{\numberline {16.2}Oral report}{39}{section.16.2}
