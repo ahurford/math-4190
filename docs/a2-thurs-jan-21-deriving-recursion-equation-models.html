@@ -89,7 +89,9 @@
 <li class="chapter" data-level="4" data-path="a2-tues-jan-19-deriving-ordinary-differential-equation-models.html"><a href="a2-tues-jan-19-deriving-ordinary-differential-equation-models.html"><i class="fa fa-check"></i><b>4</b> A2. Tues Jan 19: Deriving ordinary differential equation models</a><ul>
 <li class="chapter" data-level="4.1" data-path="a2-tues-jan-19-deriving-ordinary-differential-equation-models.html"><a href="a2-tues-jan-19-deriving-ordinary-differential-equation-models.html#questions-a2-1"><i class="fa fa-check"></i><b>4.1</b> Questions A2-1</a></li>
 </ul></li>
-<li class="chapter" data-level="5" data-path="a2-thurs-jan-21-deriving-recursion-equation-models.html"><a href="a2-thurs-jan-21-deriving-recursion-equation-models.html"><i class="fa fa-check"></i><b>5</b> A2. Thurs Jan 21: Deriving recursion equation models</a></li>
+<li class="chapter" data-level="5" data-path="a2-thurs-jan-21-deriving-recursion-equation-models.html"><a href="a2-thurs-jan-21-deriving-recursion-equation-models.html"><i class="fa fa-check"></i><b>5</b> A2. Thurs Jan 21: Deriving recursion equation models</a><ul>
+<li class="chapter" data-level="5.1" data-path="a2-thurs-jan-21-deriving-recursion-equation-models.html"><a href="a2-thurs-jan-21-deriving-recursion-equation-models.html#questions-a2-2"><i class="fa fa-check"></i><b>5.1</b> Questions A2-2</a></li>
+</ul></li>
 <li class="chapter" data-level="6" data-path="a3-tues-jan-26-analysis-of-dynamical-systems.html"><a href="a3-tues-jan-26-analysis-of-dynamical-systems.html"><i class="fa fa-check"></i><b>6</b> A3. Tues Jan 26: Analysis of dynamical systems</a></li>
 <li class="chapter" data-level="7" data-path="a3-thurs-jan-28-classic-models-of-population-biology.html"><a href="a3-thurs-jan-28-classic-models-of-population-biology.html"><i class="fa fa-check"></i><b>7</b> A3. Thurs Jan 28: Classic models of population biology</a></li>
 <li class="chapter" data-level="8" data-path="a4-tues-feb-2-epidemic-consumer-resource-and-competition-models.html"><a href="a4-tues-feb-2-epidemic-consumer-resource-and-competition-models.html"><i class="fa fa-check"></i><b>8</b> A4. Tues Feb 2: Epidemic, consumer-resource, and competition models</a></li>
@@ -133,8 +135,52 @@
 <h1><span class="header-section-number">5</span> A2. Thurs Jan 21: Deriving recursion equation models</h1>
 <p><em>Assignment 2: to be handed in to Brightspace on Tues Jan 26 by 2pm.</em></p>
 <hr />
-<p>Recursion equation models update the value of your dependent variables at regular intervals, i.e. after one year, rather than continuously as they would for an ordinary differential equation model. Recursion equation models are referred to as discrete time models, whereas</p>
+<p>Recursion equation models update the value of your dependent variables at regular intervals, i.e. after one year, rather than continuously as they would for an ordinary differential equation model. Recursion equation models are referred to as discrete time models, whereas ordinary differential equation models are referred to as continuous time models.</p>
+<p>The general equation for a recursion equation is,</p>
+<span class="math display" id="eq:general">\[\begin{equation}
+n_{t+1} = n_t + \mbox{increase} - \mbox{decrease},
+\tag{5.1}
+\end{equation}\]</span>
+<p>where <span class="math inline">\(n_{t+1}\)</span> is the value of the variable at time, <span class="math inline">\(t+1\)</span>. Each term in the recursion equation <a href="a2-thurs-jan-21-deriving-recursion-equation-models.html#eq:general">(5.1)</a> has the same units as the variable of interest. More complex models may consider the dynamics of multiple variables as systems of coupled recursion equations.</p>
+<p>For recursion equations, within a time step multiple events may occur. When an event occurs, the value of a variable will change, and so for recursion equation models, is it necessary to define an order of events.</p>
+<p>For example, consider a population dynamic model,</p>
+<span class="math display" id="eq:BD">\[\begin{equation}
+n_{t+1} = (1+b)(1-d)n_t,
+\tag{5.2}
+\end{equation}\]</span>
+<p>where <span class="math inline">\(n_t\)</span> is the number of individuals in the population, <span class="math inline">\(b&gt;0\)</span> is the number of offspring produced per individual in a time step (unitless) and <span class="math inline">\(0 \leq d \leq 1\)</span> is the probability that an individual dies during a time step (unitless). What order of events has been assumed in equation <a href="a2-thurs-jan-21-deriving-recursion-equation-models.html#eq:BD">(5.2)</a>?</p>
+<p>Formally, we might define <span class="math inline">\(n&#39;\)</span> as the number of individuals after births, and <span class="math inline">\(n&#39;&#39;\)</span> as the number of individuals after mortality. Then,</p>
+<span class="math display">\[\begin{eqnarray}
+n&#39; &amp;=&amp; n_t + bn_t = (1+b)n_t, \\
+n&#39;&#39; &amp;=&amp; n&#39; - dn&#39; = (1-d)n&#39;, \\
+n&#39;&#39; &amp;=&amp; (1-d)(1+b)n_t, \\
+n_{t+1} &amp;=&amp; (1-d)(1+b)n_t.
+\end{eqnarray}\]</span>
+<p>The above derivation assumes that births occur first and then mortality. Assuming the opposite: mortality occurs first and then births, would result in the same equation, however this is not always the case.</p>
+<div id="questions-a2-2" class="section level2">
+<h2><span class="header-section-number">5.1</span> Questions A2-2</h2>
+<ol start="3" style="list-style-type: decimal">
+<li><p>Assume that <span class="math inline">\(\theta &gt; 0\)</span> is the rate that individuals migrate into a population (units: number). Assume that <span class="math inline">\(b&gt;0\)</span> is the per individual birth rate (unitless) and <span class="math inline">\(0 \leq d \leq 1\)</span> is the probability that an individual dies during the time step (unitless). Choose two different orderings of events (migration, births, and deaths) such that the final equations are different. [4 marks]</p></li>
+<li>Consider two variations on a model for population growth,<br />
 
+<span class="math display" id="eq:BD1">\[\begin{equation}
+n_{t+1} = n_t + bn_t,
+\tag{5.3}
+\end{equation}\]</span>
+<br />
+and,<br />
+
+<span class="math display" id="eq:BD2">\[\begin{equation}
+n_{t+1} = bn_t,
+\tag{5.4}
+\end{equation}\]</span>
+<p><br />
+where <span class="math inline">\(b\)</span> is a per individual birth rate (unitless). How might the description of <span class="math inline">\(b\)</span>, and the constraints on <span class="math inline">\(b\)</span>, be slightly different under either model formulation?<br />
+<br />
+The population grows when <span class="math inline">\(n_{t+1}&gt;n_t\)</span>. Assuming <span class="math inline">\(n_0 &gt;0\)</span>, what are the values of <span class="math inline">\(b\)</span> for which the population grows under either model formulation? [2 marks]</p></li>
+</ol>
+
+</div>
 </div>
             </section>
 

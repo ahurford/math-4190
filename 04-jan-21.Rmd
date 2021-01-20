@@ -3,4 +3,56 @@
 *Assignment 2: to be handed in to Brightspace on Tues Jan 26 by 2pm.*
 
 ---
-Recursion equation models update the value of your dependent variables at regular intervals, i.e. after one year, rather than continuously as they would for an ordinary differential equation model. Recursion equation models are referred to as discrete time models, whereas 
+Recursion equation models update the value of your dependent variables at regular intervals, i.e. after one year, rather than continuously as they would for an ordinary differential equation model. Recursion equation models are referred to as discrete time models, whereas ordinary differential equation models are referred to as continuous time models.
+
+The general equation for a recursion equation is,
+
+\begin{equation}
+n_{t+1} = n_t + \mbox{increase} - \mbox{decrease},
+(\#eq:general)
+\end{equation}
+
+where $n_{t+1}$ is the value of the variable at time, $t+1$. Each term in the recursion equation \@ref(eq:general) has the same units as the variable of interest. More complex models may consider the dynamics of multiple variables as systems of coupled recursion equations. 
+
+For recursion equations, within a time step multiple events may occur. When an event occurs, the value of a variable will change, and so for recursion equation models, is it necessary to define an order of events.
+
+For example, consider a population dynamic model,
+
+\begin{equation}
+n_{t+1} = (1+b)(1-d)n_t,
+(\#eq:BD)
+\end{equation}
+
+where $n_t$ is the number of individuals in the population, $b>0$ is the number of offspring produced per individual in a time step (unitless) and $0 \leq d \leq 1$ is the probability that an individual dies during a time step (unitless). What order of events has been assumed in equation \@ref(eq:BD)?
+
+Formally, we might define $n'$ as the number of individuals after births, and $n''$ as the number of individuals after mortality. Then,
+
+\begin{eqnarray}
+n' &=& n_t + bn_t = (1+b)n_t, \\
+n'' &=& n' - dn' = (1-d)n', \\
+n'' &=& (1-d)(1+b)n_t, \\
+n_{t+1} &=& (1-d)(1+b)n_t.
+\end{eqnarray}
+
+The above derivation assumes that births occur first and then mortality. Assuming the opposite: mortality occurs first and then births, would result in the same equation, however this is not always the case.
+
+## Questions A2-2
+3. Assume that $\theta > 0$ is the rate that individuals migrate into a population (units: number). Assume that $b>0$ is the per individual birth rate (unitless) and $0 \leq d \leq 1$ is the probability that an individual dies during the time step (unitless). Choose two different orderings of events (migration, births, and deaths) such that the final equations are different. [4 marks]
+
+2. Consider two variations on a model for population growth,
+\
+\begin{equation}
+n_{t+1} = n_t + bn_t,
+(\#eq:BD1)
+\end{equation}
+\
+and,
+\
+\begin{equation}
+n_{t+1} = bn_t,
+(\#eq:BD2)
+\end{equation}
+\
+where $b$ is a per individual birth rate (unitless). How might the description of $b$, and the constraints on $b$, be slightly different under either model formulation?\
+\
+The population grows when $n_{t+1}>n_t$. Assuming $n_0 >0$, what are the values of $b$ for which the population grows under either model formulation? [2 marks]
