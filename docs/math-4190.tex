@@ -556,7 +556,79 @@ result in the same equation, however this is not always the case.
 \chapter{A3. Tues Jan 26: Analysis of dynamical
 systems}\label{a3.-tues-jan-26-analysis-of-dynamical-systems}
 
-Assignment 3: to be handed in to Brightspace on Tues Feb 2 by 2pm.
+\emph{Assignment 3: to be handed in to Brightspace on Tues Feb 2 by
+2pm.}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+An important step in the modelling process is analyzing the mathematical
+model to answer the research problem. We know that mathematical models
+need not necessarily be ordinary differential equations and recursion
+equations, however, given the pre-requisites for MATH 4190, we will
+focus on these equations. Furthermore, we generally consider models that
+are dynamical systems (the independent variable is time), such that
+commonly we address research problems considering the future value of a
+dependent variable.
+
+Although we often want to know the value of the dependent variables in
+the future, usually it is not possible to solve our models to explicitly
+find a formula for the value of the dependent variable in the future.
+The exceptions are linear ODEs and recursion equations,\\
+
+\begin{equation}
+\frac{dy(t)}{dt} = a y(t) + b, \qquad \mbox{and} \qquad y_{t+1} = a y_t + b,
+\end{equation}
+
+including multivariate versions of these equations. Such linear
+equations can be solved explicitly as was done for the \emph{Cooling
+beer in the freezer} problem on Assignment 1.
+
+Many of the mathematical models that we will study are nonlinear systems
+of ordinary differential equations and recursion equations. These cannot
+be solved to find the value of the dependent variable for any time,
+however, we can still make inferences about the dynamics of these models
+by finding equilibria and performing local stabilty analyses. Such
+analyses should be review from your prerequisite course work in
+\emph{Dynamical systems} (MATH 3100), and additionally guidance on how
+to find equilibria and determine local stability is found in
+\href{https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/reader.action?docID=768551\&ppg=326}{Chapter
+8 of Otto and Day}.
+
+\section{Questions A3-1}\label{questions-a3-1}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  The following system of coupled nonlinear ordinary differential
+  equations has one equilibrium:\\
+
+  \begin{eqnarray}
+  \frac{dx(t)}{dt} & = & a - bx(t)y(t),\\
+  \frac{dy(t)}{dt} & = & bx(t)y(t) - cy(t),\\
+  \end{eqnarray}
+
+  You should assume that all parameters and initial values of the
+  variables are positive. Solve for the equilibrium and provide the
+  conditions for the equibrium to be positive and locally stable. Show
+  all your work. {[}5 marks{]}\\
+\item
+  The following nonlinear recursion equation has two equilibria:\\
+
+  \begin{equation}
+  x_{t+1} = a x_t e^{-x_t}+bx_t
+  \end{equation}
+
+  You should assume that all parameters and the initial value of the
+  variable is positive. Solve for all equilibria and provide the
+  conditions for each equibrium to be non-negative and locally stable.
+  For the equilibrium, where \(x^*\) can be greater than zero, write the
+  condition for local stability in relation to \((1-b)x^*\). Show all
+  your work. {[}6 marks{]}
+\item
+  From question 2, comment on the conditions for the local stability of
+  each equilibrium relative to the other, and the positivity of the
+  equilibria. {[}1 mark{]}
+\end{enumerate}
 
 \chapter{A3. Thurs Jan 28: Classic models of population
 biology}\label{a3.-thurs-jan-28-classic-models-of-population-biology}
