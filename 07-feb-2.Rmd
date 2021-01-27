@@ -1,3 +1,23 @@
 # A4. Tues Feb 2: Epidemic, consumer-resource, and competition models
 
 Assignment 4: to be handed in to Brightspace on Tues Feb 9 by 2pm.
+
+---
+
+Read the following sections of Chapter 3 in [Otto and Day](https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/reader.action?docID=768551&ppg=87). 
+
+- 3.4 Models of Interactions among species
+- 3.4.1 The Lotka-Volterra Model of Competition
+- 3.4.2 Consumer-Resource Models
+- 3.5 Epidemiological Models of Diseae Spread
+- 3.6 Working Backward
+
+## Questions A4-1
+
+1.  Problem 3.12 on p99 of [Otto and Day](https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/reader.action?docID=768551&ppg=99). [3 marks]
+
+2.  Problem 3.13 on p99 of [Otto and Day](https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/reader.action?docID=768551&ppg=99). [2 marks]
+
+3. In Section 3.6, _Working Backward_ Otto and Day write that "precisely what is meant by constant harvesting rate is quite different for each model". What are the units of $\theta$ and $H$ in equations 3.20a-c on p96-97 of Otto and Day. [1 mark]
+
+4. Write 1 paragraph explaining in your own words the difference in what is assumed about how infection is spread by a model formulation that uses the transmission term $acS(t)I(t)$ versus one uses the term $acS(t)I(t)/N(t)$. [2 marks]
