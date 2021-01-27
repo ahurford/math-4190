@@ -2,5 +2,17 @@
 
 *Assignment 3: to be handed in to Brightspace on Tues Feb 2 by 2pm.*
 
-===
-Read the following section of Chapter 3 in [Otto and Day](https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/reader.action?docID=768551&ppg=66)
+---
+
+Read the following sections of Chapter 3 in [Otto and Day](https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/reader.action?docID=768551&ppg=66). 
+
+- 3.1 Introduction
+- 3.2 Exponential and Logistic Models of Population Growth
+
+## Questions A3-2
+
+4. Problem 3.2 on p99 of [Otto and Day](https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/reader.action?docID=768551&ppg=99). [3 marks]
+
+5. Problem 3.3 of p99 of [Otto and Day](https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/reader.action?docID=768551&ppg=99). [3 marks]
+
+6. Problem 3.4 of p99 of [Otto and Day](https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/reader.action?docID=768551&ppg=99). [3 marks]

@@ -20,6 +20,7 @@
 \contentsline {chapter}{\numberline {6}A3. Tues Jan 26: Analysis of dynamical systems}{17}{chapter.6}
 \contentsline {section}{\numberline {6.1}Questions A3-1}{18}{section.6.1}
 \contentsline {chapter}{\numberline {7}A3. Thurs Jan 28: Classic models of population biology}{19}{chapter.7}
+\contentsline {section}{\numberline {7.1}Questions A3-2}{19}{section.7.1}
 \contentsline {chapter}{\numberline {8}A4. Tues Feb 2: Epidemic, consumer-resource, and competition models}{21}{chapter.8}
 \contentsline {chapter}{\numberline {9}A4. Thurs Feb 4: Partial differential and delay differential equation models}{23}{chapter.9}
 \contentsline {chapter}{\numberline {10}A5. Tues Feb 9: Parameter estimation}{25}{chapter.10}
