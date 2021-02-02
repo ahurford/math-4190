@@ -1,3 +1,6 @@
-# A4. Thurs Feb 4: Partial differential and delay differential equation models
+# A4. Thurs Feb 4: Check-in
 
-Assignment 4: to be handed in to Brightspace on Tues Feb 9 by 2pm.
+Assignment 4: to be handed in to Brightspace on Thurs Feb 11 by 2pm.
+
+## Questions A4-2
+5. Everyone should make a 10 minute meeting with Dr. Hurford to talk about how class is going for you. It can be anytime. Please email me ahurford@mun.ca to set up this meeting. [5 marks]

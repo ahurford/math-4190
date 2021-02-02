@@ -1,6 +1,6 @@
 # A4. Tues Feb 2: Epidemic, consumer-resource, and competition models
 
-Assignment 4: to be handed in to Brightspace on Tues Feb 9 by 2pm.
+Assignment 4: to be handed in to Brightspace on Thurs Feb 11 by 2pm.
 
 ---
 
@@ -9,7 +9,7 @@ Read the following sections of Chapter 3 in [Otto and Day](https://ebookcentral-
 - 3.4 Models of Interactions among species
 - 3.4.1 The Lotka-Volterra Model of Competition
 - 3.4.2 Consumer-Resource Models
-- 3.5 Epidemiological Models of Diseae Spread
+- 3.5 Epidemiological Models of Disease Spread
 - 3.6 Working Backward
 
 ## Questions A4-1

@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="a2-thurs-jan-21-deriving-recursion-equation-models.html"/>
-<link rel="next" href="a3-thurs-jan-28-classic-models-of-population-biology.html"/>
+<link rel="prev" href="a4-tues-feb-2-epidemic-consumer-resource-and-competition-models.html"/>
+<link rel="next" href="a5-tues-feb-9-parameter-estimation.html"/>
 <script src="book_assets/jquery-2.2.3/jquery.min.js"></script>
 <link href="book_assets/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="book_assets/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
@@ -139,39 +139,13 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="a3.-tues-jan-26-analysis-of-dynamical-systems" class="section level1">
-<h1><span class="header-section-number">6</span> A3. Tues Jan 26: Analysis of dynamical systems</h1>
-<p><em>Assignment 3: to be handed in to Brightspace on Thurs Feb 4 by 2pm.</em></p>
-<hr />
-<p>An important step in the modelling process is analyzing the mathematical model to answer the research problem. We know that mathematical models need not necessarily be ordinary differential equations and recursion equations, however, given the pre-requisites for MATH 4190, we will focus on these equations. Furthermore, we generally consider models that are dynamical systems (the independent variable is time), such that commonly we address research problems considering the future value of a dependent variable.</p>
-Although we often want to know the value of the dependent variables in the future, usually it is not possible to solve our models to explicitly find a formula for the value of the dependent variable in the future. The exceptions are linear ODEs and recursion equations,<br />
-
-<span class="math display">\[\begin{equation}
-\frac{dy(t)}{dt} = a y(t) + b, \qquad \mbox{and} \qquad y_{t+1} = a y_t + b,
-\end{equation}\]</span>
-<p><br />
-including multivariate versions of these equations. Such linear equations can be solved explicitly as was done for the <em>Cooling beer in the freezer</em> problem on Assignment 1.</p>
-<p>Many of the mathematical models that we will study are nonlinear systems of ordinary differential equations and recursion equations. These cannot be solved to find the value of the dependent variable for any time, however, we can still make inferences about the dynamics of these models by finding equilibria and performing local stabilty analyses. Such analyses should be review from your prerequisite course work in <em>Dynamical systems</em> (MATH 3100), and additionally guidance on how to find equilibria and determine local stability is found in <a href="https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/reader.action?docID=768551&amp;ppg=326">Chapter 8 of Otto and Day</a>.</p>
-<div id="questions-a3-1" class="section level2">
-<h2><span class="header-section-number">6.1</span> Questions A3-1</h2>
-<ol style="list-style-type: decimal">
-<li>The following system of coupled nonlinear ordinary differential equations has one equilibrium:<br />
-
-<span class="math display">\[\begin{eqnarray}
-\frac{dx(t)}{dt} &amp; = &amp; a - bx(t)y(t),\\
-\frac{dy(t)}{dt} &amp; = &amp; bx(t)y(t) - cy(t),\\
-\end{eqnarray}\]</span>
-<br />
-You should assume that all parameters and initial values of the variables are positive. Solve for the equilibrium and provide the conditions for the equibrium to be positive and locally stable. Show all your work. [5 marks]<br />
-</li>
-<li>The following nonlinear recursion equation has two equilibria:<br />
-
-<span class="math display">\[\begin{equation}
-x_{t+1} = a x_t e^{-x_t}+bx_t
-\end{equation}\]</span>
-<p><br />
-You should assume that all parameters and the initial value of the variable is positive. Solve for all equilibria and provide the conditions for each equibrium to be non-negative and locally stable. For the equilibrium, where <span class="math inline">\(x^*\)</span> can be greater than zero, write the condition for local stability in relation to <span class="math inline">\((1-b)x^*\)</span>. Show all your work. [6 marks]</p></li>
-<li><p>From question 2, comment on the conditions for the local stability of each equilibrium relative to the other, and the positivity of the equilibria. [1 mark]</p></li>
+<div id="a4.-thurs-feb-4-check-in" class="section level1">
+<h1><span class="header-section-number">9</span> A4. Thurs Feb 4: Check-in</h1>
+<p>Assignment 4: to be handed in to Brightspace on Thurs Feb 11 by 2pm.</p>
+<div id="questions-a4-2" class="section level2">
+<h2><span class="header-section-number">9.1</span> Questions A4-2</h2>
+<ol start="5" style="list-style-type: decimal">
+<li>Everyone should make a 10 minute meeting with Dr. Hurford to talk about how class is going for you. It can be anytime. Please email me <a href="mailto:ahurford@mun.ca">ahurford@mun.ca</a> to set up this meeting. [5 marks]</li>
 </ol>
 
 </div>
@@ -181,8 +155,8 @@ You should assume that all parameters and the initial value of the variable is p
           </div>
         </div>
       </div>
-<a href="a2-thurs-jan-21-deriving-recursion-equation-models.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="a3-thurs-jan-28-classic-models-of-population-biology.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="a4-tues-feb-2-epidemic-consumer-resource-and-competition-models.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="a5-tues-feb-9-parameter-estimation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="book_assets/gitbook-2.6.7/js/app.min.js"></script>
@@ -213,7 +187,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/05-jan-26.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/08-feb-4.Rmd",
 "text": "Edit"
 },
 "history": {
