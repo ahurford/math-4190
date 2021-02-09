@@ -1,3 +1,167 @@
-# A5. Tues Feb 9: Parameter estimation
+# A5. Tues Feb 9: Numerical solutions - 1
 
-Assignment 5: to be handed in to Brightspace on Tues Feb 16 by 2pm.
+Assignment 5: to be handed in to Brightspace on Thurs Feb 18 by 2pm.
+
+---
+
+For many nonlinear ordinary differential equations (ODEs), it is not possible to find expressions for the values of the dependent variables for any time. We can, however, solve the ODEs using numerical methods. Regarding specific programming languages, I will provide the following support:
+
+_Python_ Example codes that solve ODEs and nonlinear recursion equations;
+
+_R_ and _MATLAB_ in addition to the above, I can provide some additional support debugging your code;
+
+You may choose to work in another programming language that you are an expert in, however, you may need to complete your codes unaided.
+
+## The Example model
+
+In the example codes, the model that is solved is:
+
+\begin{eqnarray}
+\frac{dS(t)}{dt} & = & - \beta I(t)\frac{S(t)}{N},\\
+\frac{dI(t)}{dt} & = & \beta I(t)\frac{S(t)}{N} - \gamma I(t),
+\end{eqnarray}
+
+with $S(0) = 1 - 10^{-4}$ and $I(0) = 10^{-4}$ and for $0 \leq t \leq 365$ days. You may recognize these equations as a Susceptible-Infected-Recovered epidemiological model. The average number of secondary infections produced per infected individual over their entire infectious period, when $S/N \approx 1$ is $R_0 = \beta/\gamma$. Note that for $R_0 > 1$, the number of infections will grow, i.e., $I(t)$ is initially an increasing function for $t>0$, and visa versa for $R_0 < 1$, and this property is a _unit test_ that we can use to verify that our code is working correctly (i.e., run the code with $R_0 > 1$ and $R_0 < 1$ and check that the solutions are $I(t)$ are as expected). 
+
+## Question A4-1
+1. On brightspace, you are to hand-in: (i) your code that solves the example model. This is completed by cutting and pasting the code blocks below [10 marks]; and (ii) the .png figures your code makes for $R_0 > 1$ and $R_0 < 1$ [5 marks].
+
+## Python
+Make sure you have Python installed. On my _MacBook Air_, I then open a terminal window and type `jupyter notebook`. A browser window will open, and allow me to open a `.py` file or begin a new file `.py`. To execute a code block, I press `Shift + Enter`.
+
+```{python, eval=F}
+# Import the packages with the functions required to numerically solve ODEs
+from numpy import *
+import pylab as p
+from scipy import integrate
+```
+
+Copy the above code block into your juypter notebook and press `Shift + Enter`.
+
+The code block below defines the parameter values, initial conditions, range of the independent variable to solve over, and the system of ODEs that you wish to solve.
+
+```{python, eval=F}
+# Parameters
+gamma = 1/8 # 1/(duration of infectivity)
+R0 = 2 # (av. number of secondary infections per infected)
+N = 1 # (total population size = 1; dependant variables are fractions)
+I0 = 1e-4 # (initial proportion infected)
+
+# Note: the transmission rate is beta = R0*gamma, i.e., the number
+# infections per infected per day, multiplied by 1/gamma (the average
+# duration of infectivity)
+beta = R0*gamma
+
+# t is a vector of the values of the independent variable, t, for which
+# we would like the dependent variables, S(t) and I(t).
+t = linspace(0, 365, 1000) 
+X0 = array([N-I0, I0]) # initial values S(0) and I(0).
+
+# This is a function returning dS/dt and dI/dt.
+def dX_dt(X, t=0):
+    S = X[0]
+    I = X[1]
+    return array([ - beta*I*S/N ,
+                  -gamma*I + beta*I*S/N ])
+```
+
+Any code block you enter into your juypter notebook can be executed by pressing `Shift + Enter`.
+
+The code block below performs the numerical integration:
+
+```{python, eval=F}
+# integrate.odeint is a function from the packages we uploaded which
+# performs the numerical integration of dX_dt for the initial values,
+# X0, and over the range of t values, t.
+X, infodict = integrate.odeint(dX_dt, X0, t, full_output=True)
+infodict['message'] 
+```
+
+The code block below then plots the model solutions:
+
+```{python, eval=F}
+# The commands below produce a plot of your dependent variables versus
+# time. The plot is exported as 'SIR.png' which is saved to your working
+# directory.
+
+susceptible, infected = X.T
+f1 = p.figure()
+p.plot(t, susceptible, 'b-', label='Susceptible')
+p.plot(t, infected  , 'r-', label='Infected')
+p.grid()
+p.legend(loc='best')
+p.xlabel('time')
+p.ylabel('proportion')
+p.title('SIR model')
+f1.savefig('SIR.png')
+```
+
+Cutting and pasting these code blocks and executing 
+the commands will complete the required assignment. You will need to change the value of $R_0$ to make your second graph.
+
+## R
+
+Install `R` and `RStudio` [Link](https://ahurford.github.io/quant-guide-all-courses/install.html).
+
+Familiarize yourself with the `Console` and `Source` panes [Link](https://ahurford.github.io/quant-guide-all-courses/rstudio.html) and Best Practicing for writing code [Link](https://ahurford.github.io/quant-guide-all-courses/style.html). 
+
+To solve the Model example, begin by installing the `deSolve` package. Type the following into the `Console`:
+
+```{R, eval=F}
+install.packages("deSolve")
+```
+
+The `deSolve` package includes the function `ode()`, which we will use to solve the ODE. Begin your script by loading the package (this is different than installing it):
+
+```{R, eval=F}
+require(deSolve)
+```
+
+Next define the parameter values, initial conditions, range of time values to solve over, and the ODE:
+
+```{R, eval=F}
+# Parameters
+gamma <- 1/8 # 1/(duration of infectivity)
+R0 <- 2 # (av. number of secondary infections per infected)
+N <- 1 # (total population size = 1; dependant variables are fractions)
+I0 <- 1e-4 # (initial proportion infected)
+
+# Note: the transmission rate is beta = R0*gamma, i.e., the number
+# infections per infected per day, multiplied by 1/gamma (the average
+# duration of infectivity)
+beta <- R0*gamma
+
+# t is a vector of the values of the independent variable, t, for which
+# we would like the dependent variables, S(t) and I(t).
+t <- seq(0, 365, .1) 
+Y0 = c(S=N-I0, I=I0) # initial values S(0) and I(0).
+
+# This is a function returning dS/dt and dI/dt.
+dY_dt = function(t,y,parms){
+  # It's a personal perference of mine to switch the symbols
+  # to be consistent with the equation.
+  S <- y[1]
+  I <- y[2]
+ dS <- - beta*I*S/N
+ dI <- -gamma*I + beta*I*S/N 
+  # The function returns the value of the change in S(t) and I(t).
+return(list(c(dS,dI)))
+}
+```
+
+Next use the `ode()` function to solve the ODE and plot the results:
+
+```{r, eval=F}
+# performing the numerical integration
+out <- ode(y = Y0, parms = NULL, times = t, func = dY_dt)
+out <- data.frame(out)
+# Make the graph
+plot(out$t, out$S, typ = "l", col = "blue", ylim = c(0,1), ylab = "proportion", xlab = "time", main = "SIR model")
+lines(out$t, out$I, col = "red")
+```
+
+For additional guidance see [Making graphs in R](https://ahurford.github.io/quant-guide-all-courses/graph.html)
+
+## MATLAB
+
+Please email Dr. Hurford (ahurford@mun.ca) if you would like to complete this assignment in MATLAB.

@@ -26,6 +26,46 @@
             pdfborder={0 0 0},
             breaklinks=true}
 \urlstyle{same}  % don't use monospace font for urls
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{{#1}}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{{#1}}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{{#1}}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{{#1}}}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{{#1}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{{#1}}}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{{#1}}}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{{#1}}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{{#1}}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{{#1}}}
+\newcommand{\ImportTok}[1]{{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{{#1}}}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{{#1}}}}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{{#1}}}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{{#1}}}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{{#1}}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{{#1}}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{{#1}}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{{#1}}}}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{{#1}}}}
+\newcommand{\BuiltInTok}[1]{{#1}}
+\newcommand{\ExtensionTok}[1]{{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.77,0.63,0.00}{{#1}}}
+\newcommand{\RegionMarkerTok}[1]{{#1}}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{{#1}}}}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{{#1}}}}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{{#1}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{{#1}}}}
+\newcommand{\NormalTok}[1]{{#1}}
 \usepackage{longtable,booktabs}
 \usepackage{graphicx,grffile}
 \makeatletter
@@ -735,20 +775,271 @@ Assignment 4: to be handed in to Brightspace on Thurs Feb 11 by 2pm.
   this meeting. {[}5 marks{]}
 \end{enumerate}
 
-\chapter{A5. Tues Feb 9: Parameter
-estimation}\label{a5.-tues-feb-9-parameter-estimation}
+\chapter{A5. Tues Feb 9: Numerical solutions -
+1}\label{a5.-tues-feb-9-numerical-solutions---1}
 
-Assignment 5: to be handed in to Brightspace on Tues Feb 16 by 2pm.
+Assignment 5: to be handed in to Brightspace on Thurs Feb 18 by 2pm.
 
-\chapter{A5. Thurs Feb 11: Numerical
-solultions}\label{a5.-thurs-feb-11-numerical-solultions}
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
 
-Assignment 5: to be handed in to Brightspace on Tues Feb 16 by 2pm.
+For many nonlinear ordinary differential equations (ODEs), it is not
+possible to find expressions for the values of the dependent variables
+for any time. We can, however, solve the ODEs using numerical methods.
+Regarding specific programming languages, I will provide the following
+support:
+
+\emph{Python} Example codes that solve ODEs and nonlinear recursion
+equations;
+
+\emph{R} and \emph{MATLAB} in addition to the above, I can provide some
+additional support debugging your code;
+
+You may choose to work in another programming language that you are an
+expert in, however, you may need to complete your codes unaided.
+
+\section{The Example model}\label{the-example-model}
+
+In the example codes, the model that is solved is:
+
+\begin{eqnarray}
+\frac{dS(t)}{dt} & = & - \beta I(t)\frac{S(t)}{N},\\
+\frac{dI(t)}{dt} & = & \beta I(t)\frac{S(t)}{N} - \gamma I(t),
+\end{eqnarray}
+
+with \(S(0) = 1 - 10^{-4}\) and \(I(0) = 10^{-4}\) and for
+\(0 \leq t \leq 365\) days. You may recognize these equations as a
+Susceptible-Infected-Recovered epidemiological model. The average number
+of secondary infections produced per infected individual over their
+entire infectious period, when \(S/N \approx 1\) is
+\(R_0 = \beta/\gamma\). Note that for \(R_0 > 1\), the number of
+infections will grow, i.e., \(I(t)\) is initially an increasing function
+for \(t>0\), and visa versa for \(R_0 < 1\), and this property is a
+\emph{unit test} that we can use to verify that our code is working
+correctly (i.e., run the code with \(R_0 > 1\) and \(R_0 < 1\) and check
+that the solutions are \(I(t)\) are as expected).
+
+\section{Question A4-1}\label{question-a4-1}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  On brightspace, you are to hand-in: (i) your code that solves the
+  example model. This is completed by cutting and pasting the code
+  blocks below {[}10 marks{]}; and (ii) the .png figures your code makes
+  for \(R_0 > 1\) and \(R_0 < 1\) {[}5 marks{]}.
+\end{enumerate}
+
+\section{Python}\label{python}
+
+Make sure you have Python installed. On my \emph{MacBook Air}, I then
+open a terminal window and type \texttt{jupyter\ notebook}. A browser
+window will open, and allow me to open a \texttt{.py} file or begin a
+new file \texttt{.py}. To execute a code block, I press
+\texttt{Shift\ +\ Enter}.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Import the packages with the functions required to numerically solve ODEs}
+\ImportTok{from} \NormalTok{numpy }\ImportTok{import} \OperatorTok{*}
+\ImportTok{import} \NormalTok{pylab }\ImportTok{as} \NormalTok{p}
+\ImportTok{from} \NormalTok{scipy }\ImportTok{import} \NormalTok{integrate}
+\end{Highlighting}
+\end{Shaded}
+
+Copy the above code block into your juypter notebook and press
+\texttt{Shift\ +\ Enter}.
+
+The code block below defines the parameter values, initial conditions,
+range of the independent variable to solve over, and the system of ODEs
+that you wish to solve.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Parameters}
+\NormalTok{gamma }\OperatorTok{=} \DecValTok{1}\OperatorTok{/}\DecValTok{8} \CommentTok{# 1/(duration of infectivity)}
+\NormalTok{R0 }\OperatorTok{=} \DecValTok{2} \CommentTok{# (av. number of secondary infections per infected)}
+\NormalTok{N }\OperatorTok{=} \DecValTok{1} \CommentTok{# (total population size = 1; dependant variables are fractions)}
+\NormalTok{I0 }\OperatorTok{=} \FloatTok{1e-4} \CommentTok{# (initial proportion infected)}
+
+\CommentTok{# Note: the transmission rate is beta = R0*gamma, i.e., the number}
+\CommentTok{# infections per infected per day, multiplied by 1/gamma (the average}
+\CommentTok{# duration of infectivity)}
+\NormalTok{beta }\OperatorTok{=} \NormalTok{R0}\OperatorTok{*}\NormalTok{gamma}
+
+\CommentTok{# t is a vector of the values of the independent variable, t, for which}
+\CommentTok{# we would like the dependent variables, S(t) and I(t).}
+\NormalTok{t }\OperatorTok{=} \NormalTok{linspace(}\DecValTok{0}\NormalTok{, }\DecValTok{365}\NormalTok{, }\DecValTok{1000}\NormalTok{) }
+\NormalTok{X0 }\OperatorTok{=} \NormalTok{array([N}\OperatorTok{-}\NormalTok{I0, I0]) }\CommentTok{# initial values S(0) and I(0).}
+
+\CommentTok{# This is a function returning dS/dt and dI/dt.}
+\KeywordTok{def} \NormalTok{dX_dt(X, t}\OperatorTok{=}\DecValTok{0}\NormalTok{):}
+    \NormalTok{S }\OperatorTok{=} \NormalTok{X[}\DecValTok{0}\NormalTok{]}
+    \NormalTok{I }\OperatorTok{=} \NormalTok{X[}\DecValTok{1}\NormalTok{]}
+    \ControlFlowTok{return} \NormalTok{array([ }\OperatorTok{-} \NormalTok{beta}\OperatorTok{*}\NormalTok{I}\OperatorTok{*}\NormalTok{S}\OperatorTok{/}\NormalTok{N ,}
+                  \OperatorTok{-}\NormalTok{gamma}\OperatorTok{*}\NormalTok{I }\OperatorTok{+} \NormalTok{beta}\OperatorTok{*}\NormalTok{I}\OperatorTok{*}\NormalTok{S}\OperatorTok{/}\NormalTok{N ])}
+\end{Highlighting}
+\end{Shaded}
+
+Any code block you enter into your juypter notebook can be executed by
+pressing \texttt{Shift\ +\ Enter}.
+
+The code block below performs the numerical integration:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# integrate.odeint is a function from the packages we uploaded which}
+\CommentTok{# performs the numerical integration of dX_dt for the initial values,}
+\CommentTok{# X0, and over the range of t values, t.}
+\NormalTok{X, infodict }\OperatorTok{=} \NormalTok{integrate.odeint(dX_dt, X0, t, full_output}\OperatorTok{=}\VariableTok{True}\NormalTok{)}
+\NormalTok{infodict[}\StringTok{'message'}\NormalTok{] }
+\end{Highlighting}
+\end{Shaded}
+
+The code block below then plots the model solutions:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# The commands below produce a plot of your dependent variables versus}
+\CommentTok{# time. The plot is exported as 'SIR.png' which is saved to your working}
+\CommentTok{# directory.}
+
+\NormalTok{susceptible, infected }\OperatorTok{=} \NormalTok{X.T}
+\NormalTok{f1 }\OperatorTok{=} \NormalTok{p.figure()}
+\NormalTok{p.plot(t, susceptible, }\StringTok{'b-'}\NormalTok{, label}\OperatorTok{=}\StringTok{'Susceptible'}\NormalTok{)}
+\NormalTok{p.plot(t, infected  , }\StringTok{'r-'}\NormalTok{, label}\OperatorTok{=}\StringTok{'Infected'}\NormalTok{)}
+\NormalTok{p.grid()}
+\NormalTok{p.legend(loc}\OperatorTok{=}\StringTok{'best'}\NormalTok{)}
+\NormalTok{p.xlabel(}\StringTok{'time'}\NormalTok{)}
+\NormalTok{p.ylabel(}\StringTok{'proportion'}\NormalTok{)}
+\NormalTok{p.title(}\StringTok{'SIR model'}\NormalTok{)}
+\NormalTok{f1.savefig(}\StringTok{'SIR.png'}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+Cutting and pasting these code blocks and executing the commands will
+complete the required assignment. You will need to change the value of
+\(R_0\) to make your second graph.
+
+\section{R}\label{r}
+
+Install \texttt{R} and \texttt{RStudio}
+\href{https://ahurford.github.io/quant-guide-all-courses/install.html}{Link}.
+
+Familiarize yourself with the \texttt{Console} and \texttt{Source} panes
+\href{https://ahurford.github.io/quant-guide-all-courses/rstudio.html}{Link}
+and Best Practicing for writing code
+\href{https://ahurford.github.io/quant-guide-all-courses/style.html}{Link}.
+
+To solve the Model example, begin by installing the \texttt{deSolve}
+package. Type the following into the \texttt{Console}:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{install.packages}\NormalTok{(}\StringTok{"deSolve"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+The \texttt{deSolve} package includes the function \texttt{ode()}, which
+we will use to solve the ODE. Begin your script by loading the package
+(this is different than installing it):
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\KeywordTok{require}\NormalTok{(deSolve)}
+\end{Highlighting}
+\end{Shaded}
+
+Next define the parameter values, initial conditions, range of time
+values to solve over, and the ODE:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# Parameters}
+\NormalTok{gamma <-}\StringTok{ }\DecValTok{1}\NormalTok{/}\DecValTok{8} \CommentTok{# 1/(duration of infectivity)}
+\NormalTok{R0 <-}\StringTok{ }\DecValTok{2} \CommentTok{# (av. number of secondary infections per infected)}
+\NormalTok{N <-}\StringTok{ }\DecValTok{1} \CommentTok{# (total population size = 1; dependant variables are fractions)}
+\NormalTok{I0 <-}\StringTok{ }\FloatTok{1e-4} \CommentTok{# (initial proportion infected)}
+
+\CommentTok{# Note: the transmission rate is beta = R0*gamma, i.e., the number}
+\CommentTok{# infections per infected per day, multiplied by 1/gamma (the average}
+\CommentTok{# duration of infectivity)}
+\NormalTok{beta <-}\StringTok{ }\NormalTok{R0*gamma}
+
+\CommentTok{# t is a vector of the values of the independent variable, t, for which}
+\CommentTok{# we would like the dependent variables, S(t) and I(t).}
+\NormalTok{t <-}\StringTok{ }\KeywordTok{seq}\NormalTok{(}\DecValTok{0}\NormalTok{, }\DecValTok{365}\NormalTok{, .}\DecValTok{1}\NormalTok{) }
+\NormalTok{Y0 =}\StringTok{ }\KeywordTok{c}\NormalTok{(}\DataTypeTok{S=}\NormalTok{N-I0, }\DataTypeTok{I=}\NormalTok{I0) }\CommentTok{# initial values S(0) and I(0).}
+
+\CommentTok{# This is a function returning dS/dt and dI/dt.}
+\NormalTok{dY_dt =}\StringTok{ }\NormalTok{function(t,y,parms)\{}
+  \CommentTok{# It's a personal perference of mine to switch the symbols}
+  \CommentTok{# to be consistent with the equation.}
+  \NormalTok{S <-}\StringTok{ }\NormalTok{y[}\DecValTok{1}\NormalTok{]}
+  \NormalTok{I <-}\StringTok{ }\NormalTok{y[}\DecValTok{2}\NormalTok{]}
+ \NormalTok{dS <-}\StringTok{ }\NormalTok{-}\StringTok{ }\NormalTok{beta*I*S/N}
+ \NormalTok{dI <-}\StringTok{ }\NormalTok{-gamma*I +}\StringTok{ }\NormalTok{beta*I*S/N }
+  \CommentTok{# The function returns the value of the change in S(t) and I(t).}
+\KeywordTok{return}\NormalTok{(}\KeywordTok{list}\NormalTok{(}\KeywordTok{c}\NormalTok{(dS,dI)))}
+\NormalTok{\}}
+\end{Highlighting}
+\end{Shaded}
+
+Next use the \texttt{ode()} function to solve the ODE and plot the
+results:
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{# performing the numerical integration}
+\NormalTok{out <-}\StringTok{ }\KeywordTok{ode}\NormalTok{(}\DataTypeTok{y =} \NormalTok{Y0, }\DataTypeTok{parms =} \OtherTok{NULL}\NormalTok{, }\DataTypeTok{times =} \NormalTok{t, }\DataTypeTok{func =} \NormalTok{dY_dt)}
+\NormalTok{out <-}\StringTok{ }\KeywordTok{data.frame}\NormalTok{(out)}
+\CommentTok{# Make the graph}
+\KeywordTok{plot}\NormalTok{(out$t, out$S, }\DataTypeTok{typ =} \StringTok{"l"}\NormalTok{, }\DataTypeTok{col =} \StringTok{"blue"}\NormalTok{, }\DataTypeTok{ylim =} \KeywordTok{c}\NormalTok{(}\DecValTok{0}\NormalTok{,}\DecValTok{1}\NormalTok{), }\DataTypeTok{ylab =} \StringTok{"proportion"}\NormalTok{, }\DataTypeTok{xlab =} \StringTok{"time"}\NormalTok{, }\DataTypeTok{main =} \StringTok{"SIR model"}\NormalTok{)}
+\KeywordTok{lines}\NormalTok{(out$t, out$I, }\DataTypeTok{col =} \StringTok{"red"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+For additional guidance see
+\href{https://ahurford.github.io/quant-guide-all-courses/graph.html}{Making
+graphs in R}
+
+\section{MATLAB}\label{matlab}
+
+Please email Dr.~Hurford
+(\href{mailto:ahurford@mun.ca}{\nolinkurl{ahurford@mun.ca}}) if you
+would like to complete this assignment in MATLAB.
+
+\chapter{A5. Thurs Feb 11: Numerical solutions -
+2}\label{a5.-thurs-feb-11-numerical-solutions---2}
+
+Assignment 5: to be handed in to Brightspace on Tues Feb 18 by 2pm.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Reproduce Figure 1. in
+  \href{https://www-ncbi-nlm-nih-gov.qe2a-proxy.mun.ca/pmc/articles/PMC7526677/}{In-host
+  Mathematical Modelling of COVID-19 in Humans} by Hernandez-Vargas and
+  Velasco-Hernandez. On brightspace, you are to hand-in (i) your code
+  {[}10 marks{]}; and (ii) your figure {[}5 marks{]}.
+\end{enumerate}
 
 \chapter{A6. Tues Feb 16: Case
 studies}\label{a6.-tues-feb-16-case-studies}
 
 Assignment 6: to be handed in to Brightspace on Tues Feb 27 by 2pm.
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Reproduce Figure 1. in
+  \href{https://www-ncbi-nlm-nih-gov.qe2a-proxy.mun.ca/pmc/articles/PMC7526677/}{In-host
+  Mathematical Modelling of COVID-19 in Humans} by Hernandez-Vargas and
+  Velasco-Hernandez. On brightspace, you are to hand-in (i) your code
+  {[}10 marks{]}; and (ii) your figure {[}5 marks{]}.
+\end{enumerate}
 
 \chapter{A6. Thurs Feb 18: Make your own
 model}\label{a6.-thurs-feb-18-make-your-own-model}

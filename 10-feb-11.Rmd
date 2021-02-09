@@ -1,3 +1,5 @@
-# A5. Thurs Feb 11: Numerical solultions
+# A5. Thurs Feb 11: Numerical solutions - 2
 
-Assignment 5: to be handed in to Brightspace on Tues Feb 16 by 2pm.
+Assignment 5: to be handed in to Brightspace on Tues Feb 18 by 2pm.
+
+1. Reproduce Figure 1. in [In-host Mathematical Modelling of COVID-19 in Humans](https://www-ncbi-nlm-nih-gov.qe2a-proxy.mun.ca/pmc/articles/PMC7526677/) by Hernandez-Vargas and Velasco-Hernandez. On brightspace, you are to hand-in (i) your code [10 marks]; and (ii) your figure [5 marks].
