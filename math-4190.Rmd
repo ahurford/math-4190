@@ -1,0 +1,650 @@
+--- 
+site: bookdown::bookdown_site
+output:
+  bookdown::gitbook:
+    lib_dir: "book_assets"
+  bookdown::pdf_book:
+    keep_tex: yes
+documentclass: book
+bibliography: [references.bib]
+biblio-style: apalike
+link-citations: false 
+---
+
+# Syllabus
+ 
+## Instructor Information
+
+Instructor: Dr. Amy Hurford\
+Office: Teaching remotely\
+Email: ahurford@mun.ca\
+WebEx: https://mun.webex.com/meet/ahurford \
+Course website: https://ahurford.github.io/math-4190/
+
+Availability: I will try to reply to emails within 24 hours (excluding evenings, weekends and holidays). I am always available during the lecture times. Please email to request a meeting for a different time. Please check my [schedule](https://amyhurford.weebly.com/) and suggest a time I am free that works for you.
+
+## Course Information	
+TR 2-3.15pm meet on WebEx
+
+Course description:\
+MATH 4190 Mathematical Modelling is intended to develop students' skills in
+mathematical modelling and competence in oral and written presentations. Case studies in modelling will be analyzed. Students will develop a mathematical model and present it in both oral and report form.
+	
+Course format:\
+For the first 7 weeks of class, each week you will have an assignment to complete. There will not be lectures, but there may be required readings (ideally to be completed before class). For the next 5 weeks, during class time you should work on your final project. During the last week of class each student will do an oral presentation of their final project. During classtime, I will be available on WebEx to help you with your assignments, to answer your questions, or to advise you regarding your final project. If you are not able to make it to class, but require help, please email me to set up an appointment.
+
+Course expectations:\
+Any students that are disruptive, violating university policies, or acting in a potentially unsafe way will be warned and asked to leave.\
+	    
+Learning goals:\
+This course will teach you how to derive, parameterize, and interpret your own mathematical models with an emphasis on 'hands-on' modelling experience.
+
+Required Text and Resources:\
+The ebook at https://ahurford.github.io/math-4190/ is the text for the course. This ebook will refer you to any other readings that will be either publically available or available via the MUN library. Class announcements and submission of your assignments will occur through BrightSpace.
+
+## Method of Evaluation
+
+- 7 assignments (equal weighting) - 35%
+- Oral presentation (week of April 5) - 15%
+- Written project (due Monday April 12 at 9am) - 50%
+
+See Section \@ref(final-project) for expectations regarding the final project.
+
+Late assignments, labs, and missed midterms, and final exams will be accommodated as described by University Regulation 6.7.3 and 6.7.5 (see [https://www.mun.ca/regoff/calendar/sectionNo=REGS-0474](https://www.mun.ca/regoff/calendar/sectionNo=REGS-0474) for Regulations).
+
+## Additional Policies
+### Accommodation of students with disabilities
+Memorial University of Newfoundland is committed to supporting inclusive education based on the principles of equity, accessibility and collaboration. Accommodations are provided within the scope of the University Policies for the Accommodations for Students with Disabilities see [www.mun.ca/policy/site/policy.php?id=239](www.mun.ca/policy/site/policy.php?id=239). Students who may need an academic accommodation are asked to initiate the request with the Glenn Roy Blundon Centre at the earliest opportunity (see [www.mun.ca/blundon](www.mun.ca/blundon) for more information). 
+
+### Academic misconduct
+Students are expected to adhere to those principles, which constitute proper academic conduct. A student has the responsibility to know which actions, as described under Academic Offences in the University Regulations, could be construed as dishonest or improper. Students found guilty of an academic offence may be subject to a number of penalties commensurate with the offence including reprimand, reduction of grade, probation, suspension or expulsion from the University. For more information regarding this policy, students should refer to University Regulation 6.12. 
+
+### Equity and Diversity
+A safe learning environment will be provided for all students regardless of race, colour, nationality, ethnic origin, social origin, religious creed, religion, age, disability, disfigurement, sex (including pregnancy), sexual orientation, gender identity, gender expression, marital status, family status, source of income or political opinion.
+
+You should not photograph or record myself, teaching assistants, or other students in the class without first obtaining permission. Accommodation will be made for students with special needs.
+
+The sound should be turned off on phones and computers during class.
+
+## Additional Supports
+Resources for additional support can be found at:
+
+- [www.mun.ca/currentstudents/student/](www.mun.ca/currentstudents/student/)
+
+- [https://munsu.ca/resource-centres/](https://munsu.ca/resource-centres/)
+
+## Tentative course schedule
+The course schedule is found in the toolbar of the class materials, see https://ahurford.github.io/math-4190/.
+
+The last day to drop the course without academic prejudice is Monday March 8.
+
+
+<!--chapter:end:index.Rmd-->
+
+# A1. Tues Jan 12: What is a mathematical model?
+
+*Assignment 1, Q1-4: to be handed in on Brightspace by Tues Jan 19 at 2pm.*
+
+---
+
+## Questions A1-1
+1. What is a mathematical model? Give the citation for your answer in the style of the Bulletin of Mathematical Biology. This citation must be to a book (i.e., from the MUN library, or another an article from the peer-reviewed literature). [2 marks]
+
+2. Usually statistical models such as a linear regression satisfy my defintion of a mathematical model. Given your definition in 1., would a linear regression meet the requirements for a mathematical model? [1 mark]
+
+3. Per your answer to 1., give an example of something that is a model, but not a mathematical model. [1 mark]
+
+4. List some types of equations that are commonly used as models. [1 mark]
+
+While the definition of a mathematical model is quite broad, in keeping with the pre-requisites for this class, we will emphasize models from dynamical systems throughout this course.
+
+You may search the MUN library online holdings to find a book or peer-reviewed article to answer the above questions. Alternatively, you may use one of the resources below:
+
+Bliss et al. 2014 [Math modeling: getting started and getting solutions](https://m3challenge.siam.org/sites/default/files/uploads/siam-guidebook-final-press.pdf)
+
+Otto and Day 2009. [A biologists guide to mathematical modelling](https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/MUN/detail.action?docID=768551)
+
+[A primer on mathematical modelling](https://link-springer-com.qe2a-proxy.mun.ca/book/10.1007%2F978-3-030-44541-6) (the chapters can be downloaded for free)
+
+
+<!--chapter:end:01-jan-12.Rmd-->
+
+# A1. Thurs Jan 14: Getting started
+
+*Assignment 1, Q5-6: to be handed in on Brightspace by Tues Jan 19 at 2pm.*
+
+---
+
+When deriving a mathematical model, some practical advice is:
+
+a. Modifying an existing model to suit your purposes is often a good approach; and\
+b. The units in the terms of your model need to be consistent.\
+
+We would like to derive a mathematical model for the following:
+
+<div class="alert alert-info">
+*Cooling beer in the freezer*\
+Room temperature beer can be cooled down by putting it in the freezer. If left too long, the beer will freeze and burst the glass making it undrinkable. How long can the beer be left in the freezer?
+</div>
+
+Read Box 2.1 on p30-31 of [A biologists guide to mathematical modelling](https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/MUN/detail.action?docID=768551).
+
+Step 1 of the modelling process has been completed because the question has been provided. Next, we will skip to Step 4. Read about the _cooling cup of coffee_ model below. We can borrow the _cooling cup of coffee_ model to use as our model for the _cooling beer in the freezer_ question.
+
+## The cooling cup of coffee
+
+The following is taken from Barnes & Fulford (2002), section 9.1-9.2 starting of p218.
+
+We would like to know how long it will take a 60$^\circ$C cup of coffee to drop to 40$^\circ$C. To develop the model, we assume the cup of coffee is a uniform temperature throughout. The cup of coffee will cool as heat energy from the coffee is lost to its surroundings, which are at a lower temperature. Note that temperature is measured in degrees Celsius, while heat is measured in Joules or Watts (Joules per second).
+
+From physics, the equation for the change in the heat content of coffee, $Q_{hc}$ (in Watts) is,
+
+\begin{equation}
+Q_{hc} = cm \frac{dU(t)}{dt},
+\end{equation}
+
+where $c$ is the heat specific constant (measured in Joules per degree Celcius per kilogram), $m$ is the mass of the material being heated or cooled (in kilograms), and $U(t)$ is the temperature in Celcius.
+
+Also, from physics the rate of heat exchange of an object which is hotter than its surroundings, $Q_{cs}$, (in Watts) is,
+
+\begin{equation}
+Q_{cs} = hS(U(t)-u_s),
+\end{equation}
+
+where $h$ is the constant of convective heat transfer (in Watts per $m^2$ per degree Celcuis), $S$ is the surface area from which heat is lost, $U(t)$ is the temperature of the object and $u_s<U(t)$ is the temperature of the surroundings (in Celcius).
+
+Owing to the conservation of heat energy, the change in the heat content of coffee, $Q_{hc}$, should be equal to the rate of heat exchange from the coffee to its surroundings, $Q_{cs}$. As such, the equation for the cooling of the cup of coffee is,
+
+\begin{equation}
+cm \frac{dU(t)}{dt}=-hS(U(t)-u_s).
+(\#eq:LL)
+\end{equation}
+
+The negative sign on the righthand side of equation \@ref(eq:LL) is to make sure both sides of the equation are consistent because $\frac{dU(t)}{dt}$ is negative while all other terms are positive. This is a linear ordinary differential equation (ODE). It is possible to integrate this ODE to solve for $U(t)$. If we assume that $U(0) = 60^\circ C$ we can then solve $t_{40}$ such that $U(t_{40}) = 40^\circ$ C.
+
+Assume the constant of convective transfer is 10 Watts/m$^2$/$^\circ$C.
+
+## Questions A1-2
+5. Complete Step 4 from Box 2.1 on p30-31 of [A biologists guide to mathematical modelling](https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/MUN/detail.action?docID=768551) for the cooling beer problem. Write down the equation for the cooling beer model, define all the parameters and variables, also giving their units, contraints, and values. Calculate the units for each term in your equation to make sure the units are consistent across terms (i.e., perform a [dimensional analysis](https://en.wikipedia.org/wiki/Dimensional_analysis)).\
+\
+Note the difference between _parameters_ and _variables_. For dynamical system models the dependent _variables_ are the quantities that change over time. Time is the independent variable. _Parameters_ are constants whose values are estimated. The dependent variables need to be assigned an initial value.\
+\
+You will need to do some research to estimate the values of the parameters and the initial condition for the variable in your model. Provide your evidence to support your parameter estimates.
+\
+List any assumptions that you have made, either in your model formulation or regarding the parameter estimates. [6 marks]
+
+6. Complete some of Steps 5-7 from Box 2.1 on p30-31 of [A biologists guide to mathematical modelling](https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/MUN/detail.action?docID=768551) by doing the following [2 marks]:
+
+- Solve the ODE to estimate the time to the beer bottle exploding.
+
+- Sketch by hand or use a software to make a graph of the change in temperature over time. 
+
+<!--chapter:end:02-jan-14.Rmd-->
+
+# A2. Tues Jan 19: Deriving ordinary differential equation models
+
+*Assignment 2: to be handed in to Brightspace on Tues Jan 26 by 2pm.*
+
+---
+
+Ordinary differential equation (ODEs) models are often appropriate for MATH 4190 final projects. The general form of an ODE model is:
+
+\begin{equation}\label{eq:genCT}
+\frac{dn(t)}{dt} = \mbox{rate of increase} - \mbox{rate of decrease}.
+\end{equation}
+
+The units of rate quantities are `per time', although this may be number per time, mL per time, or simply, per time. The ODE model may contain multiple (or no) increase and/or decrease terms and there may be several equations coupled together.
+
+Generally, a parameter that correspnds to a rate is either constrained to be positive, non-negative, or has no constraints. When the rate parameter is $>1$ this means that, on average, more than one of the corresponding event occurs per time unit. Sometimes rate parameters are multiplied by probabilities. A parameter that is a probability is constrained to be $\geq 0$ and $\leq 1$.
+
+When deriving ODE models it is helpful to draw a diagram (i.e. Step 3, Box 2.1 on p30-31 of [A biologists guide to mathematical modelling](https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/MUN/detail.action?docID=768551)).
+
+## Questions A2-1
+1. Draw a flow diagram for one of the systems of ODEs in [In-host Mathematical Modelling of COVID-19 in Humans](https://www-ncbi-nlm-nih-gov.qe2a-proxy.mun.ca/pmc/articles/PMC7526677/) by Hernandez-Vargas and Velasco-Hernandeza. For the system of ODEs that you chose, provide a table listing the variables and the parameters, their units, and any constraints on their values. Be sure to clearly identify which are parameters and which are variables. To make your flow diagram, follow the rules described in Box 2.3: Drawing flow diagrams, on p44 of [A biologists guide to mathematical modelling](https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/reader.action?docID=768551&ppg=44). This question does not need to be completed in Latex. You may work with pencil and paper and photograph your work. [5 marks]
+
+2. Derive your own system of ODEs for a between-host epidemic spread model. Assume that the epidemiology of the system is such that:
+
+- The system has 3 variables: Susceptible host, $S(t)$, Infected hosts, $I(t)$, and Recovered hosts, $R(t)$. For all of these variables the units are number.
+
+- The rate that new susceptible hosts enter the population is $\theta>0$ (units: number/time).
+
+- The rate that susceptible hosts become infected due to coming into contact with the infected host is $\beta S(t) I(t)/N(t)$, where $N(t) = S(t) + I(t) + R(t)$, and $\beta>0$ is the transmission rate (units: 1/time). This term results in both a decrease in $\frac{dS(t)}{dt}$ and an increase in $\frac{dI(t)}{dt}$. 
+
+- The rate that infected indviduals recover is $\gamma I(t)$, where $\gamma >0$ (units: 1/time). This term results in both a decrease in $\frac{dI(t)}{dt}$ and an increase in $\frac{dR(t)}{dt}$.
+
+- Recovered individuals lose immunity at rate $\omega R(t)$. This term results in both a decrease in $\frac{dR(t)}{dt}$ and an increase in $\frac{dS(t)}{dt}$.
+
+You may work on pencil and paper and photograph your work. [5 marks]
+
+<!--chapter:end:03-jan-19.Rmd-->
+
+# A2. Thurs Jan 21: Deriving recursion equation models
+
+*Assignment 2: to be handed in to Brightspace on Tues Jan 26 by 2pm.*
+
+---
+Recursion equation models update the value of your dependent variables at regular intervals, i.e. after one year, rather than continuously as they would for an ordinary differential equation model. Recursion equation models are referred to as discrete time models, whereas ordinary differential equation models are referred to as continuous time models.
+
+The general equation for a recursion equation is,
+
+\begin{equation}
+n_{t+1} = n_t + \mbox{increase} - \mbox{decrease},
+(\#eq:general)
+\end{equation}
+
+where $n_{t+1}$ is the value of the variable at time, $t+1$. Each term in the recursion equation \@ref(eq:general) has the same units as the variable of interest. More complex models may consider the dynamics of multiple variables as systems of coupled recursion equations. 
+
+For recursion equations, within a time step multiple events may occur. When an event occurs, the value of a variable will change, and so for recursion equation models, is it necessary to define an order of events.
+
+For example, consider a population dynamic model,
+
+\begin{equation}
+n_{t+1} = (1+b)(1-d)n_t,
+(\#eq:BD)
+\end{equation}
+
+where $n_t$ is the number of individuals in the population, $b>0$ is the number of offspring produced per individual in a time step (unitless) and $0 \leq d \leq 1$ is the probability that an individual dies during a time step (unitless). What order of events has been assumed in equation \@ref(eq:BD)?
+
+Formally, we might define $n'$ as the number of individuals after births, and $n''$ as the number of individuals after mortality. Then,
+
+\begin{eqnarray}
+n' &=& n_t + bn_t = (1+b)n_t, \\
+n'' &=& n' - dn' = (1-d)n', \\
+n'' &=& (1-d)(1+b)n_t, \\
+n_{t+1} &=& (1-d)(1+b)n_t.
+\end{eqnarray}
+
+The above derivation assumes that births occur first and then mortality. Assuming the opposite: mortality occurs first and then births, would result in the same equation, however this is not always the case.
+
+## Questions A2-2
+3. Assume that $\theta > 0$ is the rate that individuals migrate into a population (units: number). Assume that $b>0$ is the per individual birth rate (unitless) and $0 \leq d \leq 1$ is the probability that an individual dies during the time step (unitless). Choose two different orderings of events (migration, births, and deaths) such that the final equations are different. [4 marks]
+
+2. Consider two variations on a model for population growth,
+\
+\begin{equation}
+n_{t+1} = n_t + bn_t,
+(\#eq:BD1)
+\end{equation}
+\
+and,
+\
+\begin{equation}
+n_{t+1} = bn_t,
+(\#eq:BD2)
+\end{equation}
+\
+where $b$ is a per individual birth rate (unitless). How might the description of $b$, and the constraints on $b$, be slightly different under either model formulation?\
+\
+The population grows when $n_{t+1}>n_t$. Assuming $n_0 >0$, what are the values of $b$ for which the population grows under either model formulation? [2 marks]
+
+<!--chapter:end:04-jan-21.Rmd-->
+
+# A3. Tues Jan 26: Analysis of dynamical systems
+
+*Assignment 3: to be handed in to Brightspace on Thurs Feb 4 by 2pm.*
+
+---
+
+An important step in the modelling process is analyzing the mathematical model to answer the research problem. We know that mathematical models need not necessarily be ordinary differential equations and recursion equations, however, given the pre-requisites for MATH 4190, we will focus on these equations. Furthermore, we generally consider models that are dynamical systems (the independent variable is time), such that commonly we address research problems considering the future value of a dependent variable.
+
+Although we often want to know the value of the dependent variables in the future, usually it is not possible to solve our models to explicitly find a formula for the value of the dependent variable in the future. The exceptions are linear ODEs and recursion equations,
+\
+\begin{equation}
+\frac{dy(t)}{dt} = a y(t) + b, \qquad \mbox{and} \qquad y_{t+1} = a y_t + b,
+\end{equation}
+\
+including multivariate versions of these equations. Such linear equations can be solved explicitly as was done for the _Cooling beer in the freezer_ problem on Assignment 1.
+
+Many of the mathematical models that we will study are nonlinear systems of ordinary differential equations and recursion equations. These cannot be solved to find the value of the dependent variable for any time, however, we can still make inferences about the dynamics of these models by finding equilibria and performing local stabilty analyses. Such analyses should be review from your prerequisite course work in _Dynamical systems_ (MATH 3100), and additionally guidance on how to find equilibria and determine local stability is found in [Chapter 8 of Otto and Day](https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/reader.action?docID=768551&ppg=326).
+
+## Questions A3-1
+1. The following system of coupled nonlinear ordinary differential equations has one equilibrium:
+\
+\begin{eqnarray}
+\frac{dx(t)}{dt} & = & a - bx(t)y(t),\\
+\frac{dy(t)}{dt} & = & bx(t)y(t) - cy(t),\\
+\end{eqnarray}
+\
+You should assume that all parameters and initial values of the variables are positive. Solve for the equilibrium and provide the conditions for the equibrium to be positive and locally stable. Show all your work. [5 marks]
+\
+2. The following nonlinear recursion equation has two equilibria:
+\
+\begin{equation}
+x_{t+1} = a x_t e^{-x_t}+bx_t
+\end{equation}
+\
+You should assume that all parameters and the initial value of the variable is positive. Solve for all equilibria and provide the conditions for each equibrium to be non-negative and locally stable. For the equilibrium, where $x^*$ can be greater than zero, write the condition for local stability in relation to $(1-b)x^*$. Show all your work. [6 marks]
+
+3. From question 2, comment on the conditions for the local stability of each equilibrium relative to the other, and the positivity of the equilibria. [1 mark]
+
+<!--chapter:end:05-jan-26.Rmd-->
+
+# A3. Thurs Jan 28: Classic models of population biology
+
+*Assignment 3: to be handed in to Brightspace on Thurs Feb 4 by 2pm.*
+
+---
+
+Read the following sections of Chapter 3 in [Otto and Day](https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/reader.action?docID=768551&ppg=66). 
+
+- 3.1 Introduction
+- 3.2 Exponential and Logistic Models of Population Growth
+
+## Questions A3-2
+
+4. Problem 3.2 on p99 of [Otto and Day](https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/reader.action?docID=768551&ppg=99). [3 marks]
+
+5. Problem 3.3 of p99 of [Otto and Day](https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/reader.action?docID=768551&ppg=99). [3 marks]
+
+6. Problem 3.4 of p99 of [Otto and Day](https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/reader.action?docID=768551&ppg=99). [3 marks]
+
+<!--chapter:end:06-jan-28.Rmd-->
+
+# A4. Tues Feb 2: Epidemic, consumer-resource, and competition models
+
+Assignment 4: to be handed in to Brightspace on Thurs Feb 11 by 2pm.
+
+---
+
+Read the following sections of Chapter 3 in [Otto and Day](https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/reader.action?docID=768551&ppg=87). 
+
+- 3.4 Models of Interactions among species
+- 3.4.1 The Lotka-Volterra Model of Competition
+- 3.4.2 Consumer-Resource Models
+- 3.5 Epidemiological Models of Disease Spread
+- 3.6 Working Backward
+
+## Questions A4-1
+
+1.  Problem 3.12 on p99 of [Otto and Day](https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/reader.action?docID=768551&ppg=99). [3 marks]
+
+2.  Problem 3.13 on p99 of [Otto and Day](https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/reader.action?docID=768551&ppg=99). [2 marks]
+
+3. In Section 3.6, _Working Backward_ Otto and Day write that "precisely what is meant by constant harvesting rate is quite different for each model". What are the units of $\theta$ and $H$ in equations 3.20a-c on p96-97 of Otto and Day. [1 mark]
+
+4. Write 1 paragraph explaining in your own words the difference in what is assumed about how infection is spread by a model formulation that uses the transmission term $acS(t)I(t)$ versus one uses the term $acS(t)I(t)/N(t)$. [2 marks]
+
+<!--chapter:end:07-feb-2.Rmd-->
+
+# A4. Thurs Feb 4: Check-in
+
+Assignment 4: to be handed in to Brightspace on Thurs Feb 11 by 2pm.
+
+## Questions A4-2
+5. Everyone should make a 10 minute meeting with Dr. Hurford to talk about how class is going for you. It can be anytime. Please email me ahurford@mun.ca to set up this meeting. [5 marks]
+
+<!--chapter:end:08-feb-4.Rmd-->
+
+# A5. Tues Feb 9: Numerical solutions - 1
+
+Assignment 5: to be handed in to Brightspace on Thurs Feb 18 by 2pm.
+
+---
+
+For many nonlinear ordinary differential equations (ODEs), it is not possible to find expressions for the values of the dependent variables for any time. We can, however, solve the ODEs using numerical methods. Regarding specific programming languages, I will provide the following support:
+
+_Python_ Example codes that solve ODEs and nonlinear recursion equations;
+
+_R_ and _MATLAB_ in addition to the above, I can provide some additional support debugging your code;
+
+You may choose to work in another programming language that you are an expert in, however, you may need to complete your codes unaided.
+
+## The Example model
+
+In the example codes, the model that is solved is:
+
+\begin{eqnarray}
+\frac{dS(t)}{dt} & = & - \beta I(t)\frac{S(t)}{N},\\
+\frac{dI(t)}{dt} & = & \beta I(t)\frac{S(t)}{N} - \gamma I(t),
+\end{eqnarray}
+
+with $S(0) = 1 - 10^{-4}$ and $I(0) = 10^{-4}$ and for $0 \leq t \leq 365$ days. You may recognize these equations as a Susceptible-Infected-Recovered epidemiological model. The average number of secondary infections produced per infected individual over their entire infectious period, when $S/N \approx 1$ is $R_0 = \beta/\gamma$. Note that for $R_0 > 1$, the number of infections will grow, i.e., $I(t)$ is initially an increasing function for $t>0$, and visa versa for $R_0 < 1$, and this property is a _unit test_ that we can use to verify that our code is working correctly (i.e., run the code with $R_0 > 1$ and $R_0 < 1$ and check that the solutions are $I(t)$ are as expected). 
+
+## Question A4-1
+1. On brightspace, you are to hand-in: (i) your code that solves the example model. This is completed by cutting and pasting the code blocks below [10 marks]; and (ii) the .png figures your code makes for $R_0 > 1$ and $R_0 < 1$ [5 marks].
+
+## Python
+Make sure you have Python installed. On my _MacBook Air_, I then open a terminal window and type `jupyter notebook`. A browser window will open, and allow me to open a `.py` file or begin a new file `.py`. To execute a code block, I press `Shift + Enter`.
+
+```{python, eval=F}
+# Import the packages with the functions required to numerically solve ODEs
+from numpy import *
+import pylab as p
+from scipy import integrate
+```
+
+Copy the above code block into your juypter notebook and press `Shift + Enter`.
+
+The code block below defines the parameter values, initial conditions, range of the independent variable to solve over, and the system of ODEs that you wish to solve.
+
+```{python, eval=F}
+# Parameters
+gamma = 1/8 # 1/(duration of infectivity)
+R0 = 2 # (av. number of secondary infections per infected)
+N = 1 # (total population size = 1; dependant variables are fractions)
+I0 = 1e-4 # (initial proportion infected)
+
+# Note: the transmission rate is beta = R0*gamma, i.e., the number
+# infections per infected per day, multiplied by 1/gamma (the average
+# duration of infectivity)
+beta = R0*gamma
+
+# t is a vector of the values of the independent variable, t, for which
+# we would like the dependent variables, S(t) and I(t).
+t = linspace(0, 365, 1000) 
+X0 = array([N-I0, I0]) # initial values S(0) and I(0).
+
+# This is a function returning dS/dt and dI/dt.
+def dX_dt(X, t=0):
+    S = X[0]
+    I = X[1]
+    return array([ - beta*I*S/N ,
+                  -gamma*I + beta*I*S/N ])
+```
+
+Any code block you enter into your juypter notebook can be executed by pressing `Shift + Enter`.
+
+The code block below performs the numerical integration:
+
+```{python, eval=F}
+# integrate.odeint is a function from the packages we uploaded which
+# performs the numerical integration of dX_dt for the initial values,
+# X0, and over the range of t values, t.
+X, infodict = integrate.odeint(dX_dt, X0, t, full_output=True)
+infodict['message'] 
+```
+
+The code block below then plots the model solutions:
+
+```{python, eval=F}
+# The commands below produce a plot of your dependent variables versus
+# time. The plot is exported as 'SIR.png' which is saved to your working
+# directory.
+
+susceptible, infected = X.T
+f1 = p.figure()
+p.plot(t, susceptible, 'b-', label='Susceptible')
+p.plot(t, infected  , 'r-', label='Infected')
+p.grid()
+p.legend(loc='best')
+p.xlabel('time')
+p.ylabel('proportion')
+p.title('SIR model')
+f1.savefig('SIR.png')
+```
+
+Cutting and pasting these code blocks and executing 
+the commands will complete the required assignment. You will need to change the value of $R_0$ to make your second graph.
+
+## R
+
+Install `R` and `RStudio` [Link](https://ahurford.github.io/quant-guide-all-courses/install.html).
+
+Familiarize yourself with the `Console` and `Source` panes [Link](https://ahurford.github.io/quant-guide-all-courses/rstudio.html) and Best Practicing for writing code [Link](https://ahurford.github.io/quant-guide-all-courses/style.html). 
+
+To solve the Model example, begin by installing the `deSolve` package. Type the following into the `Console`:
+
+```{R, eval=F}
+install.packages("deSolve")
+```
+
+The `deSolve` package includes the function `ode()`, which we will use to solve the ODE. Begin your script by loading the package (this is different than installing it):
+
+```{R, eval=F}
+require(deSolve)
+```
+
+Next define the parameter values, initial conditions, range of time values to solve over, and the ODE:
+
+```{R, eval=F}
+# Parameters
+gamma <- 1/8 # 1/(duration of infectivity)
+R0 <- 2 # (av. number of secondary infections per infected)
+N <- 1 # (total population size = 1; dependant variables are fractions)
+I0 <- 1e-4 # (initial proportion infected)
+
+# Note: the transmission rate is beta = R0*gamma, i.e., the number
+# infections per infected per day, multiplied by 1/gamma (the average
+# duration of infectivity)
+beta <- R0*gamma
+
+# t is a vector of the values of the independent variable, t, for which
+# we would like the dependent variables, S(t) and I(t).
+t <- seq(0, 365, .1) 
+Y0 = c(S=N-I0, I=I0) # initial values S(0) and I(0).
+
+# This is a function returning dS/dt and dI/dt.
+dY_dt = function(t,y,parms){
+  # It's a personal perference of mine to switch the symbols
+  # to be consistent with the equation.
+  S <- y[1]
+  I <- y[2]
+ dS <- - beta*I*S/N
+ dI <- -gamma*I + beta*I*S/N 
+  # The function returns the value of the change in S(t) and I(t).
+return(list(c(dS,dI)))
+}
+```
+
+Next use the `ode()` function to solve the ODE and plot the results:
+
+```{r, eval=F}
+# performing the numerical integration
+out <- ode(y = Y0, parms = NULL, times = t, func = dY_dt)
+out <- data.frame(out)
+# Make the graph
+plot(out$t, out$S, typ = "l", col = "blue", ylim = c(0,1), ylab = "proportion", xlab = "time", main = "SIR model")
+lines(out$t, out$I, col = "red")
+```
+
+For additional guidance see [Making graphs in R](https://ahurford.github.io/quant-guide-all-courses/graph.html)
+
+## MATLAB
+
+Please email Dr. Hurford (ahurford@mun.ca) if you would like to complete this assignment in MATLAB.
+
+<!--chapter:end:09-feb-9.Rmd-->
+
+# A5. Thurs Feb 11: Numerical solutions - 2
+
+Assignment 5: to be handed in to Brightspace on Tues Feb 18 by 2pm.
+
+1. Reproduce Figure 1. in [In-host Mathematical Modelling of COVID-19 in Humans](https://www-ncbi-nlm-nih-gov.qe2a-proxy.mun.ca/pmc/articles/PMC7526677/) by Hernandez-Vargas and Velasco-Hernandez. On brightspace, you are to hand-in (i) your code [10 marks]; and (ii) your figure [5 marks].
+
+<!--chapter:end:10-feb-11.Rmd-->
+
+# A6. Tues Feb 16: Case studies
+
+Assignment 6: to be handed in to Brightspace on Tues Feb 27 by 2pm.
+
+
+1. Reproduce Figure 1. in [In-host Mathematical Modelling of COVID-19 in Humans](https://www-ncbi-nlm-nih-gov.qe2a-proxy.mun.ca/pmc/articles/PMC7526677/) by Hernandez-Vargas and Velasco-Hernandez. On brightspace, you are to hand-in (i) your code [10 marks]; and (ii) your figure [5 marks].
+
+<!--chapter:end:11-feb-16.Rmd-->
+
+# A6. Thurs Feb 18: Make your own model
+
+Assignment 6: to be handed in to Brightspace on Tues Feb 27 by 2pm.
+
+<!--chapter:end:12-feb-18.Rmd-->
+
+# A7. Tues Feb 23: Stochastic models
+
+Assignment 7: to be handed in to Brightspace on Tues Mar 2 by 2pm.
+
+<!--chapter:end:13-feb-23.Rmd-->
+
+# A7. Thurs Feb 25: Simulation of stochastic models
+
+Assignment 7: to be handed in to Brightspace on Tues Mar 2 by 2pm.
+
+<!--chapter:end:14-feb-25.Rmd-->
+
+# Final project {#final-project}
+
+- Oral presentation - 15% (week of April 5)
+- Written Project - 50% (due Monday April 12 at 9am)
+
+The main focus of the second half of MATH 4190 is the final project. You are to:
+
+-	derive and analyze an original mathematical model,
+-	extend and analyze an existing mathematical model, or 
+-	explain, recreate and/or produce novel proofs for an existing analysis of a mathematical model involving advanced mathematics (i.e., graduate level).
+
+## Written Report
+Your written report should consist of four sections: Introduction, Model, Results, and Discussion (for more details see below). You must appropriately acknowledge results and models that are not your own work. Your written report must be no more than 10 pages (excluding references, figures, and appendices) and written in Latex. If you have more than 10 pages of important content, then you should choose to place some of this content in an Appendix.
+
+Some advice:
+- Start simple. Start with a model that you are confident that you will be able to produce some results for. When you fully understand simpler versions of your model, gradually add in more complexity. This prevents you from tackling a project this is ‘too hard’ and not getting any results.
+- Be concise. A good project is thoughtfully put together – it does not necessarily need to be overly complex or long.
+
+Guidelines for each section of the final project:
+
+### Introduction 
+- Describe the general question/problem of interest.
+- Describe the real-world application in language that is accessible to a reader without prior knowledge of the application.
+- Summarize relevant previous research from the scientific literature (i.e., scholarly journals and books) and clearly place the project within the context of what has already been done. Remember to cite modeling articles, not just articles that describe the details of your applied system. 
+- Don’t focus your literature research to narrowly. For example, if you project is on ‘moose-wolf population dynamics’ consider also the literature on predator-prey dynamics, which may contain mathematically equivalent model formulations.
+- Concisely state the main objective, hypothesis or question of the project.
+- Usually ends with a paragraph describing how the problem will be solved, i.e., the type of model and the type of analysis.
+
+### Model
+- Your model should be a dynamical system. The model cannot be an autonomous linear system of differential equations or difference equations because the analysis of such a model is too simple. You may however, consider a simplification of the model you are interested in that is an autonomous linear system of equations, if it helps you to understand the non-linear or non-autonomous system of interest.
+- Provide all details of the model to be analyzed. Define all the model parameters, variables, provide their word definitions and state their units. Provide the complete system of equations that comprises the model. If appropriate provide a table of parameter values (and references if literature sources are used to justify choices of parameter values).
+- You should describe the assumptions of your model.
+- You should provide enough detail that your model is reproducible. This may mean that you need to appendicize some material.
+- Consider including a diagram that communicates the interactions present in your model. This is often useful.
+
+### Results
+- If possible, consider special cases of your model that yield analytical solutions such as equilibria and local stability conditions.
+- If it is possible to solve for the equilibrium values and/or to determine the local stability of equilibria for your model you must do so.
+- Usually the results section of a MATH 4190 project includes numerical solutions for the main model of interest. 
+- You may wish to summarize how numerical results for your model change depending on the parameter values used. 
+- Depending on your project, you may wish to explore different types of more advanced analyses, i.e. perturbation analysis, sensitivity and uncertainty analysis, stochastic simulations based on the Gillespie algorithm, bifurcation diagrams, analysis of periodic systems, and model validation.
+- You do not need to hand in your code. If your numerical methods are complex or non-standard you may wish to provide your pseudo-code in an Appendix.
+- Your results should include at least 1 figure that is fully labeled and contains a figure caption. 
+- Your results section does not need to include every analysis that you have done. Your results section should be logically organized and this may mean omitting analyses that ‘didn’t work out’ or you judge to be less important given later results that you were able to achieve. Your results should be appropriate given the question/hypothesis that you described in the Introduction.
+
+### Discussion
+- Interpret your results in terms of the main question/hypothesis.
+- Towards the beginning of the Discussion, typically there is a section that reiterates the highlights of the results section.
+- Your discussion should describe whether your results matched what was expected or not. Are your results consistent with other similar studies?
+- You should interpret your results in the context of the applied problem, i.e., what does a stability condition suggest in terms of the practical management of a system?
+- How did your assumptions affect your results?
+- Do your results suggest any avenues for future research?
+- Highlight what is novel about your work.
+
+You are to provide a complete bibliography of literature cited. You can choose to use the referencing style of any scholarly scientific journal or any of the preset options from Bibtex. The referencing style you use must be consistent throughout.
+
+## Oral report
+The content of your oral report should be similiar to the written report.
+
+I am here to help! Please let me know if you have any questions.
+
+For writing tips, you may consider:
+(1) [Bliss et al. 2014](https://m3challenge.siam.org/sites/default/files/uploads/siam-guidebook-final-press.pdf) (p42-44);
+(2) [“How to write a theoretical ecology paper that people will cite”](http://matryoshka.org/2012/07/13/how-to-write-a-paper-people-will-cite/); or
+(3) [Webinar: How to write a modelling paper](https://video.mbi.ohio-state.edu/video/player/?id=4775&title=Webinar%3A How to Write a Modelling Paper)
+
+<!--chapter:end:15-final-project.Rmd-->
+
