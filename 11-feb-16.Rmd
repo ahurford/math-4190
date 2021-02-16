@@ -1,6 +1,13 @@
 # A6. Tues Feb 16: Case studies
 
-Assignment 6: to be handed in to Brightspace on Tues Feb 27 by 2pm.
+Assignment 6: to be handed in to Brightspace on Tues Mar 2 by 2pm.
+
+---
+
+Read [Disease and healthcare burden of COVID-19 in the United States](https://www-nature-com.qe2a-proxy.mun.ca/articles/s41591-020-0952-y)
+
+## Questions A6-1 {-}
+1. Write 1 paragraph explaining how the model in [Disease and healthcare burden of COVID-19 in the United States](https://www-nature-com.qe2a-proxy.mun.ca/articles/s41591-020-0952-y) (see the Methods at the end of this paper) is different from the models described in _3.5 Epidemiological models of Disease Spread_ in [Otto and Day](https://ebookcentral-proquest-com.qe2a-proxy.mun.ca/lib/mun/reader.action?docID=768551&ppg=93).
 
 
-1. Reproduce Figure 1. in [In-host Mathematical Modelling of COVID-19 in Humans](https://www-ncbi-nlm-nih-gov.qe2a-proxy.mun.ca/pmc/articles/PMC7526677/) by Hernandez-Vargas and Velasco-Hernandez. On brightspace, you are to hand-in (i) your code [10 marks]; and (ii) your figure [5 marks].
+

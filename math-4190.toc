@@ -27,12 +27,14 @@
 \contentsline {section}{\numberline {9.1}Questions A4-2}{23}{section.9.1}
 \contentsline {chapter}{\numberline {10}A5. Tues Feb 9: Numerical solutions - 1}{25}{chapter.10}
 \contentsline {section}{\numberline {10.1}The Example model}{25}{section.10.1}
-\contentsline {section}{\numberline {10.2}Question A4-1}{26}{section.10.2}
+\contentsline {section}{\numberline {10.2}Question A5-1}{26}{section.10.2}
 \contentsline {section}{\numberline {10.3}Python}{26}{section.10.3}
 \contentsline {section}{\numberline {10.4}R}{28}{section.10.4}
 \contentsline {section}{\numberline {10.5}MATLAB}{29}{section.10.5}
 \contentsline {chapter}{\numberline {11}A5. Thurs Feb 11: Numerical solutions - 2}{31}{chapter.11}
+\contentsline {section}{\numberline {11.1}Questions A5-2}{31}{section.11.1}
 \contentsline {chapter}{\numberline {12}A6. Tues Feb 16: Case studies}{33}{chapter.12}
+\contentsline {section}{Questions A6-1}{33}{section*.2}
 \contentsline {chapter}{\numberline {13}A6. Thurs Feb 18: Make your own model}{35}{chapter.13}
 \contentsline {chapter}{\numberline {14}A7. Tues Feb 23: Stochastic models}{37}{chapter.14}
 \contentsline {chapter}{\numberline {15}A7. Thurs Feb 25: Simulation of stochastic models}{39}{chapter.15}

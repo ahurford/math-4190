@@ -23,7 +23,7 @@ In the example codes, the model that is solved is:
 
 with $S(0) = 1 - 10^{-4}$ and $I(0) = 10^{-4}$ and for $0 \leq t \leq 365$ days. You may recognize these equations as a Susceptible-Infected-Recovered epidemiological model. The average number of secondary infections produced per infected individual over their entire infectious period, when $S/N \approx 1$ is $R_0 = \beta/\gamma$. Note that for $R_0 > 1$, the number of infections will grow, i.e., $I(t)$ is initially an increasing function for $t>0$, and visa versa for $R_0 < 1$, and this property is a _unit test_ that we can use to verify that our code is working correctly (i.e., run the code with $R_0 > 1$ and $R_0 < 1$ and check that the solutions are $I(t)$ are as expected). 
 
-## Question A4-1
+## Question A5-1
 1. On brightspace, you are to hand-in: (i) your code that solves the example model. This is completed by cutting and pasting the code blocks below [10 marks]; and (ii) the .png figures your code makes for $R_0 > 1$ and $R_0 < 1$ [5 marks].
 
 ## Python

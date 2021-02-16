@@ -143,13 +143,17 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 </ul></li>
 <li class="chapter" data-level="10" data-path="a5-tues-feb-9-numerical-solutions-1.html"><a href="a5-tues-feb-9-numerical-solutions-1.html"><i class="fa fa-check"></i><b>10</b> A5. Tues Feb 9: Numerical solutions - 1</a><ul>
 <li class="chapter" data-level="10.1" data-path="a5-tues-feb-9-numerical-solutions-1.html"><a href="a5-tues-feb-9-numerical-solutions-1.html#the-example-model"><i class="fa fa-check"></i><b>10.1</b> The Example model</a></li>
-<li class="chapter" data-level="10.2" data-path="a5-tues-feb-9-numerical-solutions-1.html"><a href="a5-tues-feb-9-numerical-solutions-1.html#question-a4-1"><i class="fa fa-check"></i><b>10.2</b> Question A4-1</a></li>
+<li class="chapter" data-level="10.2" data-path="a5-tues-feb-9-numerical-solutions-1.html"><a href="a5-tues-feb-9-numerical-solutions-1.html#question-a5-1"><i class="fa fa-check"></i><b>10.2</b> Question A5-1</a></li>
 <li class="chapter" data-level="10.3" data-path="a5-tues-feb-9-numerical-solutions-1.html"><a href="a5-tues-feb-9-numerical-solutions-1.html#python"><i class="fa fa-check"></i><b>10.3</b> Python</a></li>
 <li class="chapter" data-level="10.4" data-path="a5-tues-feb-9-numerical-solutions-1.html"><a href="a5-tues-feb-9-numerical-solutions-1.html#r"><i class="fa fa-check"></i><b>10.4</b> R</a></li>
 <li class="chapter" data-level="10.5" data-path="a5-tues-feb-9-numerical-solutions-1.html"><a href="a5-tues-feb-9-numerical-solutions-1.html#matlab"><i class="fa fa-check"></i><b>10.5</b> MATLAB</a></li>
 </ul></li>
-<li class="chapter" data-level="11" data-path="a5-thurs-feb-11-numerical-solutions-2.html"><a href="a5-thurs-feb-11-numerical-solutions-2.html"><i class="fa fa-check"></i><b>11</b> A5. Thurs Feb 11: Numerical solutions - 2</a></li>
-<li class="chapter" data-level="12" data-path="a6-tues-feb-16-case-studies.html"><a href="a6-tues-feb-16-case-studies.html"><i class="fa fa-check"></i><b>12</b> A6. Tues Feb 16: Case studies</a></li>
+<li class="chapter" data-level="11" data-path="a5-thurs-feb-11-numerical-solutions-2.html"><a href="a5-thurs-feb-11-numerical-solutions-2.html"><i class="fa fa-check"></i><b>11</b> A5. Thurs Feb 11: Numerical solutions - 2</a><ul>
+<li class="chapter" data-level="11.1" data-path="a5-thurs-feb-11-numerical-solutions-2.html"><a href="a5-thurs-feb-11-numerical-solutions-2.html#questions-a5-2"><i class="fa fa-check"></i><b>11.1</b> Questions A5-2</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="a6-tues-feb-16-case-studies.html"><a href="a6-tues-feb-16-case-studies.html"><i class="fa fa-check"></i><b>12</b> A6. Tues Feb 16: Case studies</a><ul>
+<li class="chapter" data-level="" data-path="a6-tues-feb-16-case-studies.html"><a href="a6-tues-feb-16-case-studies.html#questions-a6-1"><i class="fa fa-check"></i>Questions A6-1</a></li>
+</ul></li>
 <li class="chapter" data-level="13" data-path="a6-thurs-feb-18-make-your-own-model.html"><a href="a6-thurs-feb-18-make-your-own-model.html"><i class="fa fa-check"></i><b>13</b> A6. Thurs Feb 18: Make your own model</a></li>
 <li class="chapter" data-level="14" data-path="a7-tues-feb-23-stochastic-models.html"><a href="a7-tues-feb-23-stochastic-models.html"><i class="fa fa-check"></i><b>14</b> A7. Tues Feb 23: Stochastic models</a></li>
 <li class="chapter" data-level="15" data-path="a7-thurs-feb-25-simulation-of-stochastic-models.html"><a href="a7-thurs-feb-25-simulation-of-stochastic-models.html"><i class="fa fa-check"></i><b>15</b> A7. Thurs Feb 25: Simulation of stochastic models</a></li>
@@ -199,8 +203,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 \end{eqnarray}\]</span>
 <p>with <span class="math inline">\(S(0) = 1 - 10^{-4}\)</span> and <span class="math inline">\(I(0) = 10^{-4}\)</span> and for <span class="math inline">\(0 \leq t \leq 365\)</span> days. You may recognize these equations as a Susceptible-Infected-Recovered epidemiological model. The average number of secondary infections produced per infected individual over their entire infectious period, when <span class="math inline">\(S/N \approx 1\)</span> is <span class="math inline">\(R_0 = \beta/\gamma\)</span>. Note that for <span class="math inline">\(R_0 &gt; 1\)</span>, the number of infections will grow, i.e., <span class="math inline">\(I(t)\)</span> is initially an increasing function for <span class="math inline">\(t&gt;0\)</span>, and visa versa for <span class="math inline">\(R_0 &lt; 1\)</span>, and this property is a <em>unit test</em> that we can use to verify that our code is working correctly (i.e., run the code with <span class="math inline">\(R_0 &gt; 1\)</span> and <span class="math inline">\(R_0 &lt; 1\)</span> and check that the solutions are <span class="math inline">\(I(t)\)</span> are as expected).</p>
 </div>
-<div id="question-a4-1" class="section level2">
-<h2><span class="header-section-number">10.2</span> Question A4-1</h2>
+<div id="question-a5-1" class="section level2">
+<h2><span class="header-section-number">10.2</span> Question A5-1</h2>
 <ol style="list-style-type: decimal">
 <li>On brightspace, you are to hand-in: (i) your code that solves the example model. This is completed by cutting and pasting the code blocks below [10 marks]; and (ii) the .png figures your code makes for <span class="math inline">\(R_0 &gt; 1\)</span> and <span class="math inline">\(R_0 &lt; 1\)</span> [5 marks].</li>
 </ol>
