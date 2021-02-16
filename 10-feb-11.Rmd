@@ -4,4 +4,6 @@ Assignment 5: to be handed in to Brightspace on Tues Feb 18 by 2pm.
 
 ## Questions A5-2 
 
-2. Reproduce Figure 1. in [In-host Mathematical Modelling of COVID-19 in Humans](https://www-ncbi-nlm-nih-gov.qe2a-proxy.mun.ca/pmc/articles/PMC7526677/) by Hernandez-Vargas and Velasco-Hernandez. On brightspace, you are to hand-in (i) your code [10 marks]; and (ii) your figure [5 marks].
+2. Try to reproduce something similar to Figure 1 in [In-host Mathematical Modelling of COVID-19 in Humans](https://www-ncbi-nlm-nih-gov.qe2a-proxy.mun.ca/pmc/articles/PMC7526677/) by Hernandez-Vargas and Velasco-Hernandez. Figure 1 shows patient A (left panel) and patient B (right panel). We have only the values for the average patient (Table 1). Use the parameter values for $t_i = -3$ in Table 1. Assume $I(0)=0$, $V(0) = 100$ and $U(0)$ as given in the paper. Solve the system of equations for time, $t = [0, 30]$. Define $t_1 = t + t_i$. To answer the question plot $t_1$ versus $log(V)$. On brightspace, you are to hand-in (i) your code [10 marks]; and (ii) your figure [5 marks].
+
+
