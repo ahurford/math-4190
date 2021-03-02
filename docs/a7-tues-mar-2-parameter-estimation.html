@@ -157,7 +157,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <li class="chapter" data-level="13" data-path="a7-tues-mar-2-parameter-estimation.html"><a href="a7-tues-mar-2-parameter-estimation.html"><i class="fa fa-check"></i><b>13</b> A7. Tues Mar 2: Parameter estimation</a><ul>
 <li class="chapter" data-level="13.1" data-path="a7-tues-mar-2-parameter-estimation.html"><a href="a7-tues-mar-2-parameter-estimation.html#parameterizing-exponentially-distributed-rates"><i class="fa fa-check"></i><b>13.1</b> Parameterizing exponentially distributed rates</a></li>
 <li class="chapter" data-level="13.2" data-path="a7-tues-mar-2-parameter-estimation.html"><a href="a7-tues-mar-2-parameter-estimation.html#estimating-parameters-through-model-fitting"><i class="fa fa-check"></i><b>13.2</b> Estimating parameters through model fitting</a></li>
-<li class="chapter" data-level="" data-path="a6-tues-feb-16-case-studies.html"><a href="a6-tues-feb-16-case-studies.html#questions-a6-1"><i class="fa fa-check"></i>Questions A6-1</a></li>
+<li class="chapter" data-level="" data-path="a7-tues-mar-2-parameter-estimation.html"><a href="a7-tues-mar-2-parameter-estimation.html#questions-a7-1"><i class="fa fa-check"></i>Questions A7-1</a></li>
 </ul></li>
 <li class="chapter" data-level="14" data-path="a7-thurs-mar-4-final-project-ideas.html"><a href="a7-thurs-mar-4-final-project-ideas.html"><i class="fa fa-check"></i><b>14</b> A7. Thurs Mar 4: Final project ideas</a></li>
 <li class="chapter" data-level="15" data-path="final-project.html"><a href="final-project.html"><i class="fa fa-check"></i><b>15</b> Final project</a><ul>
@@ -199,7 +199,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <span class="math display">\[\begin{equation}
 \frac{dI(t)}{dt} = \beta S(t) I(t) - (v+\gamma)I(t) 
 \end{equation}\]</span>
-<p>where <span class="math inline">\(\beta\)</span> is the transmission coefficient, <span class="math inline">\(S(t)\)</span> is the number of individuals susceptible to the disease, <span class="math inline">\(v\)</span> is the disease-induced mortality rate and <span class="math inline">\(\gamma\)</span> is the recovery rate. If we consider only a cohort of individuals that are already infected, and will recover, <span class="math inline">\(C(t)\)</span>, then in keeping with the model above, our model for the fraction of individuals in the cohort that have not yet recovered is:</p>
+<p>where <span class="math inline">\(\beta\)</span> is the transmission coefficient, <span class="math inline">\(S(t)\)</span> is the number of individuals susceptible to the disease, <span class="math inline">\(v\)</span> is the disease-induced mortality rate, and <span class="math inline">\(\gamma\)</span> is the recovery rate. If we consider only a cohort of individuals that are already infected, and will recover, <span class="math inline">\(C(t)\)</span>, then in keeping with the model above, our model for the fraction of individuals in the cohort that have not yet recovered is:</p>
 <span class="math display">\[\begin{equation}
 \frac{dC(t)}{dt} = - \gamma C(t), 
 \end{equation}\]</span>
@@ -207,69 +207,112 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <span class="math display">\[\begin{equation}
 C(t) = \exp(-\gamma t). 
 \end{equation}\]</span>
-<p>Note that <span class="math inline">\(1-C(t)\)</span> is the cumulative fraction of the cohort that have recovered at time, <span class="math inline">\(t\)</span>. The probability, <span class="math inline">\(c(t)\)</span>, that an individual in the cohort recovers during the time interval <span class="math inline">\([t, t+\Delta t]\)</span> is the probability density corresponding to <span class="math inline">\(C(t)\)</span>, which is,</p>
+<p>Note that <span class="math inline">\(1-C(t)\)</span> is the cumulative fraction of the cohort that have recovered at time, <span class="math inline">\(t\)</span>. The probability, <span class="math inline">\(c(t)\)</span>, that an individual in the cohort recovers during the time interval <span class="math inline">\([t, t+ \Delta t]\)</span> is the probability density corresponding to <span class="math inline">\(C(t)\)</span>, which is,</p>
 <span class="math display">\[\begin{equation}
 c(t) = \gamma \exp(-\gamma t). 
 \end{equation}\]</span>
-<p>Note that for an exponentially distributed random variable, where <span class="math inline">\(\lambda\)</span> is the rate at which the exponential process occurs, the mean time until the event happens is <span class="math inline">\(1/ \lambda\)</span> (i.e., see <a href="https://en.wikipedia.org/wiki/Exponential_distribution">Wikipedia</a>). As such, the mean time to recovery, implied by our SIR model, is <span class="math inline">\(1/ \gamma\)</span>, and so if we can read about our disease of interest and find the mean time to recovery (i.e. <a href="https://www.webmd.com/cold-and-flu/stay-home-cold-flu">WebMD*</a> states that the flu usually lasts 5 days and a cold 7-10 days), then we can simply parameterize the recovery rates as the inverses (i.e., <span class="math inline">\(\gamma\)</span> = 1/5 for the flu and <span class="math inline">\(\gamma \in [\frac{1}{10}, \frac{1}{7}]\)</span> for a cold). Note that the mean time until the event happens would have units of days, which is reassuring since <span class="math inline">\(\gamma\)</span> was a rate and would have units 1/days.</p>
-<p>*please use non-peer reviewed websites such as WebMD only as a last resort for you final project; for you final project I would perfer citations to the published literature.</p>
-<p>Note that while this example was for an epidemiological model, if you were modelling the rate that customers leave a store, and your model formulation was similar, you could parameterize the leaving rate as the reciporcal of the average time spent in the store.</p>
+<p>For an exponentially distributed random variable, where <span class="math inline">\(\lambda\)</span> is the rate at which the exponential process occurs, the mean time until the event happens is <span class="math inline">\(1/ \lambda\)</span> (i.e., see <a href="https://en.wikipedia.org/wiki/Exponential_distribution">Wikipedia</a>). As such, the mean time to recovery, implied by our SIR model, is <span class="math inline">\(1/ \gamma\)</span>, and so if we can read about our disease of interest and find the mean time to recovery (i.e. <a href="https://www.webmd.com/cold-and-flu/stay-home-cold-flu">WebMD*</a> states that the flu usually lasts 5 days and a cold 7-10 days), then we can simply parameterize the recovery rates as the inverses (i.e., <span class="math inline">\(\gamma = \frac{1}{5}\)</span> for the flu and <span class="math inline">\(\gamma \in [\frac{1}{10}, \frac{1}{7}]\)</span> for a cold). Note that the mean time until the event happens would have units of days, which is reassuring since <span class="math inline">\(\gamma\)</span> was a rate and would have units 1/days.</p>
+<p>*please use non-peer reviewed websites such as WebMD only as a last resort for you final project; for your final project I would perfer citations to the peer-reviewed literature.</p>
+<p>Note that while this example was for an epidemiological model, if you were modelling the rate that customers leave a store, and your model formulation was similar, you could parameterize the leaving rate as the reciprocal of the average time spent in the store.</p>
 </div>
 <div id="estimating-parameters-through-model-fitting" class="section level2">
 <h2><span class="header-section-number">13.2</span> Estimating parameters through model fitting</h2>
 <p>Some parameters, such as the transmission coefficient, <span class="math inline">\(\beta\)</span>, for an SIR model, are notoriously difficult to estimate from independent data sources. We can also estimate parameters by fitting to data, particularly when most other parameters can be estimated from independent sources. Consider, the COVID-19 outbreak in St. John's in March 2020. We can fit an SIR model to these data. Let the change in the number of actively infected individuals, <span class="math inline">\(I(t)\)</span>, be,</p>
 <span class="math display">\[\begin{eqnarray}
-\frac{dS(t){dt} &amp;=&amp; - \beta I(t)\frac{S(t)}{N} \\
-\frac{dI(t)}{dt} &amp;=&amp; \beta I(t)\frac{S(t)}{N} - \gamma I(t),
+\frac{dS(t)}{dt} &amp; = &amp; - \beta S(t)I(t) \\
+\frac{dI(t)}{dt} &amp; = &amp; \beta S(t)I(t) - \gamma I(t) \\
 \end{eqnarray}\]</span>
-<p>where <span class="math inline">\(\gamma\)</span> is the recovery rate and Newfoundland and Labrador typically declares a recovery 14 days after infection such that <span class="math inline">\(\gamma = 1/14\)</span> days<span class="math inline">\(^{-1}\)</span>.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">require</span>(deSolve)</code></pre></div>
+<p>where <span class="math inline">\(\gamma\)</span> is the recovery rate and Newfoundland and Labrador typically declares a recovery 14 days after infection such that <span class="math inline">\(\gamma = 1/14\)</span> days<span class="math inline">\(^{-1}\)</span>. Below is <code>R</code> code that estimates the transmission coefficients, <span class="math inline">\(\beta_1\)</span> and <span class="math inline">\(\beta_2\)</span> where we assume that the transmission coefficients changed due to the declaration of the public health emergency. Even if you don't use use <code>R</code> reading through this code will give you some idea of how such model fitting can be performed.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Load a package to solve an ODE</span>
+<span class="kw">require</span>(deSolve)</code></pre></div>
 <pre><code>## Loading required package: deSolve</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">active.cases &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">24</span>,<span class="dv">35</span>,<span class="dv">67</span>,<span class="dv">82</span>,<span class="dv">101</span>,<span class="dv">116</span>,<span class="dv">131</span>,<span class="dv">140</span>,<span class="dv">144</span>,<span class="dv">164</span>,<span class="dv">172</span>,<span class="dv">183</span>,<span class="dv">184</span>,<span class="dv">188</span>,<span class="dv">192</span>,<span class="dv">177</span>,<span class="dv">156</span>,<span class="dv">138</span>,<span class="dv">133</span>,<span class="dv">118</span>,<span class="dv">110</span>,<span class="dv">108</span>,<span class="dv">92</span>, <span class="dv">85</span>, <span class="dv">79</span>, <span class="dv">77</span>, <span class="dv">64</span>, <span class="dv">62</span>, <span class="dv">62</span>, <span class="dv">59</span>, <span class="dv">54</span>, <span class="dv">48</span>, <span class="dv">46</span>, <span class="dv">46</span>, <span class="dv">36</span>, <span class="dv">34</span>, <span class="dv">33</span>, <span class="dv">30</span>, <span class="dv">30</span>, <span class="dv">26</span>, <span class="dv">25</span>, <span class="dv">24</span>, <span class="dv">23</span>, <span class="dv">15</span>, <span class="dv">12</span>, <span class="dv">13</span>, <span class="dv">13</span>, <span class="dv">13</span>, <span class="dv">13</span>, <span class="dv">13</span>, <span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">9</span>, <span class="dv">9</span>, <span class="dv">8</span>, <span class="dv">8</span>, <span class="dv">8</span>, <span class="dv">7</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">2</span>)
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Load a package to perform maximum likelihood</span>
+<span class="kw">require</span>(bbmle)</code></pre></div>
+<pre><code>## Loading required package: bbmle</code></pre>
+<pre><code>## Loading required package: stats4</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># The active number of cases beginning on March 23, 2020. These are all the cases around the time of the Caul&#39;s cluster</span>
+active.cases &lt;-<span class="st"> </span><span class="kw">c</span>(<span class="dv">24</span>,<span class="dv">35</span>,<span class="dv">67</span>,<span class="dv">82</span>,<span class="dv">101</span>,<span class="dv">116</span>,<span class="dv">131</span>,<span class="dv">140</span>,<span class="dv">144</span>,<span class="dv">164</span>,<span class="dv">172</span>,<span class="dv">183</span>,<span class="dv">184</span>,<span class="dv">188</span>,<span class="dv">192</span>,<span class="dv">177</span>,<span class="dv">156</span>,<span class="dv">138</span>,<span class="dv">133</span>,<span class="dv">118</span>,<span class="dv">110</span>,<span class="dv">108</span>,<span class="dv">92</span>, <span class="dv">85</span>, <span class="dv">79</span>, <span class="dv">77</span>, <span class="dv">64</span>, <span class="dv">62</span>, <span class="dv">62</span>, <span class="dv">59</span>, <span class="dv">54</span>, <span class="dv">48</span>, <span class="dv">46</span>, <span class="dv">46</span>, <span class="dv">36</span>, <span class="dv">34</span>, <span class="dv">33</span>, <span class="dv">30</span>, <span class="dv">30</span>, <span class="dv">26</span>, <span class="dv">25</span>, <span class="dv">24</span>, <span class="dv">23</span>, <span class="dv">15</span>, <span class="dv">12</span>, <span class="dv">13</span>, <span class="dv">13</span>, <span class="dv">13</span>, <span class="dv">13</span>, <span class="dv">13</span>, <span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">9</span>, <span class="dv">9</span>, <span class="dv">8</span>, <span class="dv">8</span>, <span class="dv">8</span>, <span class="dv">7</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">4</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">2</span>, <span class="dv">2</span>)
+
+<span class="co"># A vector of times where Day 1 is March 23, 2020</span>
 times &lt;-<span class="st"> </span><span class="kw">seq</span>(<span class="dv">1</span>,<span class="kw">length</span>(active.cases))
+
+<span class="co"># The day on which we assumed public health measures take effect</span>
+<span class="co"># assumed to correspond to the day when the maximum number of active cases occurred.</span>
 t.hat &lt;-<span class="st"> </span>times[<span class="kw">which</span>(active.cases ==<span class="st"> </span><span class="kw">max</span>(active.cases))]
 
-N &lt;-<span class="st"> </span><span class="dv">500000</span>
+<span class="co"># The total number of people assume to live in St. John&#39;s</span>
+N &lt;-<span class="st"> </span><span class="dv">120000</span>
+
+<span class="co"># The intial number of active cases for the solving of the ODE</span>
 I0 &lt;-<span class="st"> </span>active.cases[<span class="dv">1</span>]
-beta1 &lt;-<span class="st"> </span><span class="fl">0.2</span>
-beta2 &lt;-<span class="st"> </span><span class="fl">0.01</span>
+
+<span class="co"># The assumed recovery rate</span>
 gamma &lt;-<span class="st"> </span><span class="dv">1</span>/<span class="dv">14</span>
 
+<span class="co"># This function returns S(t) and I(t) for the SIR model and takes values of the transmission coefficient before and after the assumed time of public health measures, t.hat. beta1 is the transmission coefficient prior to t.hat and beta2 is the transmission coefficient after t.hat</span>
+SIR.pred =<span class="st"> </span>function(beta1,beta2){
+  <span class="co"># The transmission coefficient function: there is a breakpoint around t = t.hat.</span>
   beta.fun =<span class="st"> </span>function(t){
     if(t&lt;=t.hat){
       betaval &lt;-<span class="st"> </span>beta1
     }
     else {
-    betaval &lt;-<span class="st"> </span>beta2
+      betaval &lt;-<span class="st"> </span>beta2
     }
 
     <span class="kw">return</span>(betaval)
   }
 
-  <span class="co"># Define the system of coupled ODEs for the Miller et al. model</span>
+  <span class="co"># Define the system of coupled ODEs for an SIR model</span>
   SIR =<span class="st"> </span>function(t,y,parms){
     S &lt;-<span class="st"> </span>y[<span class="dv">1</span>]
     I &lt;-<span class="st"> </span>y[<span class="dv">2</span>]
-
     dS =<span class="st"> </span>-<span class="kw">beta.fun</span>(t)*I*S
     dI =<span class="st"> </span><span class="kw">beta.fun</span>(t)*I*S -<span class="st"> </span>gamma*I
-
     <span class="kw">return</span>(<span class="kw">list</span>(<span class="kw">c</span>(dS,dI)))
   }
 
- <span class="co"># SIR model</span>
+  <span class="co"># The initial values of the variables</span>
   yini  =<span class="st"> </span><span class="kw">c</span>(<span class="dt">S =</span> <span class="dv">1</span>-I0/N, <span class="dt">I =</span> I0/N)
+  <span class="co"># Numerically solving the SIR model</span>
   out &lt;-<span class="st"> </span><span class="kw">ode</span>(<span class="dt">y =</span> yini, <span class="dt">parms =</span> <span class="ot">NULL</span>, <span class="dt">times =</span> times, <span class="dt">func =</span> SIR)
   out &lt;-<span class="st"> </span><span class="kw">data.frame</span>(out)
+}
 
-<span class="kw">plot</span>(times, active.cases, <span class="dt">pch =</span> <span class="dv">16</span>, <span class="dt">ylab =</span> <span class="st">&quot;active cases&quot;</span>)
-<span class="kw">lines</span>(times, out$I*N, <span class="dt">typ =</span> <span class="st">&quot;l&quot;</span>, <span class="dt">col =</span> <span class="st">&quot;red&quot;</span>)</code></pre></div>
+<span class="co"># This function returns the negative log-likelihood for given values of beta1 and beta2, the transmission coefficients for t &lt; t.hat and t &gt;= t.hat. The negative log-likelihood is minimized to find the best fit parameter values for beta1 and beta2</span>
+nLL =<span class="st"> </span>function(beta1,beta2){
+  <span class="co"># Generate the model predictions by calling the function SIR.pred() which numerically solves the</span>
+  <span class="co"># SIR model</span>
+  out =<span class="st"> </span><span class="kw">SIR.pred</span>(beta1,beta2)
+  <span class="co"># Calculate the sum squared errors - to be minimized during the maximum likelihood paramter</span>
+  <span class="co"># estimation</span>
+  res =<span class="st"> </span><span class="kw">sum</span>((out$I*N -<span class="st"> </span>active.cases)^<span class="dv">2</span>)
+}
+
+<span class="co"># Estimate the best fit parameter values beta1 and beta2 using maximum likelihood to minimize the sum</span>
+<span class="co"># squared errors.</span>
+fit =<span class="st"> </span><span class="kw">mle2</span>(nLL, <span class="dt">start=</span><span class="kw">list</span>(<span class="dt">beta1=</span><span class="dv">1</span>, <span class="dt">beta2=</span>.<span class="dv">01</span>), <span class="dt">method=</span><span class="st">&quot;L-BFGS-B&quot;</span>, <span class="dt">lower=</span><span class="kw">c</span>(<span class="dt">beta1=</span><span class="dv">0</span>, <span class="dt">beta2 =</span> <span class="dv">0</span>))</code></pre></div>
+<pre><code>## Warning in mle2(nLL, start = list(beta1 = 1, beta2 = 0.01), method = &quot;L-BFGS-
+## B&quot;, : some parameters are on the boundary: variance-covariance calculations
+## based on Hessian may be unreliable</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># Let beta1 and beta1 be their best-fit values</span>
+beta1 &lt;-<span class="st"> </span><span class="kw">coef</span>(fit)[<span class="dv">1</span>]
+beta2 &lt;-<span class="st"> </span><span class="kw">coef</span>(fit)[<span class="dv">2</span>]
+
+<span class="co"># Make the model predictions using the best-fit values of beta1 and beta2</span>
+out =<span class="st"> </span><span class="kw">SIR.pred</span>(beta1,beta2)
+
+<span class="co"># Plot the data and the model predictions under the best fit parameter values</span>
+<span class="kw">plot</span>(times, active.cases, <span class="dt">pch =</span> <span class="dv">16</span>, <span class="dt">ylab =</span> <span class="st">&quot;active cases&quot;</span>, <span class="dt">xlab =</span> <span class="st">&quot;Days since March 23, 2020&quot;</span>)
+<span class="kw">lines</span>(times, out$I*N, <span class="dt">typ =</span> <span class="st">&quot;l&quot;</span>, <span class="dt">col =</span> <span class="st">&quot;red&quot;</span>)
+<span class="kw">legend</span>(<span class="st">&quot;topright&quot;</span>, <span class="dt">legend =</span> <span class="kw">c</span>(<span class="st">&quot;data&quot;</span>, <span class="st">&quot;fitted SIR&quot;</span>),<span class="dt">bty=</span><span class="st">&quot;n&quot;</span>,<span class="dt">pch=</span><span class="kw">c</span>(<span class="dv">16</span>,<span class="ot">NA</span>),<span class="dt">lty=</span><span class="kw">c</span>(<span class="ot">NA</span>,<span class="dv">1</span>),<span class="dt">col =</span> <span class="kw">c</span>(<span class="st">&quot;black&quot;</span>,<span class="st">&quot;red&quot;</span>))</code></pre></div>
 <p><img src="math-4190_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
 </div>
-<div id="questions-a6-1" class="section level2 unnumbered">
-<h2>Questions A6-1</h2>
+<div id="questions-a7-1" class="section level2 unnumbered">
+<h2>Questions A7-1</h2>
 <ol style="list-style-type: decimal">
-<li>Read all the text above. Revisit <a href="https://www-nature-com.qe2a-proxy.mun.ca/articles/s41591-020-0952-y">Disease and healthcare burden of COVID-19 in the United States</a>. For the system of ordinary differential equations that appear in the methods section at the end of the paper choose 2 parameters. Spend 30 minutes following the citations to find the source for how the parameters were estimated. Write 1 paragraph describing if you were able to find a sentence or figure that underpins the estimates of 2 parameters that you chose.</li>
+<li><p>Read all the text above. Revisit <a href="https://www-nature-com.qe2a-proxy.mun.ca/articles/s41591-020-0952-y">Disease and healthcare burden of COVID-19 in the United States</a>. For the system of ordinary differential equations that appear in the methods section at the end of the paper choose 2 parameters. Spend 30 minutes following the citations to find the source for how the parameters were estimated. Write 1 paragraph describing if you were able to find a sentence or figure that underpins the estimates of 2 parameters that you chose. [3 marks]</p></li>
+<li><p>Read over the R code. What is different about the transmission coefficient for this code? [1 mark]</p></li>
 </ol>
 
 </div>
