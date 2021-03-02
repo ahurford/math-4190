@@ -3,8 +3,8 @@ site: bookdown::bookdown_site
 output:
   bookdown::gitbook:
     lib_dir: "book_assets"
-  bookdown::pdf_book:
-    keep_tex: yes
+  #bookdown::pdf_book:
+    #keep_tex: yes
 documentclass: book
 bibliography: [references.bib]
 biblio-style: apalike
