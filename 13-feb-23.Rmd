@@ -1,3 +1,9 @@
 # A7. Thurs Mar 4: Final project ideas
 
 Assignment 7: to be handed in to Brightspace on Tues Mar 9 by 2pm.
+
+You should start working on your final project today. You might like to read over the Project Ideas files on BrightSpace. The expectations for the Final Project and Final Presentation are here: Section \@ref(final-project).
+
+## Questions A7-2 {-}
+
+3. Hand in 1 paragraph describing your ideas for your final project. If you are able to, provide the system of equations that you propose as a starting point. [2 marks]
